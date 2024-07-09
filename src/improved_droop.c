@@ -72,6 +72,12 @@ void executeDroop(ImprovedDroop *droop, float v_alpha, float v_beta, float i_alp
     // improved droop with two integrator
     v_improved = droop->kv * (droop->v0 - computeVrms(v_alpha, v_beta)) - droop->kq * (q_filtered - droop->q0);
     vout = computeIntegral(droop, v_improved, droop->vin_kminus1, droop->vout_kminus1, droop->ki);
+    // REVISAR
+      if(vout > 275)
+        vout = 275;
+      if(vout < 165)
+        vout = 165;
+    // REVISAR
     droop->vin_kminus1 = v_improved;
     droop->vout_kminus1 = vout;
   }

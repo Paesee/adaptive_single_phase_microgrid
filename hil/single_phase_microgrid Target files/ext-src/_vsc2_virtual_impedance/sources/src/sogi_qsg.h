@@ -4,7 +4,7 @@
 /* SOGI QSG + FLL */
 
 #define PI 3.14159265359
-#define INT_GAIN 0.0001
+#define INT_GAIN 0.00005
 
 typedef struct {
   float w0;
