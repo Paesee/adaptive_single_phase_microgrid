@@ -40,7 +40,6 @@ typedef struct ImprovedDroop
   float ki;
   float kv;
   float kq;
-  int is_islanded;
 
   // integrator variables
   float phi_integral;
@@ -63,7 +62,6 @@ void setKi(ImprovedDroop *droop, float ki);
 void setKv(ImprovedDroop *droop, float kv);
 void setDeltaV(ImprovedDroop *droop, float delta_v);
 void setDeltaW(ImprovedDroop *droop, float delta_w);
-void setStatus(ImprovedDroop *droop, int status);
 void computePhi(ImprovedDroop *droop);
 // Droop Controller Inline Functions
 extern inline float computeP(float v_alpha, float v_beta, float i_alpha, float i_beta);

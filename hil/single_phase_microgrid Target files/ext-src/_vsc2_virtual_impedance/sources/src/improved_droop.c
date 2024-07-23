@@ -32,7 +32,6 @@ void initDroop(ImprovedDroop *droop, float ts, float v0, float w0, float p_max, 
   droop->ki = ki;
   droop->kv = kv;
   droop->kq = droop->n * droop->kv;
-  droop->is_islanded = 1;
   // integrator variables
   droop->phi_integral = 0.5 * droop->sampling_time;
   droop->vin_kminus1 = 0;
@@ -57,30 +56,16 @@ void executeDroop(ImprovedDroop *droop, float v_alpha, float v_beta, float i_alp
   droop->qf_kminus1 = q_filtered;
 
   // handle voltage/kVAr control loop
-  float vout = 0;
-  float v_improved = 0;
-  if (droop->is_islanded == 1)
-  {
-    // classical method
-    float delta_v = droop->n * (q_filtered - droop->q0);
-    vout = droop->v0 + delta_v;
-    droop->vin_kminus1 = vout;
-    droop->vout_kminus1 = vout;
-  }
-  else
-  {
-    // improved droop with two integrator
-    v_improved = droop->kv * (droop->v0 - computeVrms(v_alpha, v_beta)) - droop->kq * (q_filtered - droop->q0);
-    vout = computeIntegral(droop, v_improved, droop->vin_kminus1, droop->vout_kminus1, droop->ki);
-    // REVISAR
-      if(vout > 275)
-        vout = 275;
-      if(vout < 165)
-        vout = 165;
-    // REVISAR
-    droop->vin_kminus1 = v_improved;
-    droop->vout_kminus1 = vout;
-  }
+  float v_improved = droop->kv * (droop->v0 - computeVrms(v_alpha, v_beta)) - droop->kq * (q_filtered - droop->q0);
+  float vout = computeIntegral(droop, v_improved, droop->vin_kminus1, droop->vout_kminus1, droop->ki);
+  // voltage output boundary computation
+  if(vout > droop->v0 * 1.25)
+    vout = droop->v0 * 1.25;
+  if(vout < droop->v0 * 0.75)
+    vout = droop->v0 * 0.75;
+  // store variables for next iteration
+  droop->vin_kminus1 = v_improved;
+  droop->vout_kminus1 = vout;
 
   // handle frequency/kW control loop
   float delta_w = droop->m * (p_filtered - droop->p0);
@@ -88,6 +73,7 @@ void executeDroop(ImprovedDroop *droop, float v_alpha, float v_beta, float i_alp
   float theta_out = computeIntegral(droop, w, droop->w_kminus1, droop->theta_kminus1, 1.0);
   if (theta_out >= TWOPI)
     theta_out -= TWOPI;
+  // store variables for next iteration
   droop->w_kminus1 = w;
   droop->theta_kminus1 = theta_out;
 
@@ -125,13 +111,7 @@ void setKi(ImprovedDroop *droop, float ki)
 void setKv(ImprovedDroop *droop, float kv)
 {
   droop->kv = kv;
-  if(kv > 0)
-  {
-    droop->kq = droop->n * droop->kv;
-  }else{
-    droop->kq = droop->n;
-  }
-    
+  droop->kq = droop->n * droop->kv;
 }
 
 void setDeltaV(ImprovedDroop *droop, float delta_v)
@@ -142,11 +122,6 @@ void setDeltaV(ImprovedDroop *droop, float delta_v)
 void setDeltaW(ImprovedDroop *droop, float delta_w)
 {
   droop->m = delta_w / (2.0 * droop->p_max);
-}
-
-void setStatus(ImprovedDroop *droop, int status)
-{
-  droop->is_islanded = status;
 }
 
 void computePhi(ImprovedDroop *droop)

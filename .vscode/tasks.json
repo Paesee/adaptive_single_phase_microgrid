@@ -307,8 +307,6 @@
       ],
       "dependsOrder": "sequence",
       "dependsOn": [
-        "object_resonant_control",
-        "dll_resonant_control",
         "object_sogi_qsg",
         "dll_sogi_qsg",
         "object_droop",

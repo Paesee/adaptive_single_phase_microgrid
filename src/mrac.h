@@ -1,3 +1,24 @@
+/*
+Model Reference Adaptive Controller (MRAC)
+
+Copyright 2024 Vítor Paese De Carli
+
+This file is part of MRAC for Grid-Forming Inverters applied to Single-Phase Microgrid.
+
+MRAC for Grid-Forming Inverters applied to Single-Phase Microgrid is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+MRAC for Grid-Forming Inverters applied to Single-Phase Microgrid is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MRAC for Grid-Forming Inverters applied to Single-Phase Microgrid.  If not, see <https://www.gnu.org/licenses/>6.
+*/
+
 #ifndef MRAC_H
 #define MRAC_H
 
@@ -125,7 +146,7 @@ typedef struct MRAC
 } MRAC;
 
 void initMRAC(MRAC *mrac, float sampling_time);
-void computeMRAC(MRAC *mrac, float r_al, float r_be, float x1, float x2, float x3, float ds, float dc, float *u_ctrl, float *r_c, float *y_m);
+void computeMRAC(MRAC *mrac, float r_al, float r_be, float x1, float x2, float x3, float ds, float dc, float *u_ctrl, float *y_m);
 
 extern inline float computeReferenceCorrection(float ral, float rbe, float gain, float phase);
 extern inline void computeWmCoeffs(MRAC *mrac);
@@ -138,7 +159,7 @@ extern inline void computeM2(MRAC *mrac);
 extern inline float computeWm(MRAC *mrac, float u, float u_kminus1, float u_kminus2, float u_kminus3, float y_kminus1, float y_kminus2, float y_kminus3);
 extern inline void updateMRAC(MRAC *mrac, float ym, float v, float u_bounded, float x1, float x2, float x3, float rc, float ds, float dc);
 
-void setTheta(MRAC *mrac, float theta_x1, float theta_x2, float theta_x3, float theta_r, float theta_ds, float theta_dc);
+void setTheta(MRAC *mrac, float theta_x1, float theta_x2, float theta_x3, float theta_u, float theta_r, float theta_ds, float theta_dc);
 void setBoundary(MRAC *mrac, float boundary);
 void setGain(MRAC *mrac, float rho);
 void setPhaseShift(MRAC *mrac, float phi);
@@ -148,6 +169,6 @@ void setPole2(MRAC *mrac, float pole_2);
 void setGamma(MRAC *mrac, float gamma);
 void setWmCoeffs(MRAC *mrac, float alpha0, float alpha1, float alpha2, float alpha3, float beta1, float beta2, float beta3);
 
-void getTheta(MRAC *mrac, float *theta_x1, float *theta_x2, float *theta_x3, float *theta_r, float *theta_ds, float *theta_dc);
+void getTheta(MRAC *mrac, float *theta_x1, float *theta_x2, float *theta_x3, float *theta_u, float *theta_r, float *theta_ds, float *theta_dc);
 
 #endif

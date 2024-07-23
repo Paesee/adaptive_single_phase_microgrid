@@ -1,6 +1,6 @@
 <ui_settings>
     <version>2.8</version>
-    <model_locked>True</model_locked>
+    <model_locked>False</model_locked>
     <canvas_bg_color>#ffffff</canvas_bg_color>
     <initialization_code><![CDATA[# NOTE: Variables and functions defined here will be
 # available for use in all Macro and Expression scripts.
@@ -45,10 +45,10 @@ SETTINGS_DIR = get_settings_dir_path()
                     <virtual_signals_definitions>
                     </virtual_signals_definitions>
                     <presets>
-                        <active_capture_preset><![CDATA[Test: Tied to Grid]]></active_capture_preset>
+                        <active_capture_preset><![CDATA[ART_TESTE 01: ILHADO ]]></active_capture_preset>
                         <active_scope_preset><![CDATA[Grid Connected]]></active_scope_preset>
                         <capture name="Default">
-                            <time_interval>5.0</time_interval>
+                            <time_interval>1.0</time_interval>
                             <sample_rate>1000000.0</sample_rate>
                             <background_color>white</background_color>
                             <layout>Vertical</layout>
@@ -56,10 +56,10 @@ SETTINGS_DIR = get_settings_dir_path()
                             <analog_signals>
                                 <analog>
                                     <channel>0</channel>
-                                    <name><![CDATA[VSC1.REF_VC1]]></name>
+                                    <name><![CDATA[VSC1.YM_RMS]]></name>
                                     <is_locked>False</is_locked>
                                     <vertical_scale>Auto</vertical_scale>
-                                    <vertical_offset>0</vertical_offset>
+                                    <vertical_offset>0.0</vertical_offset>
                                     <coupling>False</coupling>
                                     <row>0</row>
                                     <viewports>
@@ -68,10 +68,10 @@ SETTINGS_DIR = get_settings_dir_path()
                                </analog>
                                 <analog>
                                     <channel>1</channel>
-                                    <name><![CDATA[VSC1.VC]]></name>
+                                    <name><![CDATA[VSC1.VC_RMS]]></name>
                                     <is_locked>False</is_locked>
                                     <vertical_scale>Auto</vertical_scale>
-                                    <vertical_offset>0</vertical_offset>
+                                    <vertical_offset>0.0</vertical_offset>
                                     <coupling>False</coupling>
                                     <row>1</row>
                                     <viewports>
@@ -80,10 +80,10 @@ SETTINGS_DIR = get_settings_dir_path()
                                </analog>
                                 <analog>
                                     <channel>2</channel>
-                                    <name><![CDATA[VSC1.IL1]]></name>
+                                    <name><![CDATA[VSC1.E_TR]]></name>
                                     <is_locked>False</is_locked>
                                     <vertical_scale>Auto</vertical_scale>
-                                    <vertical_offset>0</vertical_offset>
+                                    <vertical_offset>0.0</vertical_offset>
                                     <coupling>False</coupling>
                                     <row>2</row>
                                     <viewports>
@@ -92,10 +92,10 @@ SETTINGS_DIR = get_settings_dir_path()
                                </analog>
                                 <analog>
                                     <channel>3</channel>
-                                    <name><![CDATA[VSC1.PF]]></name>
+                                    <name><![CDATA[VSC1.SF[0]]]></name>
                                     <is_locked>False</is_locked>
                                     <vertical_scale>Auto</vertical_scale>
-                                    <vertical_offset>0</vertical_offset>
+                                    <vertical_offset>0.0</vertical_offset>
                                     <coupling>False</coupling>
                                     <row>3</row>
                                     <viewports>
@@ -104,34 +104,34 @@ SETTINGS_DIR = get_settings_dir_path()
                                </analog>
                                 <analog>
                                     <channel>4</channel>
-                                    <name><![CDATA[VSC1.QF]]></name>
+                                    <name><![CDATA[VSC1.SF[1]]]></name>
                                     <is_locked>False</is_locked>
                                     <vertical_scale>Auto</vertical_scale>
-                                    <vertical_offset>0</vertical_offset>
+                                    <vertical_offset>0.0</vertical_offset>
                                     <coupling>False</coupling>
                                     <row>4</row>
-                                    <viewports>
-                                        <num_viewport>4</num_viewport>
-                                   </viewports>
-                               </analog>
-                                <analog>
-                                    <channel>5</channel>
-                                    <name><![CDATA[VSC1.REF_P]]></name>
-                                    <is_locked>False</is_locked>
-                                    <vertical_scale>Auto</vertical_scale>
-                                    <vertical_offset>0</vertical_offset>
-                                    <coupling>False</coupling>
-                                    <row>5</row>
                                     <viewports>
                                         <num_viewport>3</num_viewport>
                                    </viewports>
                                </analog>
                                 <analog>
-                                    <channel>6</channel>
-                                    <name><![CDATA[VSC1.REF_Q]]></name>
+                                    <channel>5</channel>
+                                    <name><![CDATA[VSC1.THETA[0]]]></name>
                                     <is_locked>False</is_locked>
                                     <vertical_scale>Auto</vertical_scale>
-                                    <vertical_offset>0</vertical_offset>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>5</row>
+                                    <viewports>
+                                        <num_viewport>4</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>6</channel>
+                                    <name><![CDATA[VSC1.THETA[1]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
                                     <coupling>False</coupling>
                                     <row>6</row>
                                     <viewports>
@@ -140,208 +140,72 @@ SETTINGS_DIR = get_settings_dir_path()
                                </analog>
                                 <analog>
                                     <channel>7</channel>
-                                    <name><![CDATA[test_flag_fb]]></name>
+                                    <name><![CDATA[VSC1.THETA[2]]]></name>
                                     <is_locked>False</is_locked>
                                     <vertical_scale>Auto</vertical_scale>
-                                    <vertical_offset>0</vertical_offset>
+                                    <vertical_offset>0.0</vertical_offset>
                                     <coupling>False</coupling>
                                     <row>7</row>
                                     <viewports>
+                                        <num_viewport>4</num_viewport>
                                    </viewports>
                                </analog>
-                            </analog_signals>
-                            <digital_signals>
-                            </digital_signals>
-                            <virtual_signals>
-                            </virtual_signals>
-                            <trigger>
-                                <device>0</device>
-                                <is_force>True</is_force>
-                                <type>Analog</type>
-                                <source><![CDATA[test_flag_fb]]></source>
-                                <edge>Rising edge</edge>
-                                <treshold>0.0</treshold>
-                                <offset>0.0</offset>
-                                <useFirstTrigger>False</useFirstTrigger>
-                            </trigger>
-                            <plotting_options in_use="False">
-                                <subplots>
-                                    </subplots>
-                            </plotting_options>
-                        </capture>
-                        <capture name="Teste: Ilhado">
-                            <time_interval>3.0</time_interval>
-                            <sample_rate>1000000.0</sample_rate>
-                            <background_color>white</background_color>
-                            <layout>Vertical</layout>
-                            <legend>True</legend>
-                            <analog_signals>
                                 <analog>
-                                    <channel>0</channel>
-                                    <name><![CDATA[VSC1.REF_VC]]></name>
+                                    <channel>8</channel>
+                                    <name><![CDATA[VSC1.THETA[3]]]></name>
                                     <is_locked>False</is_locked>
                                     <vertical_scale>Auto</vertical_scale>
-                                    <vertical_offset>0</vertical_offset>
+                                    <vertical_offset>0.0</vertical_offset>
                                     <coupling>False</coupling>
-                                    <row>0</row>
+                                    <row>8</row>
                                     <viewports>
-                                        <num_viewport>1</num_viewport>
+                                        <num_viewport>4</num_viewport>
                                    </viewports>
                                </analog>
                                 <analog>
-                                    <channel>1</channel>
-                                    <name><![CDATA[VSC1.VC]]></name>
+                                    <channel>9</channel>
+                                    <name><![CDATA[VSC1.THETA[4]]]></name>
                                     <is_locked>False</is_locked>
                                     <vertical_scale>Auto</vertical_scale>
-                                    <vertical_offset>0</vertical_offset>
+                                    <vertical_offset>0.0</vertical_offset>
                                     <coupling>False</coupling>
-                                    <row>1</row>
+                                    <row>9</row>
                                     <viewports>
-                                        <num_viewport>1</num_viewport>
+                                        <num_viewport>4</num_viewport>
                                    </viewports>
                                </analog>
                                 <analog>
-                                    <channel>2</channel>
+                                    <channel>10</channel>
+                                    <name><![CDATA[VSC1.THETA[5]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>10</row>
+                                    <viewports>
+                                        <num_viewport>4</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>11</channel>
+                                    <name><![CDATA[VSC1.THETA[6]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>11</row>
+                                    <viewports>
+                                        <num_viewport>4</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>12</channel>
                                     <name><![CDATA[test_flag_fb]]></name>
                                     <is_locked>False</is_locked>
                                     <vertical_scale>Auto</vertical_scale>
-                                    <vertical_offset>0</vertical_offset>
+                                    <vertical_offset>0.0</vertical_offset>
                                     <coupling>False</coupling>
-                                    <row>2</row>
-                                    <viewports>
-                                   </viewports>
-                               </analog>
-                                <analog>
-                                    <channel>3</channel>
-                                    <name><![CDATA[VSC1.IL1]]></name>
-                                    <is_locked>False</is_locked>
-                                    <vertical_scale>Auto</vertical_scale>
-                                    <vertical_offset>0</vertical_offset>
-                                    <coupling>False</coupling>
-                                    <row>3</row>
-                                    <viewports>
-                                        <num_viewport>2</num_viewport>
-                                   </viewports>
-                               </analog>
-                                <analog>
-                                    <channel>4</channel>
-                                    <name><![CDATA[VSC1.PF]]></name>
-                                    <is_locked>False</is_locked>
-                                    <vertical_scale>Auto</vertical_scale>
-                                    <vertical_offset>0</vertical_offset>
-                                    <coupling>False</coupling>
-                                    <row>4</row>
-                                    <viewports>
-                                        <num_viewport>3</num_viewport>
-                                   </viewports>
-                               </analog>
-                                <analog>
-                                    <channel>5</channel>
-                                    <name><![CDATA[VSC1.QF]]></name>
-                                    <is_locked>False</is_locked>
-                                    <vertical_scale>Auto</vertical_scale>
-                                    <vertical_offset>0</vertical_offset>
-                                    <coupling>False</coupling>
-                                    <row>5</row>
-                                    <viewports>
-                                        <num_viewport>3</num_viewport>
-                                   </viewports>
-                               </analog>
-                            </analog_signals>
-                            <digital_signals>
-                            </digital_signals>
-                            <virtual_signals>
-                            </virtual_signals>
-                            <trigger>
-                                <device>0</device>
-                                <is_force>True</is_force>
-                                <type>Analog</type>
-                                <source><![CDATA[test_flag_fb]]></source>
-                                <edge>Rising edge</edge>
-                                <treshold>0.0</treshold>
-                                <offset>0.0</offset>
-                                <useFirstTrigger>False</useFirstTrigger>
-                            </trigger>
-                            <plotting_options in_use="False">
-                                <subplots>
-                                    </subplots>
-                            </plotting_options>
-                        </capture>
-                        <capture name="Teste: curto-circuito">
-                            <time_interval>0.25</time_interval>
-                            <sample_rate>1000000.0</sample_rate>
-                            <background_color>white</background_color>
-                            <layout>Vertical</layout>
-                            <legend>True</legend>
-                            <analog_signals>
-                                <analog>
-                                    <channel>0</channel>
-                                    <name><![CDATA[VSC1.REF_VC]]></name>
-                                    <is_locked>False</is_locked>
-                                    <vertical_scale>Auto</vertical_scale>
-                                    <vertical_offset>0</vertical_offset>
-                                    <coupling>False</coupling>
-                                    <row>0</row>
-                                    <viewports>
-                                        <num_viewport>1</num_viewport>
-                                   </viewports>
-                               </analog>
-                                <analog>
-                                    <channel>1</channel>
-                                    <name><![CDATA[VSC1.VC]]></name>
-                                    <is_locked>False</is_locked>
-                                    <vertical_scale>Auto</vertical_scale>
-                                    <vertical_offset>0</vertical_offset>
-                                    <coupling>False</coupling>
-                                    <row>1</row>
-                                    <viewports>
-                                        <num_viewport>1</num_viewport>
-                                   </viewports>
-                               </analog>
-                                <analog>
-                                    <channel>2</channel>
-                                    <name><![CDATA[VSC1.IL1]]></name>
-                                    <is_locked>False</is_locked>
-                                    <vertical_scale>Auto</vertical_scale>
-                                    <vertical_offset>0</vertical_offset>
-                                    <coupling>False</coupling>
-                                    <row>2</row>
-                                    <viewports>
-                                        <num_viewport>2</num_viewport>
-                                   </viewports>
-                               </analog>
-                                <analog>
-                                    <channel>3</channel>
-                                    <name><![CDATA[VSC1.PF]]></name>
-                                    <is_locked>False</is_locked>
-                                    <vertical_scale>Auto</vertical_scale>
-                                    <vertical_offset>0</vertical_offset>
-                                    <coupling>False</coupling>
-                                    <row>3</row>
-                                    <viewports>
-                                        <num_viewport>3</num_viewport>
-                                   </viewports>
-                               </analog>
-                                <analog>
-                                    <channel>4</channel>
-                                    <name><![CDATA[VSC1.QF]]></name>
-                                    <is_locked>False</is_locked>
-                                    <vertical_scale>Auto</vertical_scale>
-                                    <vertical_offset>0</vertical_offset>
-                                    <coupling>False</coupling>
-                                    <row>4</row>
-                                    <viewports>
-                                        <num_viewport>3</num_viewport>
-                                   </viewports>
-                               </analog>
-                                <analog>
-                                    <channel>5</channel>
-                                    <name><![CDATA[test_flag_fb]]></name>
-                                    <is_locked>False</is_locked>
-                                    <vertical_scale>Auto</vertical_scale>
-                                    <vertical_offset>0</vertical_offset>
-                                    <coupling>False</coupling>
-                                    <row>5</row>
+                                    <row>12</row>
                                     <viewports>
                                    </viewports>
                                </analog>
@@ -365,7 +229,7 @@ SETTINGS_DIR = get_settings_dir_path()
                                     </subplots>
                             </plotting_options>
                         </capture>
-                        <capture name="Test: Transition to Tied">
+                        <capture name="TESTE: Modo Ilhado">
                             <time_interval>2.0</time_interval>
                             <sample_rate>1000000.0</sample_rate>
                             <background_color>white</background_color>
@@ -374,22 +238,21 @@ SETTINGS_DIR = get_settings_dir_path()
                             <analog_signals>
                                 <analog>
                                     <channel>0</channel>
-                                    <name><![CDATA[VSC1.REF_VC1]]></name>
+                                    <name><![CDATA[test_flag_fb]]></name>
                                     <is_locked>False</is_locked>
                                     <vertical_scale>Auto</vertical_scale>
-                                    <vertical_offset>0</vertical_offset>
+                                    <vertical_offset>0.0</vertical_offset>
                                     <coupling>False</coupling>
                                     <row>0</row>
                                     <viewports>
-                                        <num_viewport>1</num_viewport>
                                    </viewports>
                                </analog>
                                 <analog>
                                     <channel>1</channel>
-                                    <name><![CDATA[VSC1.VC]]></name>
+                                    <name><![CDATA[VSC1.YM]]></name>
                                     <is_locked>False</is_locked>
                                     <vertical_scale>Auto</vertical_scale>
-                                    <vertical_offset>0</vertical_offset>
+                                    <vertical_offset>0.0</vertical_offset>
                                     <coupling>False</coupling>
                                     <row>1</row>
                                     <viewports>
@@ -398,46 +261,242 @@ SETTINGS_DIR = get_settings_dir_path()
                                </analog>
                                 <analog>
                                     <channel>2</channel>
-                                    <name><![CDATA[VSC1.IL1]]></name>
+                                    <name><![CDATA[VSC1.VC]]></name>
                                     <is_locked>False</is_locked>
                                     <vertical_scale>Auto</vertical_scale>
-                                    <vertical_offset>0</vertical_offset>
+                                    <vertical_offset>0.0</vertical_offset>
                                     <coupling>False</coupling>
                                     <row>2</row>
+                                    <viewports>
+                                        <num_viewport>1</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>3</channel>
+                                    <name><![CDATA[VSC1.I0]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>3</row>
                                     <viewports>
                                         <num_viewport>2</num_viewport>
                                    </viewports>
                                </analog>
                                 <analog>
-                                    <channel>3</channel>
-                                    <name><![CDATA[VSC1.PF]]></name>
+                                    <channel>4</channel>
+                                    <name><![CDATA[VSC1.SF[0]]]></name>
                                     <is_locked>False</is_locked>
                                     <vertical_scale>Auto</vertical_scale>
-                                    <vertical_offset>0</vertical_offset>
+                                    <vertical_offset>0.0</vertical_offset>
                                     <coupling>False</coupling>
-                                    <row>3</row>
+                                    <row>4</row>
                                     <viewports>
                                         <num_viewport>3</num_viewport>
                                    </viewports>
                                </analog>
                                 <analog>
-                                    <channel>4</channel>
-                                    <name><![CDATA[VSC1.QF]]></name>
+                                    <channel>5</channel>
+                                    <name><![CDATA[VSC1.SF[1]]]></name>
                                     <is_locked>False</is_locked>
                                     <vertical_scale>Auto</vertical_scale>
-                                    <vertical_offset>0</vertical_offset>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>5</row>
+                                    <viewports>
+                                        <num_viewport>3</num_viewport>
+                                   </viewports>
+                               </analog>
+                            </analog_signals>
+                            <digital_signals>
+                            </digital_signals>
+                            <virtual_signals>
+                            </virtual_signals>
+                            <trigger>
+                                <device>0</device>
+                                <is_force>False</is_force>
+                                <type>Analog</type>
+                                <source><![CDATA[test_flag_fb]]></source>
+                                <edge>Rising edge</edge>
+                                <treshold>0.0</treshold>
+                                <offset>0.0</offset>
+                                <useFirstTrigger>False</useFirstTrigger>
+                            </trigger>
+                            <plotting_options in_use="False">
+                                <subplots>
+                                    </subplots>
+                            </plotting_options>
+                        </capture>
+                        <capture name="TESTE: Transicao de Ilhado para Conectado">
+                            <time_interval>2.0</time_interval>
+                            <sample_rate>1000000.0</sample_rate>
+                            <background_color>white</background_color>
+                            <layout>Vertical</layout>
+                            <legend>True</legend>
+                            <analog_signals>
+                                <analog>
+                                    <channel>0</channel>
+                                    <name><![CDATA[test_flag_fb]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>0</row>
+                                    <viewports>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>1</channel>
+                                    <name><![CDATA[VSC1.YM]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>1</row>
+                                    <viewports>
+                                        <num_viewport>1</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>2</channel>
+                                    <name><![CDATA[VSC1.VC]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>2</row>
+                                    <viewports>
+                                        <num_viewport>1</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>3</channel>
+                                    <name><![CDATA[VSC1.I0]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>3</row>
+                                    <viewports>
+                                        <num_viewport>2</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>4</channel>
+                                    <name><![CDATA[VSC1.SF[0]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
                                     <coupling>False</coupling>
                                     <row>4</row>
                                     <viewports>
-                                        <num_viewport>4</num_viewport>
+                                        <num_viewport>3</num_viewport>
                                    </viewports>
                                </analog>
                                 <analog>
                                     <channel>5</channel>
-                                    <name><![CDATA[VSC1.REF_P]]></name>
+                                    <name><![CDATA[VSC1.SF[1]]]></name>
                                     <is_locked>False</is_locked>
                                     <vertical_scale>Auto</vertical_scale>
-                                    <vertical_offset>0</vertical_offset>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>5</row>
+                                    <viewports>
+                                        <num_viewport>3</num_viewport>
+                                   </viewports>
+                               </analog>
+                            </analog_signals>
+                            <digital_signals>
+                            </digital_signals>
+                            <virtual_signals>
+                            </virtual_signals>
+                            <trigger>
+                                <device>0</device>
+                                <is_force>False</is_force>
+                                <type>Analog</type>
+                                <source><![CDATA[test_flag_fb]]></source>
+                                <edge>Rising edge</edge>
+                                <treshold>0.0</treshold>
+                                <offset>0.0</offset>
+                                <useFirstTrigger>False</useFirstTrigger>
+                            </trigger>
+                            <plotting_options in_use="False">
+                                <subplots>
+                                    </subplots>
+                            </plotting_options>
+                        </capture>
+                        <capture name="TESTE: Modo Conectado">
+                            <time_interval>5.0</time_interval>
+                            <sample_rate>1000000.0</sample_rate>
+                            <background_color>white</background_color>
+                            <layout>Vertical</layout>
+                            <legend>True</legend>
+                            <analog_signals>
+                                <analog>
+                                    <channel>0</channel>
+                                    <name><![CDATA[test_flag_fb]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>0</row>
+                                    <viewports>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>1</channel>
+                                    <name><![CDATA[VSC1.YM]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>1</row>
+                                    <viewports>
+                                        <num_viewport>1</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>2</channel>
+                                    <name><![CDATA[VSC1.VC]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>2</row>
+                                    <viewports>
+                                        <num_viewport>1</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>3</channel>
+                                    <name><![CDATA[VSC1.I0]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>3</row>
+                                    <viewports>
+                                        <num_viewport>2</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>4</channel>
+                                    <name><![CDATA[VSC1.S0[0]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>4</row>
+                                    <viewports>
+                                        <num_viewport>3</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>5</channel>
+                                    <name><![CDATA[VSC1.SF[0]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
                                     <coupling>False</coupling>
                                     <row>5</row>
                                     <viewports>
@@ -446,10 +505,10 @@ SETTINGS_DIR = get_settings_dir_path()
                                </analog>
                                 <analog>
                                     <channel>6</channel>
-                                    <name><![CDATA[VSC1.REF_Q]]></name>
+                                    <name><![CDATA[VSC1.S0[1]]]></name>
                                     <is_locked>False</is_locked>
                                     <vertical_scale>Auto</vertical_scale>
-                                    <vertical_offset>0</vertical_offset>
+                                    <vertical_offset>0.0</vertical_offset>
                                     <coupling>False</coupling>
                                     <row>6</row>
                                     <viewports>
@@ -458,13 +517,186 @@ SETTINGS_DIR = get_settings_dir_path()
                                </analog>
                                 <analog>
                                     <channel>7</channel>
-                                    <name><![CDATA[test_flag_fb]]></name>
+                                    <name><![CDATA[VSC1.SF[1]]]></name>
                                     <is_locked>False</is_locked>
                                     <vertical_scale>Auto</vertical_scale>
-                                    <vertical_offset>0</vertical_offset>
+                                    <vertical_offset>0.0</vertical_offset>
                                     <coupling>False</coupling>
                                     <row>7</row>
                                     <viewports>
+                                        <num_viewport>4</num_viewport>
+                                   </viewports>
+                               </analog>
+                            </analog_signals>
+                            <digital_signals>
+                            </digital_signals>
+                            <virtual_signals>
+                            </virtual_signals>
+                            <trigger>
+                                <device>0</device>
+                                <is_force>False</is_force>
+                                <type>Analog</type>
+                                <source><![CDATA[test_flag_fb]]></source>
+                                <edge>Rising edge</edge>
+                                <treshold>0.0</treshold>
+                                <offset>0.0</offset>
+                                <useFirstTrigger>False</useFirstTrigger>
+                            </trigger>
+                            <plotting_options in_use="False">
+                                <subplots>
+                                    </subplots>
+                            </plotting_options>
+                        </capture>
+                        <capture name="TESTE: Transicao de Conectado para Ilhado">
+                            <time_interval>2.0</time_interval>
+                            <sample_rate>1000000.0</sample_rate>
+                            <background_color>white</background_color>
+                            <layout>Vertical</layout>
+                            <legend>True</legend>
+                            <analog_signals>
+                                <analog>
+                                    <channel>0</channel>
+                                    <name><![CDATA[test_flag_fb]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>0</row>
+                                    <viewports>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>1</channel>
+                                    <name><![CDATA[VSC1.YM]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>1</row>
+                                    <viewports>
+                                        <num_viewport>1</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>2</channel>
+                                    <name><![CDATA[VSC1.VC]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>2</row>
+                                    <viewports>
+                                        <num_viewport>1</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>3</channel>
+                                    <name><![CDATA[VSC1.I0]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>3</row>
+                                    <viewports>
+                                        <num_viewport>2</num_viewport>
+                                   </viewports>
+                               </analog>
+                            </analog_signals>
+                            <digital_signals>
+                            </digital_signals>
+                            <virtual_signals>
+                            </virtual_signals>
+                            <trigger>
+                                <device>0</device>
+                                <is_force>False</is_force>
+                                <type>Analog</type>
+                                <source><![CDATA[test_flag_fb]]></source>
+                                <edge>Rising edge</edge>
+                                <treshold>0.0</treshold>
+                                <offset>0.0</offset>
+                                <useFirstTrigger>False</useFirstTrigger>
+                            </trigger>
+                            <plotting_options in_use="False">
+                                <subplots>
+                                    </subplots>
+                            </plotting_options>
+                        </capture>
+                        <capture name="TESTE: Curto-circuito">
+                            <time_interval>0.25</time_interval>
+                            <sample_rate>1000000.0</sample_rate>
+                            <background_color>white</background_color>
+                            <layout>Vertical</layout>
+                            <legend>True</legend>
+                            <analog_signals>
+                                <analog>
+                                    <channel>0</channel>
+                                    <name><![CDATA[test_flag_fb]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>0</row>
+                                    <viewports>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>1</channel>
+                                    <name><![CDATA[VSC1.YM]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>1</row>
+                                    <viewports>
+                                        <num_viewport>1</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>2</channel>
+                                    <name><![CDATA[VSC1.VC]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>2</row>
+                                    <viewports>
+                                        <num_viewport>1</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>3</channel>
+                                    <name><![CDATA[VSC1.I0]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>3</row>
+                                    <viewports>
+                                        <num_viewport>2</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>4</channel>
+                                    <name><![CDATA[VSC1.SF[0]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>4</row>
+                                    <viewports>
+                                        <num_viewport>3</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>5</channel>
+                                    <name><![CDATA[VSC1.SF[1]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>5</row>
+                                    <viewports>
+                                        <num_viewport>3</num_viewport>
                                    </viewports>
                                </analog>
                             </analog_signals>
@@ -487,8 +719,8 @@ SETTINGS_DIR = get_settings_dir_path()
                                     </subplots>
                             </plotting_options>
                         </capture>
-                        <capture name="Test: Tied to Grid">
-                            <time_interval>5.0</time_interval>
+                        <capture name="TESTE: Modo Ilhado (+ Thetas)">
+                            <time_interval>2.0</time_interval>
                             <sample_rate>1000000.0</sample_rate>
                             <background_color>white</background_color>
                             <layout>Vertical</layout>
@@ -496,22 +728,21 @@ SETTINGS_DIR = get_settings_dir_path()
                             <analog_signals>
                                 <analog>
                                     <channel>0</channel>
-                                    <name><![CDATA[VSC1.REF_VC1]]></name>
+                                    <name><![CDATA[test_flag_fb]]></name>
                                     <is_locked>False</is_locked>
                                     <vertical_scale>Auto</vertical_scale>
-                                    <vertical_offset>0</vertical_offset>
+                                    <vertical_offset>0.0</vertical_offset>
                                     <coupling>False</coupling>
                                     <row>0</row>
                                     <viewports>
-                                        <num_viewport>1</num_viewport>
                                    </viewports>
                                </analog>
                                 <analog>
                                     <channel>1</channel>
-                                    <name><![CDATA[VSC1.VC]]></name>
+                                    <name><![CDATA[VSC1.YM]]></name>
                                     <is_locked>False</is_locked>
                                     <vertical_scale>Auto</vertical_scale>
-                                    <vertical_offset>0</vertical_offset>
+                                    <vertical_offset>0.0</vertical_offset>
                                     <coupling>False</coupling>
                                     <row>1</row>
                                     <viewports>
@@ -520,34 +751,34 @@ SETTINGS_DIR = get_settings_dir_path()
                                </analog>
                                 <analog>
                                     <channel>2</channel>
-                                    <name><![CDATA[VSC1.IL1]]></name>
+                                    <name><![CDATA[VSC1.VC]]></name>
                                     <is_locked>False</is_locked>
                                     <vertical_scale>Auto</vertical_scale>
-                                    <vertical_offset>0</vertical_offset>
+                                    <vertical_offset>0.0</vertical_offset>
                                     <coupling>False</coupling>
                                     <row>2</row>
+                                    <viewports>
+                                        <num_viewport>1</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>3</channel>
+                                    <name><![CDATA[VSC1.I0]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>3</row>
                                     <viewports>
                                         <num_viewport>2</num_viewport>
                                    </viewports>
                                </analog>
                                 <analog>
-                                    <channel>3</channel>
-                                    <name><![CDATA[VSC1.PF]]></name>
-                                    <is_locked>False</is_locked>
-                                    <vertical_scale>Auto</vertical_scale>
-                                    <vertical_offset>0</vertical_offset>
-                                    <coupling>False</coupling>
-                                    <row>3</row>
-                                    <viewports>
-                                        <num_viewport>3</num_viewport>
-                                   </viewports>
-                               </analog>
-                                <analog>
                                     <channel>4</channel>
-                                    <name><![CDATA[VSC1.QF]]></name>
+                                    <name><![CDATA[VSC1.THETA[0]]]></name>
                                     <is_locked>False</is_locked>
                                     <vertical_scale>Auto</vertical_scale>
-                                    <vertical_offset>0</vertical_offset>
+                                    <vertical_offset>0.0</vertical_offset>
                                     <coupling>False</coupling>
                                     <row>4</row>
                                     <viewports>
@@ -556,22 +787,22 @@ SETTINGS_DIR = get_settings_dir_path()
                                </analog>
                                 <analog>
                                     <channel>5</channel>
-                                    <name><![CDATA[VSC1.REF_P]]></name>
+                                    <name><![CDATA[VSC1.THETA[1]]]></name>
                                     <is_locked>False</is_locked>
                                     <vertical_scale>Auto</vertical_scale>
-                                    <vertical_offset>0</vertical_offset>
+                                    <vertical_offset>0.0</vertical_offset>
                                     <coupling>False</coupling>
                                     <row>5</row>
                                     <viewports>
-                                        <num_viewport>3</num_viewport>
+                                        <num_viewport>4</num_viewport>
                                    </viewports>
                                </analog>
                                 <analog>
                                     <channel>6</channel>
-                                    <name><![CDATA[VSC1.REF_Q]]></name>
+                                    <name><![CDATA[VSC1.THETA[2]]]></name>
                                     <is_locked>False</is_locked>
                                     <vertical_scale>Auto</vertical_scale>
-                                    <vertical_offset>0</vertical_offset>
+                                    <vertical_offset>0.0</vertical_offset>
                                     <coupling>False</coupling>
                                     <row>6</row>
                                     <viewports>
@@ -580,12 +811,801 @@ SETTINGS_DIR = get_settings_dir_path()
                                </analog>
                                 <analog>
                                     <channel>7</channel>
+                                    <name><![CDATA[VSC1.THETA[3]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>7</row>
+                                    <viewports>
+                                        <num_viewport>4</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>8</channel>
+                                    <name><![CDATA[VSC1.THETA[4]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>8</row>
+                                    <viewports>
+                                        <num_viewport>4</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>9</channel>
+                                    <name><![CDATA[VSC1.THETA[5]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>9</row>
+                                    <viewports>
+                                        <num_viewport>4</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>10</channel>
+                                    <name><![CDATA[VSC1.THETA[6]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>10</row>
+                                    <viewports>
+                                        <num_viewport>4</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>11</channel>
+                                    <name><![CDATA[VSC1.SF[0]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>11</row>
+                                    <viewports>
+                                        <num_viewport>3</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>12</channel>
+                                    <name><![CDATA[VSC1.SF[1]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>12</row>
+                                    <viewports>
+                                        <num_viewport>3</num_viewport>
+                                   </viewports>
+                               </analog>
+                            </analog_signals>
+                            <digital_signals>
+                            </digital_signals>
+                            <virtual_signals>
+                            </virtual_signals>
+                            <trigger>
+                                <device>0</device>
+                                <is_force>False</is_force>
+                                <type>Analog</type>
+                                <source><![CDATA[test_flag_fb]]></source>
+                                <edge>Rising edge</edge>
+                                <treshold>0.0</treshold>
+                                <offset>0.0</offset>
+                                <useFirstTrigger>False</useFirstTrigger>
+                            </trigger>
+                            <plotting_options in_use="False">
+                                <subplots>
+                                    </subplots>
+                            </plotting_options>
+                        </capture>
+                        <capture name="ART_TESTE 01: ILHADO ">
+                            <time_interval>5.0</time_interval>
+                            <sample_rate>1000000.0</sample_rate>
+                            <background_color>white</background_color>
+                            <layout>Vertical</layout>
+                            <legend>True</legend>
+                            <analog_signals>
+                                <analog>
+                                    <channel>0</channel>
+                                    <name><![CDATA[VSC1.YM_RMS]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>0</row>
+                                    <viewports>
+                                        <num_viewport>1</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>1</channel>
+                                    <name><![CDATA[VSC1.VC_RMS]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>1</row>
+                                    <viewports>
+                                        <num_viewport>1</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>2</channel>
+                                    <name><![CDATA[VSC1.E_TR]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>2</row>
+                                    <viewports>
+                                        <num_viewport>2</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>3</channel>
+                                    <name><![CDATA[VSC1.SF[0]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>3</row>
+                                    <viewports>
+                                        <num_viewport>3</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>4</channel>
+                                    <name><![CDATA[VSC1.SF[1]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>4</row>
+                                    <viewports>
+                                        <num_viewport>3</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>5</channel>
+                                    <name><![CDATA[VSC1.THETA[0]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>5</row>
+                                    <viewports>
+                                        <num_viewport>4</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>6</channel>
+                                    <name><![CDATA[VSC1.THETA[1]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>6</row>
+                                    <viewports>
+                                        <num_viewport>4</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>7</channel>
+                                    <name><![CDATA[VSC1.THETA[2]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>7</row>
+                                    <viewports>
+                                        <num_viewport>4</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>8</channel>
+                                    <name><![CDATA[VSC1.THETA[3]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>8</row>
+                                    <viewports>
+                                        <num_viewport>4</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>9</channel>
+                                    <name><![CDATA[VSC1.THETA[4]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>9</row>
+                                    <viewports>
+                                        <num_viewport>4</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>10</channel>
+                                    <name><![CDATA[VSC1.THETA[5]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>10</row>
+                                    <viewports>
+                                        <num_viewport>4</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>11</channel>
+                                    <name><![CDATA[VSC1.THETA[6]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>11</row>
+                                    <viewports>
+                                        <num_viewport>4</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>12</channel>
                                     <name><![CDATA[test_flag_fb]]></name>
                                     <is_locked>False</is_locked>
                                     <vertical_scale>Auto</vertical_scale>
-                                    <vertical_offset>0</vertical_offset>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>12</row>
+                                    <viewports>
+                                   </viewports>
+                               </analog>
+                            </analog_signals>
+                            <digital_signals>
+                            </digital_signals>
+                            <virtual_signals>
+                            </virtual_signals>
+                            <trigger>
+                                <device>0</device>
+                                <is_force>False</is_force>
+                                <type>Analog</type>
+                                <source><![CDATA[test_flag_fb]]></source>
+                                <edge>Rising edge</edge>
+                                <treshold>0.0</treshold>
+                                <offset>0.0</offset>
+                                <useFirstTrigger>False</useFirstTrigger>
+                            </trigger>
+                            <plotting_options in_use="False">
+                                <subplots>
+                                    </subplots>
+                            </plotting_options>
+                        </capture>
+                        <capture name="ART_TESTE 02: TRANSICAO ILHADO PARA CONECTADO">
+                            <time_interval>1.0</time_interval>
+                            <sample_rate>1000000.0</sample_rate>
+                            <background_color>white</background_color>
+                            <layout>Vertical</layout>
+                            <legend>True</legend>
+                            <analog_signals>
+                                <analog>
+                                    <channel>0</channel>
+                                    <name><![CDATA[VSC1.YM_RMS]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>0</row>
+                                    <viewports>
+                                        <num_viewport>1</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>1</channel>
+                                    <name><![CDATA[VSC1.VC_RMS]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>1</row>
+                                    <viewports>
+                                        <num_viewport>1</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>2</channel>
+                                    <name><![CDATA[VSC1.E_TR]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>2</row>
+                                    <viewports>
+                                        <num_viewport>2</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>3</channel>
+                                    <name><![CDATA[VSC1.SF[0]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>3</row>
+                                    <viewports>
+                                        <num_viewport>3</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>4</channel>
+                                    <name><![CDATA[VSC1.SF[1]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>4</row>
+                                    <viewports>
+                                        <num_viewport>3</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>5</channel>
+                                    <name><![CDATA[VSC1.THETA[0]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>5</row>
+                                    <viewports>
+                                        <num_viewport>4</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>6</channel>
+                                    <name><![CDATA[VSC1.THETA[1]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>6</row>
+                                    <viewports>
+                                        <num_viewport>4</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>7</channel>
+                                    <name><![CDATA[VSC1.THETA[2]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
                                     <coupling>False</coupling>
                                     <row>7</row>
+                                    <viewports>
+                                        <num_viewport>4</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>8</channel>
+                                    <name><![CDATA[VSC1.THETA[3]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>8</row>
+                                    <viewports>
+                                        <num_viewport>4</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>9</channel>
+                                    <name><![CDATA[VSC1.THETA[4]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>9</row>
+                                    <viewports>
+                                        <num_viewport>4</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>10</channel>
+                                    <name><![CDATA[VSC1.THETA[5]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>10</row>
+                                    <viewports>
+                                        <num_viewport>4</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>11</channel>
+                                    <name><![CDATA[VSC1.THETA[6]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>11</row>
+                                    <viewports>
+                                        <num_viewport>4</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>12</channel>
+                                    <name><![CDATA[test_flag_fb]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>12</row>
+                                    <viewports>
+                                   </viewports>
+                               </analog>
+                            </analog_signals>
+                            <digital_signals>
+                            </digital_signals>
+                            <virtual_signals>
+                            </virtual_signals>
+                            <trigger>
+                                <device>0</device>
+                                <is_force>False</is_force>
+                                <type>Analog</type>
+                                <source><![CDATA[test_flag_fb]]></source>
+                                <edge>Rising edge</edge>
+                                <treshold>0.0</treshold>
+                                <offset>0.0</offset>
+                                <useFirstTrigger>False</useFirstTrigger>
+                            </trigger>
+                            <plotting_options in_use="False">
+                                <subplots>
+                                    </subplots>
+                            </plotting_options>
+                        </capture>
+                        <capture name="ART_TESTE 03: CONECTADO">
+                            <time_interval>5.0</time_interval>
+                            <sample_rate>1000000.0</sample_rate>
+                            <background_color>white</background_color>
+                            <layout>Vertical</layout>
+                            <legend>True</legend>
+                            <analog_signals>
+                                <analog>
+                                    <channel>0</channel>
+                                    <name><![CDATA[VSC1.YM_RMS]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>0</row>
+                                    <viewports>
+                                        <num_viewport>1</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>1</channel>
+                                    <name><![CDATA[VSC1.VC_RMS]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>1</row>
+                                    <viewports>
+                                        <num_viewport>1</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>2</channel>
+                                    <name><![CDATA[VSC1.E_TR]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>2</row>
+                                    <viewports>
+                                        <num_viewport>2</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>3</channel>
+                                    <name><![CDATA[VSC1.SF[0]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>3</row>
+                                    <viewports>
+                                        <num_viewport>3</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>4</channel>
+                                    <name><![CDATA[VSC1.SF[1]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>4</row>
+                                    <viewports>
+                                        <num_viewport>3</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>5</channel>
+                                    <name><![CDATA[VSC1.THETA[0]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>5</row>
+                                    <viewports>
+                                        <num_viewport>4</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>6</channel>
+                                    <name><![CDATA[VSC1.THETA[1]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>6</row>
+                                    <viewports>
+                                        <num_viewport>4</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>7</channel>
+                                    <name><![CDATA[VSC1.THETA[2]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>7</row>
+                                    <viewports>
+                                        <num_viewport>4</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>8</channel>
+                                    <name><![CDATA[VSC1.THETA[3]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>8</row>
+                                    <viewports>
+                                        <num_viewport>4</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>9</channel>
+                                    <name><![CDATA[VSC1.THETA[4]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>9</row>
+                                    <viewports>
+                                        <num_viewport>4</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>10</channel>
+                                    <name><![CDATA[VSC1.THETA[5]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>10</row>
+                                    <viewports>
+                                        <num_viewport>4</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>11</channel>
+                                    <name><![CDATA[VSC1.THETA[6]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>11</row>
+                                    <viewports>
+                                        <num_viewport>4</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>12</channel>
+                                    <name><![CDATA[test_flag_fb]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>12</row>
+                                    <viewports>
+                                   </viewports>
+                               </analog>
+                            </analog_signals>
+                            <digital_signals>
+                            </digital_signals>
+                            <virtual_signals>
+                            </virtual_signals>
+                            <trigger>
+                                <device>0</device>
+                                <is_force>False</is_force>
+                                <type>Analog</type>
+                                <source><![CDATA[test_flag_fb]]></source>
+                                <edge>Rising edge</edge>
+                                <treshold>0.0</treshold>
+                                <offset>0.0</offset>
+                                <useFirstTrigger>False</useFirstTrigger>
+                            </trigger>
+                            <plotting_options in_use="False">
+                                <subplots>
+                                    </subplots>
+                            </plotting_options>
+                        </capture>
+                        <capture name="ART_TESTE 04: TRANSICAO CONECTADO PARA ILHADO">
+                            <time_interval>1.0</time_interval>
+                            <sample_rate>1000000.0</sample_rate>
+                            <background_color>white</background_color>
+                            <layout>Vertical</layout>
+                            <legend>True</legend>
+                            <analog_signals>
+                                <analog>
+                                    <channel>0</channel>
+                                    <name><![CDATA[VSC1.YM_RMS]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>0</row>
+                                    <viewports>
+                                        <num_viewport>1</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>1</channel>
+                                    <name><![CDATA[VSC1.VC_RMS]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>1</row>
+                                    <viewports>
+                                        <num_viewport>1</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>2</channel>
+                                    <name><![CDATA[VSC1.E_TR]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>2</row>
+                                    <viewports>
+                                        <num_viewport>2</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>3</channel>
+                                    <name><![CDATA[VSC1.SF[0]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>3</row>
+                                    <viewports>
+                                        <num_viewport>3</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>4</channel>
+                                    <name><![CDATA[VSC1.SF[1]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>4</row>
+                                    <viewports>
+                                        <num_viewport>3</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>5</channel>
+                                    <name><![CDATA[VSC1.THETA[0]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>5</row>
+                                    <viewports>
+                                        <num_viewport>4</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>6</channel>
+                                    <name><![CDATA[VSC1.THETA[1]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>6</row>
+                                    <viewports>
+                                        <num_viewport>4</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>7</channel>
+                                    <name><![CDATA[VSC1.THETA[2]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>7</row>
+                                    <viewports>
+                                        <num_viewport>4</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>8</channel>
+                                    <name><![CDATA[VSC1.THETA[3]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>8</row>
+                                    <viewports>
+                                        <num_viewport>4</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>9</channel>
+                                    <name><![CDATA[VSC1.THETA[4]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>9</row>
+                                    <viewports>
+                                        <num_viewport>4</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>10</channel>
+                                    <name><![CDATA[VSC1.THETA[5]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>10</row>
+                                    <viewports>
+                                        <num_viewport>4</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>11</channel>
+                                    <name><![CDATA[VSC1.THETA[6]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>11</row>
+                                    <viewports>
+                                        <num_viewport>4</num_viewport>
+                                   </viewports>
+                               </analog>
+                                <analog>
+                                    <channel>12</channel>
+                                    <name><![CDATA[test_flag_fb]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>12</row>
                                     <viewports>
                                    </viewports>
                                </analog>
@@ -614,15 +1634,15 @@ SETTINGS_DIR = get_settings_dir_path()
                             <layout>Vertical</layout>
                             <legend>True</legend>
                             <show_viewports>1</show_viewports>
-                            <decimation>6</decimation>
+                            <decimation>6.0</decimation>
                             <time_base>0.005</time_base>
                             <analog_signals>
                                 <analog>
                                     <channel>0</channel>
-                                    <name><![CDATA[VSC1.REF_VC]]></name>
+                                    <name><![CDATA[MGCC.Vpcc]]></name>
                                     <is_locked>False</is_locked>
                                     <vertical_scale>Auto</vertical_scale>
-                                    <vertical_offset>0</vertical_offset>
+                                    <vertical_offset>0.0</vertical_offset>
                                     <coupling>False</coupling>
                                     <row>0</row>
                                     <viewports>
@@ -631,10 +1651,10 @@ SETTINGS_DIR = get_settings_dir_path()
                                </analog>
                                 <analog>
                                     <channel>1</channel>
-                                    <name><![CDATA[MGCC.Vpcc]]></name>
+                                    <name><![CDATA[VSC1.VC]]></name>
                                     <is_locked>False</is_locked>
                                     <vertical_scale>Auto</vertical_scale>
-                                    <vertical_offset>0</vertical_offset>
+                                    <vertical_offset>0.0</vertical_offset>
                                     <coupling>False</coupling>
                                     <row>1</row>
                                     <viewports>
@@ -648,10 +1668,10 @@ SETTINGS_DIR = get_settings_dir_path()
                                 <device>0</device>
                                 <is_force>False</is_force>
                                 <type>Analog</type>
-                                <source>VSC1.REF_VC</source>
+                                <source>MGCC.Vpcc</source>
                                 <edge>Rising edge</edge>
                                 <treshold>0.0</treshold>
-                                <offset>50</offset>
+                                <offset>50.0</offset>
                                 <useFirstTrigger>False</useFirstTrigger>
                             </trigger>
                         </scope>
@@ -673,10 +1693,10 @@ SETTINGS_DIR = get_settings_dir_path()
                         <analog_signals>
                             <analog>
                                     <channel>0</channel>
-                                    <name><![CDATA[VSC1.REF_VC1]]></name>
+                                    <name><![CDATA[VSC1.YM_RMS]]></name>
                                     <is_locked>False</is_locked>
                                     <vertical_scale>Auto</vertical_scale>
-                                    <vertical_offset>0</vertical_offset>
+                                    <vertical_offset>0.0</vertical_offset>
                                     <coupling>False</coupling>
                                     <row>0</row>
                                     <viewports>
@@ -685,10 +1705,10 @@ SETTINGS_DIR = get_settings_dir_path()
                                </analog>
                             <analog>
                                     <channel>1</channel>
-                                    <name><![CDATA[VSC1.VC]]></name>
+                                    <name><![CDATA[VSC1.VC_RMS]]></name>
                                     <is_locked>False</is_locked>
                                     <vertical_scale>Auto</vertical_scale>
-                                    <vertical_offset>0</vertical_offset>
+                                    <vertical_offset>0.0</vertical_offset>
                                     <coupling>False</coupling>
                                     <row>1</row>
                                     <viewports>
@@ -697,10 +1717,10 @@ SETTINGS_DIR = get_settings_dir_path()
                                </analog>
                             <analog>
                                     <channel>2</channel>
-                                    <name><![CDATA[VSC1.IL1]]></name>
+                                    <name><![CDATA[VSC1.E_TR]]></name>
                                     <is_locked>False</is_locked>
                                     <vertical_scale>Auto</vertical_scale>
-                                    <vertical_offset>0</vertical_offset>
+                                    <vertical_offset>0.0</vertical_offset>
                                     <coupling>False</coupling>
                                     <row>2</row>
                                     <viewports>
@@ -709,10 +1729,10 @@ SETTINGS_DIR = get_settings_dir_path()
                                </analog>
                             <analog>
                                     <channel>3</channel>
-                                    <name><![CDATA[VSC1.PF]]></name>
+                                    <name><![CDATA[VSC1.SF[0]]]></name>
                                     <is_locked>False</is_locked>
                                     <vertical_scale>Auto</vertical_scale>
-                                    <vertical_offset>0</vertical_offset>
+                                    <vertical_offset>0.0</vertical_offset>
                                     <coupling>False</coupling>
                                     <row>3</row>
                                     <viewports>
@@ -721,34 +1741,34 @@ SETTINGS_DIR = get_settings_dir_path()
                                </analog>
                             <analog>
                                     <channel>4</channel>
-                                    <name><![CDATA[VSC1.QF]]></name>
+                                    <name><![CDATA[VSC1.SF[1]]]></name>
                                     <is_locked>False</is_locked>
                                     <vertical_scale>Auto</vertical_scale>
-                                    <vertical_offset>0</vertical_offset>
+                                    <vertical_offset>0.0</vertical_offset>
                                     <coupling>False</coupling>
                                     <row>4</row>
-                                    <viewports>
-                                        <num_viewport>4</num_viewport>
-                                   </viewports>
-                               </analog>
-                            <analog>
-                                    <channel>5</channel>
-                                    <name><![CDATA[VSC1.REF_P]]></name>
-                                    <is_locked>False</is_locked>
-                                    <vertical_scale>Auto</vertical_scale>
-                                    <vertical_offset>0</vertical_offset>
-                                    <coupling>False</coupling>
-                                    <row>5</row>
                                     <viewports>
                                         <num_viewport>3</num_viewport>
                                    </viewports>
                                </analog>
                             <analog>
-                                    <channel>6</channel>
-                                    <name><![CDATA[VSC1.REF_Q]]></name>
+                                    <channel>5</channel>
+                                    <name><![CDATA[VSC1.THETA[0]]]></name>
                                     <is_locked>False</is_locked>
                                     <vertical_scale>Auto</vertical_scale>
-                                    <vertical_offset>0</vertical_offset>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>5</row>
+                                    <viewports>
+                                        <num_viewport>4</num_viewport>
+                                   </viewports>
+                               </analog>
+                            <analog>
+                                    <channel>6</channel>
+                                    <name><![CDATA[VSC1.THETA[1]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
                                     <coupling>False</coupling>
                                     <row>6</row>
                                     <viewports>
@@ -757,12 +1777,72 @@ SETTINGS_DIR = get_settings_dir_path()
                                </analog>
                             <analog>
                                     <channel>7</channel>
+                                    <name><![CDATA[VSC1.THETA[2]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>7</row>
+                                    <viewports>
+                                        <num_viewport>4</num_viewport>
+                                   </viewports>
+                               </analog>
+                            <analog>
+                                    <channel>8</channel>
+                                    <name><![CDATA[VSC1.THETA[3]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>8</row>
+                                    <viewports>
+                                        <num_viewport>4</num_viewport>
+                                   </viewports>
+                               </analog>
+                            <analog>
+                                    <channel>9</channel>
+                                    <name><![CDATA[VSC1.THETA[4]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>9</row>
+                                    <viewports>
+                                        <num_viewport>4</num_viewport>
+                                   </viewports>
+                               </analog>
+                            <analog>
+                                    <channel>10</channel>
+                                    <name><![CDATA[VSC1.THETA[5]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>10</row>
+                                    <viewports>
+                                        <num_viewport>4</num_viewport>
+                                   </viewports>
+                               </analog>
+                            <analog>
+                                    <channel>11</channel>
+                                    <name><![CDATA[VSC1.THETA[6]]]></name>
+                                    <is_locked>False</is_locked>
+                                    <vertical_scale>Auto</vertical_scale>
+                                    <vertical_offset>0.0</vertical_offset>
+                                    <coupling>False</coupling>
+                                    <row>11</row>
+                                    <viewports>
+                                        <num_viewport>4</num_viewport>
+                                   </viewports>
+                               </analog>
+                            <analog>
+                                    <channel>12</channel>
                                     <name><![CDATA[test_flag_fb]]></name>
                                     <is_locked>False</is_locked>
                                     <vertical_scale>Auto</vertical_scale>
-                                    <vertical_offset>0</vertical_offset>
+                                    <vertical_offset>0.0</vertical_offset>
                                     <coupling>False</coupling>
-                                    <row>7</row>
+                                    <row>12</row>
                                     <viewports>
                                    </viewports>
                                </analog>
@@ -778,18 +1858,18 @@ SETTINGS_DIR = get_settings_dir_path()
                         <trigger>
                             <mode>Auto</mode>
                             <type>Analog</type>
-                            <source>VSC1.REF_VC</source>
+                            <source>MGCC.Vpcc</source>
                             <edge>Rising edge</edge>
                             <treshold>0.0</treshold>
-                            <offset>50</offset>
+                            <offset>50.0</offset>
                         </trigger>
                          <analog_signals>
                             <analog>
                                     <channel>0</channel>
-                                    <name><![CDATA[VSC1.REF_VC]]></name>
+                                    <name><![CDATA[MGCC.Vpcc]]></name>
                                     <is_locked>False</is_locked>
                                     <vertical_scale>Auto</vertical_scale>
-                                    <vertical_offset>0</vertical_offset>
+                                    <vertical_offset>0.0</vertical_offset>
                                     <coupling>False</coupling>
                                     <row>0</row>
                                     <viewports>
@@ -798,10 +1878,10 @@ SETTINGS_DIR = get_settings_dir_path()
                                </analog>
                             <analog>
                                     <channel>1</channel>
-                                    <name><![CDATA[MGCC.Vpcc]]></name>
+                                    <name><![CDATA[VSC1.VC]]></name>
                                     <is_locked>False</is_locked>
                                     <vertical_scale>Auto</vertical_scale>
-                                    <vertical_offset>0</vertical_offset>
+                                    <vertical_offset>0.0</vertical_offset>
                                     <coupling>False</coupling>
                                     <row>1</row>
                                     <viewports>
@@ -825,7 +1905,7 @@ SETTINGS_DIR = get_settings_dir_path()
                 <name><![CDATA[VSC1]]></name>
                 <type>Group</type>
                 <description><![CDATA[]]></description>
-                <components_ids><![CDATA[['fac015720d9f11efad35e39b90c1cbdb', '10ec9d9c0da011efa222e39b90c1cbdb', 'ff001dec0e4311ef8747e39b90c1cbdb', '0cad7f000e4411efa860e39b90c1cbdb', '09169653273611ef8e40e22df200c506', '09169654273611ef9bcde22df200c506', '11132455273611efbf30e22df200c506']]]></components_ids>
+                <components_ids><![CDATA[['fac015720d9f11efad35e39b90c1cbdb', '10ec9d9c0da011efa222e39b90c1cbdb', 'ff001dec0e4311ef8747e39b90c1cbdb', '0cad7f000e4411efa860e39b90c1cbdb']]]></components_ids>
                 <canvas_bg_color>#ffffff</canvas_bg_color>
                 <initialization_code><![CDATA[# NOTE: Variables and functions defined here will be
 # available for use in all Macro and Expression scripts of the components owned by this widget.
@@ -833,10 +1913,10 @@ SETTINGS_DIR = get_settings_dir_path()
 # HIL API is imported as 'hil'
 ]]></initialization_code>
                 <widget_settings>
-                    <x>1632</x>
-                    <y>304</y>
+                    <x>1640</x>
+                    <y>440</y>
                     <width>376</width>
-                    <height>280</height>
+                    <height>144</height>
                     <appearance><![CDATA[Raised]]></appearance>
                     <collapsed>False</collapsed>
                     <hierarchy_position>1</hierarchy_position>
@@ -872,8 +1952,8 @@ displayValue = 0.0
                 <updateRate>500</updateRate>
                 <scaling_factor>0.001</scaling_factor>
                 <widget_settings>
-                    <x>176</x>
-                    <y>152</y>
+                    <x>184</x>
+                    <y>16</y>
                     <width>168</width>
                     <height>56</height>
                     <appearance><![CDATA[Flat]]></appearance>
@@ -915,7 +1995,7 @@ displayValue = 0.0
                 <scaling_factor>0.001</scaling_factor>
                 <widget_settings>
                     <x>184</x>
-                    <y>184</y>
+                    <y>56</y>
                     <width>168</width>
                     <height>56</height>
                     <appearance><![CDATA[Flat]]></appearance>
@@ -978,7 +2058,7 @@ displayValue = 0.0
                 <scaling_factor>1.0</scaling_factor>
                 <widget_settings>
                     <x>8</x>
-                    <y>144</y>
+                    <y>16</y>
                     <width>168</width>
                     <height>56</height>
                     <appearance><![CDATA[Flat]]></appearance>
@@ -1020,7 +2100,7 @@ displayValue = 0.0
                 <scaling_factor>1.0</scaling_factor>
                 <widget_settings>
                     <x>8</x>
-                    <y>184</y>
+                    <y>56</y>
                     <width>168</width>
                     <height>56</height>
                     <appearance><![CDATA[Flat]]></appearance>
@@ -1050,9 +2130,9 @@ displayValue = 0.0
 ]]></initialization_code>
                 <widget_settings>
                     <x>2592</x>
-                    <y>328</y>
+                    <y>320</y>
                     <width>376</width>
-                    <height>272</height>
+                    <height>288</height>
                     <appearance><![CDATA[Raised]]></appearance>
                     <collapsed>False</collapsed>
                     <hierarchy_position>1</hierarchy_position>
@@ -1204,7 +2284,7 @@ widgetValue = hil.model_read('MGCC.Pref')
                 <step>0.1</step>
                 <widget_settings>
                     <x>40</x>
-                    <y>120</y>
+                    <y>136</y>
                     <width>288</width>
                     <height>48</height>
                     <appearance><![CDATA[Flat]]></appearance>
@@ -1272,7 +2352,7 @@ widgetValue = hil.model_read('MGCC.Qref')
                 <step>0.1</step>
                 <widget_settings>
                     <x>40</x>
-                    <y>176</y>
+                    <y>192</y>
                     <width>288</width>
                     <height>48</height>
                     <appearance><![CDATA[Flat]]></appearance>
@@ -1316,7 +2396,7 @@ displayValue = textDisplayData
                 <updateRate>500</updateRate>
                 <widget_settings>
                     <x>80</x>
-                    <y>56</y>
+                    <y>64</y>
                     <width>200</width>
                     <height>56</height>
                     <appearance><![CDATA[Raised]]></appearance>
@@ -1327,134 +2407,11 @@ displayValue = textDisplayData
                 </widget_settings>
             </component_data>
         <component_data>
-                <id>09169653273611ef8e40e22df200c506</id>
-                <name><![CDATA[Button5]]></name>
-                <type>MacroButton</type>
-                <description><![CDATA[]]></description>
-                <on_use_code active="True"><![CDATA[# HIL API is imported as 'hil'
-# SCADA API is imported as 'panel'
-# SCADA API constants are imported as 'api_const'
-# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
-# This object can be used as an argument in SCADA API functions.
-
-hil.set_scada_input_value('MGCC.VSC1_enable', 1)]]></on_use_code>
-                <on_start_code active="True"><![CDATA[# NOTE: The code specified in this handler will be executed on simulation start.
-# NOTE: Variables specified here will be available in other handlers.
-# HIL API is imported as 'hil'
-# SCADA API is imported as 'panel'
-# SCADA API constants are imported as 'api_const'
-# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
-# This object can be used as an argument in SCADA API functions.
-hil.set_scada_input_value('MGCC.VSC1_enable', 1)]]></on_start_code>
-                <on_stop_code active="False"><![CDATA[# NOTE: The code specified in this handler will be executed after simulation is stopped.
-# HIL API is imported as 'hil'
-# SCADA API is imported as 'panel'
-# SCADA API constants are imported as 'api_const'
-# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
-# This object can be used as an argument in SCADA API functions.]]></on_stop_code>
-                <on_start_code_source><![CDATA[Custom code]]></on_start_code_source>
-                <widget_settings>
-                    <x>40</x>
-                    <y>16</y>
-                    <width>128</width>
-                    <height>40</height>
-                    <appearance><![CDATA[Raised]]></appearance>
-                    <hierarchy_position><![CDATA[2]]></hierarchy_position>
-                    <is_background><![CDATA[False]]></is_background>
-                    <label><![CDATA[Enable VSC1]]></label>
-                    <use_label>True</use_label>
-                </widget_settings>
-            </component_data>
-        <component_data>
-                <id>09169654273611ef9bcde22df200c506</id>
-                <name><![CDATA[Button6]]></name>
-                <type>MacroButton</type>
-                <description><![CDATA[]]></description>
-                <on_use_code active="True"><![CDATA[# HIL API is imported as 'hil'
-# SCADA API is imported as 'panel'
-# SCADA API constants are imported as 'api_const'
-# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
-# This object can be used as an argument in SCADA API functions.
-
-hil.set_scada_input_value('MGCC.VSC1_enable', 0)]]></on_use_code>
-                <on_start_code active="False"><![CDATA[# NOTE: The code specified in this handler will be executed on simulation start.
-# NOTE: Variables specified here will be available in other handlers.
-# HIL API is imported as 'hil'
-# SCADA API is imported as 'panel'
-# SCADA API constants are imported as 'api_const'
-# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
-# This object can be used as an argument in SCADA API functions.]]></on_start_code>
-                <on_stop_code active="False"><![CDATA[# NOTE: The code specified in this handler will be executed after simulation is stopped.
-# HIL API is imported as 'hil'
-# SCADA API is imported as 'panel'
-# SCADA API constants are imported as 'api_const'
-# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
-# This object can be used as an argument in SCADA API functions.
-
-]]></on_stop_code>
-                <on_start_code_source><![CDATA[Custom code]]></on_start_code_source>
-                <widget_settings>
-                    <x>184</x>
-                    <y>16</y>
-                    <width>128</width>
-                    <height>40</height>
-                    <appearance><![CDATA[Raised]]></appearance>
-                    <hierarchy_position><![CDATA[2]]></hierarchy_position>
-                    <is_background><![CDATA[False]]></is_background>
-                    <label><![CDATA[Disable VSC1]]></label>
-                    <use_label>True</use_label>
-                </widget_settings>
-            </component_data>
-        <component_data>
-                <id>11132455273611efbf30e22df200c506</id>
-                <name><![CDATA[Load_Single-phase Variable Load_Enable_fb]]></name>
-                <type>TextDisplay</type>
-                <description><![CDATA[]]></description>
-                <code><![CDATA[# HIL API is imported as 'hil'
-# NOTE: Only read functions are available from the HIL API
-
-# SCADA API is imported as 'panel'
-# SCADA API constants are imported as 'api_const'
-# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
-# This object can be used as an argument in SCADA API functions.
-
-vsc1_status = hil.model_read('MGCC.VSC1_enable');
-
-if(vsc1_status == 1):
-    str2display = 'Enabled';
-else:
-    str2display = 'Disabled';
-
-# specify Text Display options ('text' part is mandatory)
-textDisplayData = {
-    # label text
-    "text": str2display,
-    # text color: 'red', 'green', 'blue', 'orange', 'black'
-    "text_color": 'black',
-}
-
-# mandatory variable used for storing value that will be displayed
-displayValue = textDisplayData
-]]></code>
-                <updateRate>500</updateRate>
-                <widget_settings>
-                    <x>72</x>
-                    <y>72</y>
-                    <width>200</width>
-                    <height>56</height>
-                    <appearance><![CDATA[Raised]]></appearance>
-                    <hierarchy_position><![CDATA[2]]></hierarchy_position>
-                    <is_background><![CDATA[False]]></is_background>
-                    <label><![CDATA[VSC1 Status]]></label>
-                    <use_label>True</use_label>
-                </widget_settings>
-            </component_data>
-        <component_data>
                 <id>73ad8930273611efa816e22df200c506</id>
                 <name><![CDATA[VSC7]]></name>
                 <type>Group</type>
                 <description><![CDATA[]]></description>
-                <components_ids><![CDATA[['73adb06a273611efb8f7e22df200c506', '73add7a9273611efb282e22df200c506', '73add7aa273611ef8c0ee22df200c506', '73add7ab273611ef9001e22df200c506', '73add7ac273611ef9f04e22df200c506', '73add7ad273611efbfe3e22df200c506', '73add7ae273611efb17be22df200c506']]]></components_ids>
+                <components_ids><![CDATA[['73adb06a273611efb8f7e22df200c506', '73add7a9273611efb282e22df200c506', '73add7aa273611ef8c0ee22df200c506', '73add7ab273611ef9001e22df200c506']]]></components_ids>
                 <canvas_bg_color>#ffffff</canvas_bg_color>
                 <initialization_code><![CDATA[# NOTE: Variables and functions defined here will be
 # available for use in all Macro and Expression scripts of the components owned by this widget.
@@ -1462,10 +2419,10 @@ displayValue = textDisplayData
 # HIL API is imported as 'hil'
 ]]></initialization_code>
                 <widget_settings>
-                    <x>1632</x>
-                    <y>1072</y>
+                    <x>1640</x>
+                    <y>1080</y>
                     <width>376</width>
-                    <height>280</height>
+                    <height>144</height>
                     <appearance><![CDATA[Raised]]></appearance>
                     <collapsed>False</collapsed>
                     <hierarchy_position>1</hierarchy_position>
@@ -1502,7 +2459,7 @@ displayValue = 0.0
                 <scaling_factor>0.001</scaling_factor>
                 <widget_settings>
                     <x>184</x>
-                    <y>144</y>
+                    <y>16</y>
                     <width>168</width>
                     <height>56</height>
                     <appearance><![CDATA[Flat]]></appearance>
@@ -1544,7 +2501,7 @@ displayValue = 0.0
                 <scaling_factor>0.001</scaling_factor>
                 <widget_settings>
                     <x>184</x>
-                    <y>184</y>
+                    <y>56</y>
                     <width>168</width>
                     <height>56</height>
                     <appearance><![CDATA[Flat]]></appearance>
@@ -1586,7 +2543,7 @@ displayValue = 0.0
                 <scaling_factor>1.0</scaling_factor>
                 <widget_settings>
                     <x>8</x>
-                    <y>144</y>
+                    <y>16</y>
                     <width>168</width>
                     <height>56</height>
                     <appearance><![CDATA[Flat]]></appearance>
@@ -1628,7 +2585,7 @@ displayValue = 0.0
                 <scaling_factor>1.0</scaling_factor>
                 <widget_settings>
                     <x>8</x>
-                    <y>184</y>
+                    <y>56</y>
                     <width>168</width>
                     <height>56</height>
                     <appearance><![CDATA[Flat]]></appearance>
@@ -1645,137 +2602,11 @@ displayValue = 0.0
                 </advance_widget_settings>
             </component_data>
         <component_data>
-                <id>73add7ac273611ef9f04e22df200c506</id>
-                <name><![CDATA[Button5]]></name>
-                <type>MacroButton</type>
-                <description><![CDATA[]]></description>
-                <on_use_code active="True"><![CDATA[# HIL API is imported as 'hil'
-# SCADA API is imported as 'panel'
-# SCADA API constants are imported as 'api_const'
-# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
-# This object can be used as an argument in SCADA API functions.
-
-hil.set_scada_input_value('MGCC.VSC2_enable', 1)]]></on_use_code>
-                <on_start_code active="True"><![CDATA[# NOTE: The code specified in this handler will be executed on simulation start.
-# NOTE: Variables specified here will be available in other handlers.
-# HIL API is imported as 'hil'
-# SCADA API is imported as 'panel'
-# SCADA API constants are imported as 'api_const'
-# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
-# This object can be used as an argument in SCADA API functions.
-hil.set_scada_input_value('MGCC.VSC2_enable', 1)]]></on_start_code>
-                <on_stop_code active="False"><![CDATA[# NOTE: The code specified in this handler will be executed after simulation is stopped.
-# HIL API is imported as 'hil'
-# SCADA API is imported as 'panel'
-# SCADA API constants are imported as 'api_const'
-# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
-# This object can be used as an argument in SCADA API functions.
-
-]]></on_stop_code>
-                <on_start_code_source><![CDATA[Custom code]]></on_start_code_source>
-                <widget_settings>
-                    <x>40</x>
-                    <y>16</y>
-                    <width>128</width>
-                    <height>40</height>
-                    <appearance><![CDATA[Raised]]></appearance>
-                    <hierarchy_position><![CDATA[2]]></hierarchy_position>
-                    <is_background><![CDATA[False]]></is_background>
-                    <label><![CDATA[Enable VSC2]]></label>
-                    <use_label>True</use_label>
-                </widget_settings>
-            </component_data>
-        <component_data>
-                <id>73add7ad273611efbfe3e22df200c506</id>
-                <name><![CDATA[Button6]]></name>
-                <type>MacroButton</type>
-                <description><![CDATA[]]></description>
-                <on_use_code active="True"><![CDATA[# HIL API is imported as 'hil'
-# SCADA API is imported as 'panel'
-# SCADA API constants are imported as 'api_const'
-# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
-# This object can be used as an argument in SCADA API functions.
-
-hil.set_scada_input_value('MGCC.VSC2_enable', 0)]]></on_use_code>
-                <on_start_code active="False"><![CDATA[# NOTE: The code specified in this handler will be executed on simulation start.
-# NOTE: Variables specified here will be available in other handlers.
-# HIL API is imported as 'hil'
-# SCADA API is imported as 'panel'
-# SCADA API constants are imported as 'api_const'
-# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
-# This object can be used as an argument in SCADA API functions.
-]]></on_start_code>
-                <on_stop_code active="False"><![CDATA[# NOTE: The code specified in this handler will be executed after simulation is stopped.
-# HIL API is imported as 'hil'
-# SCADA API is imported as 'panel'
-# SCADA API constants are imported as 'api_const'
-# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
-# This object can be used as an argument in SCADA API functions.
-
-]]></on_stop_code>
-                <on_start_code_source><![CDATA[Custom code]]></on_start_code_source>
-                <widget_settings>
-                    <x>184</x>
-                    <y>16</y>
-                    <width>128</width>
-                    <height>40</height>
-                    <appearance><![CDATA[Raised]]></appearance>
-                    <hierarchy_position><![CDATA[2]]></hierarchy_position>
-                    <is_background><![CDATA[False]]></is_background>
-                    <label><![CDATA[Disable VSC2]]></label>
-                    <use_label>True</use_label>
-                </widget_settings>
-            </component_data>
-        <component_data>
-                <id>73add7ae273611efb17be22df200c506</id>
-                <name><![CDATA[Load_Single-phase Variable Load_Enable_fb]]></name>
-                <type>TextDisplay</type>
-                <description><![CDATA[]]></description>
-                <code><![CDATA[# HIL API is imported as 'hil'
-# NOTE: Only read functions are available from the HIL API
-
-# SCADA API is imported as 'panel'
-# SCADA API constants are imported as 'api_const'
-# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
-# This object can be used as an argument in SCADA API functions.
-
-vsc1_status = hil.model_read('MGCC.VSC2_enable');
-
-if(vsc1_status == 1):
-    str2display = 'Enabled';
-else:
-    str2display = 'Disabled';
-
-# specify Text Display options ('text' part is mandatory)
-textDisplayData = {
-    # label text
-    "text": str2display,
-    # text color: 'red', 'green', 'blue', 'orange', 'black'
-    "text_color": 'black',
-}
-
-# mandatory variable used for storing value that will be displayed
-displayValue = textDisplayData
-]]></code>
-                <updateRate>500</updateRate>
-                <widget_settings>
-                    <x>72</x>
-                    <y>72</y>
-                    <width>200</width>
-                    <height>56</height>
-                    <appearance><![CDATA[Raised]]></appearance>
-                    <hierarchy_position><![CDATA[2]]></hierarchy_position>
-                    <is_background><![CDATA[False]]></is_background>
-                    <label><![CDATA[VSC2 Status]]></label>
-                    <use_label>True</use_label>
-                </widget_settings>
-            </component_data>
-        <component_data>
                 <id>15d13755280d11ef96ade22df200c506</id>
                 <name><![CDATA[TEST INTERFACE]]></name>
                 <type>Group</type>
                 <description><![CDATA[]]></description>
-                <components_ids><![CDATA[['1d5630ad280d11ef9f2fe22df200c506', '1d5630ae280d11efa6e9e22df200c506', '1d5630af280d11ef86e0e22df200c506', '2d35f9bd3d9411efab19ff20da2aee6e']]]></components_ids>
+                <components_ids><![CDATA[['391e67a0452111efa5a5beeb7230a932', '391e8edf452111ef8055beeb7230a932', '391e8ee0452111ef9953beeb7230a932', '391e8ee2452111ef8743beeb7230a932', '712262fc492511efabc8beeb7230a932']]]></components_ids>
                 <canvas_bg_color>#ffffff</canvas_bg_color>
                 <initialization_code><![CDATA[# NOTE: Variables and functions defined here will be available for use in
 # all Macro, Expression and handlers codes of components owned by this widget.
@@ -1791,11 +2622,11 @@ displayValue = textDisplayData
 
 ]]></initialization_code>
                 <widget_settings>
-                    <x>1296</x>
-                    <y>1072</y>
-                    <width>256</width>
-                    <height>248</height>
-                    <appearance><![CDATA[Flat]]></appearance>
+                    <x>2992</x>
+                    <y>320</y>
+                    <width>280</width>
+                    <height>288</height>
+                    <appearance><![CDATA[Raised]]></appearance>
                     <collapsed>False</collapsed>
                     <hierarchy_position>1</hierarchy_position>
                     <label><![CDATA[TEST INTERFACE]]></label>
@@ -1804,182 +2635,6 @@ displayValue = textDisplayData
                 
                 <linked_model_components_settings>
                     </linked_model_components_settings>
-            </component_data>
-        <component_data>
-                <id>1d5630ad280d11ef9f2fe22df200c506</id>
-                <name><![CDATA[Button]]></name>
-                <type>MacroButton</type>
-                <description><![CDATA[]]></description>
-                <on_use_code active="True"><![CDATA[# HIL API is imported as 'hil'
-# SCADA API is imported as 'panel'
-# SCADA API constants are imported as 'api_const'
-# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
-# This object can be used as an argument in SCADA API functions.
-
-# TEMPO TOTAL: 5 s
-
-# Enable Trigger
-hil.model_write('test_flag', 1)
-
-# Change MR exported power reference
-hil.model_write('MGCC.Pref', 0.8)
-hil.wait_msec(1000.0)
-hil.model_write('MGCC.Qref', 0.6)
-hil.wait_msec(1000.0)
-hil.model_write('MGCC.Qref', -0.6)
-hil.wait_msec(1000.0)
-hil.model_write('MGCC.Pref', -0.8)
-hil.wait_msec(1000.0)
-hil.model_write('MGCC.Pref', 0)
-hil.model_write('MGCC.Qref', 0)
-hil.wait_msec(1000.0)
-
-# Disable Trigger
-hil.model_write('test_flag', 0)
-]]></on_use_code>
-                <on_start_code active="False"><![CDATA[# NOTE: The code specified in this handler will be executed on simulation start.
-# NOTE: Variables specified here will be available in other handlers.
-# HIL API is imported as 'hil'
-# SCADA API is imported as 'panel'
-# SCADA API constants are imported as 'api_const'
-# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
-# This object can be used as an argument in SCADA API functions.
-hil.set_scada_input_value('mgcc_req2tieSR', 0)]]></on_start_code>
-                <on_stop_code active="False"><![CDATA[# NOTE: The code specified in this handler will be executed after simulation is stopped.
-# HIL API is imported as 'hil'
-# SCADA API is imported as 'panel'
-# SCADA API constants are imported as 'api_const'
-# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
-# This object can be used as an argument in SCADA API functions.
-
-]]></on_stop_code>
-                <on_start_code_source><![CDATA[Custom code]]></on_start_code_source>
-                <widget_settings>
-                    <x>16</x>
-                    <y>56</y>
-                    <width>216</width>
-                    <height>40</height>
-                    <appearance><![CDATA[Raised]]></appearance>
-                    <hierarchy_position><![CDATA[2]]></hierarchy_position>
-                    <is_background><![CDATA[False]]></is_background>
-                    <label><![CDATA[Test: Connected Mode]]></label>
-                    <use_label>True</use_label>
-                </widget_settings>
-            </component_data>
-        <component_data>
-                <id>1d5630ae280d11efa6e9e22df200c506</id>
-                <name><![CDATA[Button9]]></name>
-                <type>MacroButton</type>
-                <description><![CDATA[]]></description>
-                <on_use_code active="True"><![CDATA[# HIL API is imported as 'hil'
-# SCADA API is imported as 'panel'
-# SCADA API constants are imported as 'api_const'
-# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
-# This object can be used as an argument in SCADA API functions.
-
-# TEMPO TOTAL: 250 ms
-
-# Enable Trigger
-hil.model_write('test_flag', 1)
-
-hil.wait_msec(100.0)
-hil.set_scada_input_value('MGCC.short', 1)
-hil.wait_msec(50.0)
-hil.set_scada_input_value('MGCC.short', 0)
-hil.wait_msec(100.0)
-
-# Disable Trigger
-hil.model_write('test_flag', 0)
-]]></on_use_code>
-                <on_start_code active="False"><![CDATA[# NOTE: The code specified in this handler will be executed on simulation start.
-# NOTE: Variables specified here will be available in other handlers.
-# HIL API is imported as 'hil'
-# SCADA API is imported as 'panel'
-# SCADA API constants are imported as 'api_const'
-# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
-# This object can be used as an argument in SCADA API functions.
-hil.set_scada_input_value('mgcc_req2tieSR', 0)]]></on_start_code>
-                <on_stop_code active="False"><![CDATA[# NOTE: The code specified in this handler will be executed after simulation is stopped.
-# HIL API is imported as 'hil'
-# SCADA API is imported as 'panel'
-# SCADA API constants are imported as 'api_const'
-# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
-# This object can be used as an argument in SCADA API functions.
-
-]]></on_stop_code>
-                <on_start_code_source><![CDATA[Custom code]]></on_start_code_source>
-                <widget_settings>
-                    <x>16</x>
-                    <y>104</y>
-                    <width>216</width>
-                    <height>40</height>
-                    <appearance><![CDATA[Raised]]></appearance>
-                    <hierarchy_position><![CDATA[2]]></hierarchy_position>
-                    <is_background><![CDATA[False]]></is_background>
-                    <label><![CDATA[Test: Short-Circuit]]></label>
-                    <use_label>True</use_label>
-                </widget_settings>
-            </component_data>
-        <component_data>
-                <id>1d5630af280d11ef86e0e22df200c506</id>
-                <name><![CDATA[Button8]]></name>
-                <type>MacroButton</type>
-                <description><![CDATA[]]></description>
-                <on_use_code active="True"><![CDATA[# HIL API is imported as 'hil'
-# SCADA API is imported as 'panel'
-# SCADA API constants are imported as 'api_const'
-# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
-# This object can be used as an argument in SCADA API functions.
-
-# TEMPO TOTAL: 1.6 s
-
-# Enable Trigger
-hil.model_write('test_flag', 1)
-
-# Change MR load
-hil.set_scada_input_value('Load.Single-phase Variable Load.Enable', 1)
-hil.model_write('Load.Single-phase Variable Load.Pref', 1)
-hil.wait_msec(400.0)
-hil.model_write('Load.Single-phase Variable Load.Qref', 1)
-hil.wait_msec(400.0)
-hil.model_write('Load.Single-phase Variable Load.Qref', -1)
-hil.wait_msec(800.0)
-hil.model_write('Load.Single-phase Variable Load.Pref', 0)
-hil.model_write('Load.Single-phase Variable Load.Qref', 0)
-hil.wait_msec(400.0)
-hil.set_scada_input_value('Load.Single-phase Variable Load.Enable', 0)
-
-# Disable Trigger
-hil.model_write('test_flag', 0)
-]]></on_use_code>
-                <on_start_code active="False"><![CDATA[# NOTE: The code specified in this handler will be executed on simulation start.
-# NOTE: Variables specified here will be available in other handlers.
-# HIL API is imported as 'hil'
-# SCADA API is imported as 'panel'
-# SCADA API constants are imported as 'api_const'
-# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
-# This object can be used as an argument in SCADA API functions.
-hil.set_scada_input_value('mgcc_req2tieSR', 0)]]></on_start_code>
-                <on_stop_code active="False"><![CDATA[# NOTE: The code specified in this handler will be executed after simulation is stopped.
-# HIL API is imported as 'hil'
-# SCADA API is imported as 'panel'
-# SCADA API constants are imported as 'api_const'
-# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
-# This object can be used as an argument in SCADA API functions.
-
-]]></on_stop_code>
-                <on_start_code_source><![CDATA[Custom code]]></on_start_code_source>
-                <widget_settings>
-                    <x>16</x>
-                    <y>8</y>
-                    <width>216</width>
-                    <height>40</height>
-                    <appearance><![CDATA[Raised]]></appearance>
-                    <hierarchy_position><![CDATA[2]]></hierarchy_position>
-                    <is_background><![CDATA[False]]></is_background>
-                    <label><![CDATA[Test: Islanded Mode]]></label>
-                    <use_label>True</use_label>
-                </widget_settings>
             </component_data>
         <component_data>
                 <id>15f303992e6f11efb8a0e22df200c506</id>
@@ -1994,8 +2649,8 @@ hil.set_scada_input_value('mgcc_req2tieSR', 0)]]></on_start_code>
 # HIL API is imported as 'hil'
 ]]></initialization_code>
                 <widget_settings>
-                    <x>848</x>
-                    <y>656</y>
+                    <x>1224</x>
+                    <y>488</y>
                     <width>376</width>
                     <height>216</height>
                     <appearance><![CDATA[Raised]]></appearance>
@@ -2061,7 +2716,7 @@ widgetValue = None
 widgetValue = hil.model_read('VSC1.GAIN')
 ]]></on_timer_code>
                 <on_start_code_source><![CDATA[Macro code]]></on_start_code_source>
-                <inputValue><![CDATA[1.0]]></inputValue>
+                <inputValue><![CDATA[1.00048]]></inputValue>
                 <min>1.0</min>
                 <max>5.0</max>
                 <step>0.05</step>
@@ -2130,7 +2785,7 @@ widgetValue = None
 widgetValue = hil.model_read('VSC1.PHASE_SHIFT')/(2*3.1428)
 ]]></on_timer_code>
                 <on_start_code_source><![CDATA[Custom code]]></on_start_code_source>
-                <inputValue><![CDATA[-3.0]]></inputValue>
+                <inputValue><![CDATA[-5.3464]]></inputValue>
                 <min>-90.0</min>
                 <max>90.0</max>
                 <step>1.0</step>
@@ -2229,7 +2884,7 @@ widgetValue = hil.model_read('VSC1.GAMMA')
 ]]></initialization_code>
                 <widget_settings>
                     <x>2312</x>
-                    <y>1072</y>
+                    <y>1080</y>
                     <width>376</width>
                     <height>440</height>
                     <appearance><![CDATA[Raised]]></appearance>
@@ -2294,7 +2949,7 @@ widgetValue = None
 widgetValue = hil.model_read('Load.Single-phase Variable Load.Pref')
 ]]></on_timer_code>
                 <on_start_code_source><![CDATA[Custom code]]></on_start_code_source>
-                <inputValue><![CDATA[0]]></inputValue>
+                <inputValue><![CDATA[0.0]]></inputValue>
                 <min>0.0</min>
                 <max>1.0</max>
                 <step>0.05</step>
@@ -2665,7 +3320,7 @@ displayValue = textDisplayData
                 <name><![CDATA[VSC6]]></name>
                 <type>Group</type>
                 <description><![CDATA[]]></description>
-                <components_ids><![CDATA[['f7ab092d3d8f11efa136ff20da2aee6e', 'f7ab092e3d8f11efba69ff20da2aee6e', 'f7ab092f3d8f11efac3bff20da2aee6e', 'f7ab09303d8f11ef95d5ff20da2aee6e']]]></components_ids>
+                <components_ids><![CDATA[['f7ab092e3d8f11efba69ff20da2aee6e', 'f7ab092f3d8f11efac3bff20da2aee6e', '0a26bd113e2e11efa679ff20da2aee6e', '29272e993e3011efb10fff20da2aee6e']]]></components_ids>
                 <canvas_bg_color>#ffffff</canvas_bg_color>
                 <initialization_code><![CDATA[# NOTE: Variables and functions defined here will be
 # available for use in all Macro and Expression scripts of the components owned by this widget.
@@ -2673,88 +3328,19 @@ displayValue = textDisplayData
 # HIL API is imported as 'hil'
 ]]></initialization_code>
                 <widget_settings>
-                    <x>1248</x>
-                    <y>656</y>
+                    <x>1224</x>
+                    <y>880</y>
                     <width>376</width>
-                    <height>344</height>
+                    <height>280</height>
                     <appearance><![CDATA[Raised]]></appearance>
                     <collapsed>False</collapsed>
                     <hierarchy_position>1</hierarchy_position>
-                    <label><![CDATA[CONTROL PARAMETERS]]></label>
+                    <label><![CDATA[VIRTUAL IMPEDANCE PARAMETERS]]></label>
                     <use_label>True</use_label>
                 </widget_settings>
                 
                 <linked_model_components_settings>
                     </linked_model_components_settings>
-            </component_data>
-        <component_data>
-                <id>f7ab092d3d8f11efa136ff20da2aee6e</id>
-                <name><![CDATA[VSC2_KI]]></name>
-                <type>SliderMacro</type>
-                <description><![CDATA[]]></description>
-                <on_use_code active="True"><![CDATA[# HIL API is imported as 'hil'
-# SCADA API is imported as 'panel'
-# SCADA API constants are imported as 'api_const'
-# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
-# This object can be used as an argument in SCADA API functions.
-# NOTE: entered value is available through variable 'inputValue'
-
-hil.model_write('VSC1.KI', inputValue)
-hil.model_write('VSC2.KI', inputValue)]]></on_use_code>
-                <on_start_code active="False"><![CDATA[# NOTE: The code specified in this handler will be executed on simulation start.
-# NOTE: Variables specified here will be available in other handlers.
-# HIL API is imported as 'hil'
-# SCADA API is imported as 'panel'
-# SCADA API constants are imported as 'api_const'
-# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
-# This object can be used as an argument in SCADA API functions.
-
-# Change widget value by setting this variable.
-# NOTE: If you not specify 'widgetValue' variable or assign 'None' to it,
-# widget value won't be changed.
-widgetValue = None
-]]></on_start_code>
-                <on_stop_code active="False"><![CDATA[# NOTE: The code specified in this handler will be executed after simulation is stopped.
-# HIL API is imported as 'hil'
-# SCADA API is imported as 'panel'
-# SCADA API constants are imported as 'api_const'
-# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
-# This object can be used as an argument in SCADA API functions.
-
-# Change widget value by setting this variable.
-# NOTE: If you not specify 'widgetValue' variable or assign 'None' to it,
-# widget value won't be changed.
-widgetValue = None
-]]></on_stop_code>
-                <on_timer_code active="True"><![CDATA[# NOTE: The code specified in this handler will be executed periodically each 1000ms.
-# HIL API is imported as 'hil'
-# NOTE: Only read functions are available from the HIL API
-# SCADA API is imported as 'panel'
-# SCADA API constants are imported as 'api_const'
-# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
-# This object can be used as an argument in SCADA API functions.
-
-# Change the widget value by setting this variable.
-# NOTE: If you do not specify a 'widgetValue' variable or assign 'None' to it,
-# the widget value will not be changed.
-widgetValue = hil.model_read('VSC1.KI')
-]]></on_timer_code>
-                <on_start_code_source><![CDATA[Macro code]]></on_start_code_source>
-                <inputValue><![CDATA[5.0]]></inputValue>
-                <min>0.0</min>
-                <max>50.0</max>
-                <step>1.0</step>
-                <widget_settings>
-                    <x>32</x>
-                    <y>184</y>
-                    <width>288</width>
-                    <height>48</height>
-                    <appearance><![CDATA[Flat]]></appearance>
-                    <hierarchy_position><![CDATA[2]]></hierarchy_position>
-                    <is_background><![CDATA[False]]></is_background>
-                    <label><![CDATA[Ki (Improved Droop Integral Gain)]]></label>
-                    <use_label>True</use_label>
-                </widget_settings>
             </component_data>
         <component_data>
                 <id>f7ab092e3d8f11efba69ff20da2aee6e</id>
@@ -2809,13 +3395,13 @@ widgetValue = None
 widgetValue = hil.model_read('VSC1.FC')
 ]]></on_timer_code>
                 <on_start_code_source><![CDATA[Macro code]]></on_start_code_source>
-                <inputValue><![CDATA[1000.0]]></inputValue>
+                <inputValue><![CDATA[800.0]]></inputValue>
                 <min>120.0</min>
                 <max>1000.0</max>
                 <step>1.0</step>
                 <widget_settings>
                     <x>32</x>
-                    <y>128</y>
+                    <y>176</y>
                     <width>288</width>
                     <height>48</height>
                     <appearance><![CDATA[Flat]]></appearance>
@@ -2837,8 +3423,8 @@ widgetValue = hil.model_read('VSC1.FC')
 # This object can be used as an argument in SCADA API functions.
 # NOTE: entered value is available through variable 'inputValue'
 
-hil.model_write('VSC1.VZ', inputValue)
-hil.model_write('VSC2.VZ', inputValue)]]></on_use_code>
+hil.model_write('VSC1.LV', inputValue)
+hil.model_write('VSC2.LV', inputValue)]]></on_use_code>
                 <on_start_code active="False"><![CDATA[# NOTE: The code specified in this handler will be executed on simulation start.
 # NOTE: Variables specified here will be available in other handlers.
 # HIL API is imported as 'hil'
@@ -2875,144 +3461,22 @@ widgetValue = None
 # Change the widget value by setting this variable.
 # NOTE: If you do not specify a 'widgetValue' variable or assign 'None' to it,
 # the widget value will not be changed.
-widgetValue = hil.model_read('VSC1.VZ')
+widgetValue = hil.model_read('VSC1.LV')
 ]]></on_timer_code>
                 <on_start_code_source><![CDATA[Macro code]]></on_start_code_source>
-                <inputValue><![CDATA[1.5]]></inputValue>
+                <inputValue><![CDATA[2.0]]></inputValue>
                 <min>0.0</min>
-                <max>3.0</max>
+                <max>10.0</max>
                 <step>0.1</step>
                 <widget_settings>
                     <x>32</x>
-                    <y>72</y>
+                    <y>64</y>
                     <width>288</width>
                     <height>48</height>
                     <appearance><![CDATA[Flat]]></appearance>
                     <hierarchy_position><![CDATA[2]]></hierarchy_position>
                     <is_background><![CDATA[False]]></is_background>
-                    <label><![CDATA[Virtual Impedancel (mH)]]></label>
-                    <use_label>True</use_label>
-                </widget_settings>
-            </component_data>
-        <component_data>
-                <id>f7ab09303d8f11ef95d5ff20da2aee6e</id>
-                <name><![CDATA[Kv (Ganho do Droop Aprimorado)]]></name>
-                <type>SliderMacro</type>
-                <description><![CDATA[]]></description>
-                <on_use_code active="True"><![CDATA[# HIL API is imported as 'hil'
-# SCADA API is imported as 'panel'
-# SCADA API constants are imported as 'api_const'
-# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
-# This object can be used as an argument in SCADA API functions.
-# NOTE: entered value is available through variable 'inputValue'
-
-hil.model_write('VSC1.KV', inputValue)
-hil.model_write('VSC2.KV', inputValue)]]></on_use_code>
-                <on_start_code active="False"><![CDATA[# NOTE: The code specified in this handler will be executed on simulation start.
-# NOTE: Variables specified here will be available in other handlers.
-# HIL API is imported as 'hil'
-# SCADA API is imported as 'panel'
-# SCADA API constants are imported as 'api_const'
-# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
-# This object can be used as an argument in SCADA API functions.
-
-# Change widget value by setting this variable.
-# NOTE: If you not specify 'widgetValue' variable or assign 'None' to it,
-# widget value won't be changed.
-widgetValue = None
-]]></on_start_code>
-                <on_stop_code active="False"><![CDATA[# NOTE: The code specified in this handler will be executed after simulation is stopped.
-# HIL API is imported as 'hil'
-# SCADA API is imported as 'panel'
-# SCADA API constants are imported as 'api_const'
-# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
-# This object can be used as an argument in SCADA API functions.
-
-# Change widget value by setting this variable.
-# NOTE: If you not specify 'widgetValue' variable or assign 'None' to it,
-# widget value won't be changed.
-widgetValue = None
-]]></on_stop_code>
-                <on_timer_code active="True"><![CDATA[# NOTE: The code specified in this handler will be executed periodically each 1000ms.
-# HIL API is imported as 'hil'
-# NOTE: Only read functions are available from the HIL API
-# SCADA API is imported as 'panel'
-# SCADA API constants are imported as 'api_const'
-# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
-# This object can be used as an argument in SCADA API functions.
-
-# Change the widget value by setting this variable.
-# NOTE: If you do not specify a 'widgetValue' variable or assign 'None' to it,
-# the widget value will not be changed.
-widgetValue = hil.model_read('VSC1.KV')
-]]></on_timer_code>
-                <on_start_code_source><![CDATA[Macro code]]></on_start_code_source>
-                <inputValue><![CDATA[10.0]]></inputValue>
-                <min>-50.0</min>
-                <max>500.0</max>
-                <step>1.0</step>
-                <widget_settings>
-                    <x>32</x>
-                    <y>240</y>
-                    <width>288</width>
-                    <height>48</height>
-                    <appearance><![CDATA[Flat]]></appearance>
-                    <hierarchy_position><![CDATA[2]]></hierarchy_position>
-                    <is_background><![CDATA[False]]></is_background>
-                    <label><![CDATA[Kv (Improved Droop RMS Gain)]]></label>
-                    <use_label>True</use_label>
-                </widget_settings>
-            </component_data>
-        <component_data>
-                <id>2d35f9bd3d9411efab19ff20da2aee6e</id>
-                <name><![CDATA[Button10]]></name>
-                <type>MacroButton</type>
-                <description><![CDATA[]]></description>
-                <on_use_code active="True"><![CDATA[# HIL API is imported as 'hil'
-# SCADA API is imported as 'panel'
-# SCADA API constants are imported as 'api_const'
-# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
-# This object can be used as an argument in SCADA API functions.
-
-# TEMPO TOTAL: 2000 ms
-
-# Enable Trigger
-hil.model_write('test_flag', 1)
-
-
-hil.wait_msec(1000.0)
-hil.set_scada_input_value('MGCC.STS', 1)
-hil.wait_msec(1000.0)
-
-# Disable Trigger
-hil.model_write('test_flag', 0)
-]]></on_use_code>
-                <on_start_code active="False"><![CDATA[# NOTE: The code specified in this handler will be executed on simulation start.
-# NOTE: Variables specified here will be available in other handlers.
-# HIL API is imported as 'hil'
-# SCADA API is imported as 'panel'
-# SCADA API constants are imported as 'api_const'
-# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
-# This object can be used as an argument in SCADA API functions.
-hil.set_scada_input_value('mgcc_req2tieSR', 0)]]></on_start_code>
-                <on_stop_code active="False"><![CDATA[# NOTE: The code specified in this handler will be executed after simulation is stopped.
-# HIL API is imported as 'hil'
-# SCADA API is imported as 'panel'
-# SCADA API constants are imported as 'api_const'
-# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
-# This object can be used as an argument in SCADA API functions.
-
-]]></on_stop_code>
-                <on_start_code_source><![CDATA[Custom code]]></on_start_code_source>
-                <widget_settings>
-                    <x>16</x>
-                    <y>152</y>
-                    <width>216</width>
-                    <height>40</height>
-                    <appearance><![CDATA[Raised]]></appearance>
-                    <hierarchy_position><![CDATA[2]]></hierarchy_position>
-                    <is_background><![CDATA[False]]></is_background>
-                    <label><![CDATA[Test: Tied to Grid]]></label>
+                    <label><![CDATA[Lv: Virtual Inductance (mH)]]></label>
                     <use_label>True</use_label>
                 </widget_settings>
             </component_data>
@@ -3495,6 +3959,592 @@ widgetValue = None
                     <is_background><![CDATA[False]]></is_background>
                     <label><![CDATA[]]></label>
                     <use_label>False</use_label>
+                </widget_settings>
+            </component_data>
+        <component_data>
+                <id>e167c4053e2d11ef8fb2ff20da2aee6e</id>
+                <name><![CDATA[VSC9]]></name>
+                <type>Group</type>
+                <description><![CDATA[]]></description>
+                <components_ids><![CDATA[['eca1c0c13e2d11ef947bff20da2aee6e', 'eca1e83b3e2d11efadf0ff20da2aee6e']]]></components_ids>
+                <canvas_bg_color>#ffffff</canvas_bg_color>
+                <initialization_code><![CDATA[# NOTE: Variables and functions defined here will be
+# available for use in all Macro and Expression scripts of the components owned by this widget.
+# This code is always executed prior simulation start.
+# HIL API is imported as 'hil'
+]]></initialization_code>
+                <widget_settings>
+                    <x>1224</x>
+                    <y>712</y>
+                    <width>376</width>
+                    <height>160</height>
+                    <appearance><![CDATA[Raised]]></appearance>
+                    <collapsed>False</collapsed>
+                    <hierarchy_position>1</hierarchy_position>
+                    <label><![CDATA[DROOP PARAMETERS]]></label>
+                    <use_label>True</use_label>
+                </widget_settings>
+                
+                <linked_model_components_settings>
+                    </linked_model_components_settings>
+            </component_data>
+        <component_data>
+                <id>eca1c0c13e2d11ef947bff20da2aee6e</id>
+                <name><![CDATA[Kv (Ganho do Droop Aprimorado)]]></name>
+                <type>SliderMacro</type>
+                <description><![CDATA[]]></description>
+                <on_use_code active="True"><![CDATA[# HIL API is imported as 'hil'
+# SCADA API is imported as 'panel'
+# SCADA API constants are imported as 'api_const'
+# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
+# This object can be used as an argument in SCADA API functions.
+# NOTE: entered value is available through variable 'inputValue'
+
+hil.model_write('VSC1.KV', inputValue)
+hil.model_write('VSC2.KV', inputValue)]]></on_use_code>
+                <on_start_code active="False"><![CDATA[# NOTE: The code specified in this handler will be executed on simulation start.
+# NOTE: Variables specified here will be available in other handlers.
+# HIL API is imported as 'hil'
+# SCADA API is imported as 'panel'
+# SCADA API constants are imported as 'api_const'
+# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
+# This object can be used as an argument in SCADA API functions.
+
+# Change widget value by setting this variable.
+# NOTE: If you not specify 'widgetValue' variable or assign 'None' to it,
+# widget value won't be changed.
+widgetValue = None
+]]></on_start_code>
+                <on_stop_code active="False"><![CDATA[# NOTE: The code specified in this handler will be executed after simulation is stopped.
+# HIL API is imported as 'hil'
+# SCADA API is imported as 'panel'
+# SCADA API constants are imported as 'api_const'
+# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
+# This object can be used as an argument in SCADA API functions.
+
+# Change widget value by setting this variable.
+# NOTE: If you not specify 'widgetValue' variable or assign 'None' to it,
+# widget value won't be changed.
+widgetValue = None
+]]></on_stop_code>
+                <on_timer_code active="True"><![CDATA[# NOTE: The code specified in this handler will be executed periodically each 1000ms.
+# HIL API is imported as 'hil'
+# NOTE: Only read functions are available from the HIL API
+# SCADA API is imported as 'panel'
+# SCADA API constants are imported as 'api_const'
+# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
+# This object can be used as an argument in SCADA API functions.
+
+# Change the widget value by setting this variable.
+# NOTE: If you do not specify a 'widgetValue' variable or assign 'None' to it,
+# the widget value will not be changed.
+widgetValue = hil.model_read('VSC1.KV')
+]]></on_timer_code>
+                <on_start_code_source><![CDATA[Macro code]]></on_start_code_source>
+                <inputValue><![CDATA[5.0]]></inputValue>
+                <min>-50.0</min>
+                <max>500.0</max>
+                <step>1.0</step>
+                <widget_settings>
+                    <x>32</x>
+                    <y>64</y>
+                    <width>288</width>
+                    <height>48</height>
+                    <appearance><![CDATA[Flat]]></appearance>
+                    <hierarchy_position><![CDATA[2]]></hierarchy_position>
+                    <is_background><![CDATA[False]]></is_background>
+                    <label><![CDATA[Kv (Improved Droop RMS Gain)]]></label>
+                    <use_label>True</use_label>
+                </widget_settings>
+            </component_data>
+        <component_data>
+                <id>eca1e83b3e2d11efadf0ff20da2aee6e</id>
+                <name><![CDATA[VSC2_KI]]></name>
+                <type>SliderMacro</type>
+                <description><![CDATA[]]></description>
+                <on_use_code active="True"><![CDATA[# HIL API is imported as 'hil'
+# SCADA API is imported as 'panel'
+# SCADA API constants are imported as 'api_const'
+# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
+# This object can be used as an argument in SCADA API functions.
+# NOTE: entered value is available through variable 'inputValue'
+
+hil.model_write('VSC1.KI', inputValue)
+hil.model_write('VSC2.KI', inputValue)]]></on_use_code>
+                <on_start_code active="False"><![CDATA[# NOTE: The code specified in this handler will be executed on simulation start.
+# NOTE: Variables specified here will be available in other handlers.
+# HIL API is imported as 'hil'
+# SCADA API is imported as 'panel'
+# SCADA API constants are imported as 'api_const'
+# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
+# This object can be used as an argument in SCADA API functions.
+
+# Change widget value by setting this variable.
+# NOTE: If you not specify 'widgetValue' variable or assign 'None' to it,
+# widget value won't be changed.
+widgetValue = None
+]]></on_start_code>
+                <on_stop_code active="False"><![CDATA[# NOTE: The code specified in this handler will be executed after simulation is stopped.
+# HIL API is imported as 'hil'
+# SCADA API is imported as 'panel'
+# SCADA API constants are imported as 'api_const'
+# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
+# This object can be used as an argument in SCADA API functions.
+
+# Change widget value by setting this variable.
+# NOTE: If you not specify 'widgetValue' variable or assign 'None' to it,
+# widget value won't be changed.
+widgetValue = None
+]]></on_stop_code>
+                <on_timer_code active="True"><![CDATA[# NOTE: The code specified in this handler will be executed periodically each 1000ms.
+# HIL API is imported as 'hil'
+# NOTE: Only read functions are available from the HIL API
+# SCADA API is imported as 'panel'
+# SCADA API constants are imported as 'api_const'
+# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
+# This object can be used as an argument in SCADA API functions.
+
+# Change the widget value by setting this variable.
+# NOTE: If you do not specify a 'widgetValue' variable or assign 'None' to it,
+# the widget value will not be changed.
+widgetValue = hil.model_read('VSC1.KI')
+]]></on_timer_code>
+                <on_start_code_source><![CDATA[Macro code]]></on_start_code_source>
+                <inputValue><![CDATA[5.0]]></inputValue>
+                <min>0.0</min>
+                <max>50.0</max>
+                <step>1.0</step>
+                <widget_settings>
+                    <x>32</x>
+                    <y>8</y>
+                    <width>288</width>
+                    <height>48</height>
+                    <appearance><![CDATA[Flat]]></appearance>
+                    <hierarchy_position><![CDATA[2]]></hierarchy_position>
+                    <is_background><![CDATA[False]]></is_background>
+                    <label><![CDATA[Ki (Improved Droop Integral Gain)]]></label>
+                    <use_label>True</use_label>
+                </widget_settings>
+            </component_data>
+        <component_data>
+                <id>0a26bd113e2e11efa679ff20da2aee6e</id>
+                <name><![CDATA[VSC2_VZ1]]></name>
+                <type>SliderMacro</type>
+                <description><![CDATA[]]></description>
+                <on_use_code active="True"><![CDATA[# HIL API is imported as 'hil'
+# SCADA API is imported as 'panel'
+# SCADA API constants are imported as 'api_const'
+# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
+# This object can be used as an argument in SCADA API functions.
+# NOTE: entered value is available through variable 'inputValue'
+
+hil.model_write('VSC1.RV', inputValue)
+hil.model_write('VSC2.RV', inputValue)]]></on_use_code>
+                <on_start_code active="False"><![CDATA[# NOTE: The code specified in this handler will be executed on simulation start.
+# NOTE: Variables specified here will be available in other handlers.
+# HIL API is imported as 'hil'
+# SCADA API is imported as 'panel'
+# SCADA API constants are imported as 'api_const'
+# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
+# This object can be used as an argument in SCADA API functions.
+
+# Change widget value by setting this variable.
+# NOTE: If you not specify 'widgetValue' variable or assign 'None' to it,
+# widget value won't be changed.
+widgetValue = None
+]]></on_start_code>
+                <on_stop_code active="False"><![CDATA[# NOTE: The code specified in this handler will be executed after simulation is stopped.
+# HIL API is imported as 'hil'
+# SCADA API is imported as 'panel'
+# SCADA API constants are imported as 'api_const'
+# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
+# This object can be used as an argument in SCADA API functions.
+
+# Change widget value by setting this variable.
+# NOTE: If you not specify 'widgetValue' variable or assign 'None' to it,
+# widget value won't be changed.
+widgetValue = None
+]]></on_stop_code>
+                <on_timer_code active="True"><![CDATA[# NOTE: The code specified in this handler will be executed periodically each 1000ms.
+# HIL API is imported as 'hil'
+# NOTE: Only read functions are available from the HIL API
+# SCADA API is imported as 'panel'
+# SCADA API constants are imported as 'api_const'
+# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
+# This object can be used as an argument in SCADA API functions.
+
+# Change the widget value by setting this variable.
+# NOTE: If you do not specify a 'widgetValue' variable or assign 'None' to it,
+# the widget value will not be changed.
+widgetValue = hil.model_read('VSC1.RV')
+]]></on_timer_code>
+                <on_start_code_source><![CDATA[Macro code]]></on_start_code_source>
+                <inputValue><![CDATA[0.1]]></inputValue>
+                <min>0.0</min>
+                <max>10.0</max>
+                <step>0.25</step>
+                <widget_settings>
+                    <x>32</x>
+                    <y>8</y>
+                    <width>288</width>
+                    <height>48</height>
+                    <appearance><![CDATA[Flat]]></appearance>
+                    <hierarchy_position><![CDATA[2]]></hierarchy_position>
+                    <is_background><![CDATA[False]]></is_background>
+                    <label><![CDATA[Rv: Virtual Resistance (mOhm)]]></label>
+                    <use_label>True</use_label>
+                </widget_settings>
+            </component_data>
+        <component_data>
+                <id>29272e993e3011efb10fff20da2aee6e</id>
+                <name><![CDATA[VSC1_W0]]></name>
+                <type>SliderMacro</type>
+                <description><![CDATA[]]></description>
+                <on_use_code active="True"><![CDATA[# HIL API is imported as 'hil'
+# SCADA API is imported as 'panel'
+# SCADA API constants are imported as 'api_const'
+# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
+# This object can be used as an argument in SCADA API functions.
+# NOTE: entered value is available through variable 'inputValue'
+
+hil.model_write('VSC1.W0', inputValue)
+hil.model_write('VSC2.W0', inputValue)]]></on_use_code>
+                <on_start_code active="True"><![CDATA[# NOTE: The code specified in this handler will be executed on simulation start.
+# NOTE: Variables specified here will be available in other handlers.
+# HIL API is imported as 'hil'
+# SCADA API is imported as 'panel'
+# SCADA API constants are imported as 'api_const'
+# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
+# This object can be used as an argument in SCADA API functions.
+
+# Change widget value by setting this variable.
+# NOTE: If you not specify 'widgetValue' variable or assign 'None' to it,
+# widget value won't be changed.
+widgetValue = None
+]]></on_start_code>
+                <on_stop_code active="False"><![CDATA[# NOTE: The code specified in this handler will be executed after simulation is stopped.
+# HIL API is imported as 'hil'
+# SCADA API is imported as 'panel'
+# SCADA API constants are imported as 'api_const'
+# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
+# This object can be used as an argument in SCADA API functions.
+
+# Change widget value by setting this variable.
+# NOTE: If you not specify 'widgetValue' variable or assign 'None' to it,
+# widget value won't be changed.
+widgetValue = None
+]]></on_stop_code>
+                <on_timer_code active="True"><![CDATA[# NOTE: The code specified in this handler will be executed periodically each 1000ms.
+# HIL API is imported as 'hil'
+# NOTE: Only read functions are available from the HIL API
+# SCADA API is imported as 'panel'
+# SCADA API constants are imported as 'api_const'
+# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
+# This object can be used as an argument in SCADA API functions.
+
+# Change the widget value by setting this variable.
+# NOTE: If you do not specify a 'widgetValue' variable or assign 'None' to it,
+# the widget value will not be changed.
+widgetValue = hil.model_read('VSC1.W0')
+]]></on_timer_code>
+                <on_start_code_source><![CDATA[Macro code]]></on_start_code_source>
+                <inputValue><![CDATA[9424.77]]></inputValue>
+                <min>500.0</min>
+                <max>20000.0</max>
+                <step>1.0</step>
+                <widget_settings>
+                    <x>32</x>
+                    <y>120</y>
+                    <width>288</width>
+                    <height>48</height>
+                    <appearance><![CDATA[Flat]]></appearance>
+                    <hierarchy_position><![CDATA[2]]></hierarchy_position>
+                    <is_background><![CDATA[False]]></is_background>
+                    <label><![CDATA[Wp: Complex Poles (rad/s)]]></label>
+                    <use_label>True</use_label>
+                </widget_settings>
+            </component_data>
+        <component_data>
+                <id>391e67a0452111efa5a5beeb7230a932</id>
+                <name><![CDATA[Button]]></name>
+                <type>MacroButton</type>
+                <description><![CDATA[]]></description>
+                <on_use_code active="True"><![CDATA[# HIL API is imported as 'hil'
+# SCADA API is imported as 'panel'
+# SCADA API constants are imported as 'api_const'
+# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
+# This object can be used as an argument in SCADA API functions.
+
+# TEMPO TOTAL: 5 s
+
+# Enable Trigger
+hil.model_write('test_flag', 1)
+
+# Change MR exported power reference
+hil.model_write('MGCC.Pref', 0.8)
+hil.wait_msec(1000.0)
+hil.model_write('MGCC.Qref', 0.6)
+hil.wait_msec(1000.0)
+hil.model_write('MGCC.Qref', -0.6)
+hil.wait_msec(1000.0)
+hil.model_write('MGCC.Pref', -0.8)
+hil.wait_msec(1000.0)
+hil.model_write('MGCC.Pref', 0)
+hil.model_write('MGCC.Qref', 0)
+hil.wait_msec(1000.0)
+
+# Disable Trigger
+hil.model_write('test_flag', 0)
+]]></on_use_code>
+                <on_start_code active="False"><![CDATA[# NOTE: The code specified in this handler will be executed on simulation start.
+# NOTE: Variables specified here will be available in other handlers.
+# HIL API is imported as 'hil'
+# SCADA API is imported as 'panel'
+# SCADA API constants are imported as 'api_const'
+# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
+# This object can be used as an argument in SCADA API functions.
+hil.set_scada_input_value('mgcc_req2tieSR', 0)]]></on_start_code>
+                <on_stop_code active="False"><![CDATA[# NOTE: The code specified in this handler will be executed after simulation is stopped.
+# HIL API is imported as 'hil'
+# SCADA API is imported as 'panel'
+# SCADA API constants are imported as 'api_const'
+# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
+# This object can be used as an argument in SCADA API functions.
+
+]]></on_stop_code>
+                <on_start_code_source><![CDATA[Custom code]]></on_start_code_source>
+                <widget_settings>
+                    <x>16</x>
+                    <y>104</y>
+                    <width>240</width>
+                    <height>40</height>
+                    <appearance><![CDATA[Raised]]></appearance>
+                    <hierarchy_position><![CDATA[2]]></hierarchy_position>
+                    <is_background><![CDATA[False]]></is_background>
+                    <label><![CDATA[TESTE 03: Connected Mode]]></label>
+                    <use_label>True</use_label>
+                </widget_settings>
+            </component_data>
+        <component_data>
+                <id>391e8edf452111ef8055beeb7230a932</id>
+                <name><![CDATA[Button9]]></name>
+                <type>MacroButton</type>
+                <description><![CDATA[]]></description>
+                <on_use_code active="True"><![CDATA[# HIL API is imported as 'hil'
+# SCADA API is imported as 'panel'
+# SCADA API constants are imported as 'api_const'
+# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
+# This object can be used as an argument in SCADA API functions.
+
+# TEMPO TOTAL: 250 ms
+
+# Enable Trigger
+hil.model_write('test_flag', 1)
+
+hil.wait_msec(100.0)
+hil.set_scada_input_value('MGCC.short', 1)
+hil.wait_msec(50.0)
+hil.set_scada_input_value('MGCC.short', 0)
+hil.wait_msec(100.0)
+
+# Disable Trigger
+hil.model_write('test_flag', 0)
+]]></on_use_code>
+                <on_start_code active="False"><![CDATA[# NOTE: The code specified in this handler will be executed on simulation start.
+# NOTE: Variables specified here will be available in other handlers.
+# HIL API is imported as 'hil'
+# SCADA API is imported as 'panel'
+# SCADA API constants are imported as 'api_const'
+# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
+# This object can be used as an argument in SCADA API functions.
+hil.set_scada_input_value('mgcc_req2tieSR', 0)]]></on_start_code>
+                <on_stop_code active="False"><![CDATA[# NOTE: The code specified in this handler will be executed after simulation is stopped.
+# HIL API is imported as 'hil'
+# SCADA API is imported as 'panel'
+# SCADA API constants are imported as 'api_const'
+# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
+# This object can be used as an argument in SCADA API functions.
+
+]]></on_stop_code>
+                <on_start_code_source><![CDATA[Custom code]]></on_start_code_source>
+                <widget_settings>
+                    <x>16</x>
+                    <y>200</y>
+                    <width>240</width>
+                    <height>40</height>
+                    <appearance><![CDATA[Raised]]></appearance>
+                    <hierarchy_position><![CDATA[2]]></hierarchy_position>
+                    <is_background><![CDATA[False]]></is_background>
+                    <label><![CDATA[TEST 05: Short-Circuit]]></label>
+                    <use_label>True</use_label>
+                </widget_settings>
+            </component_data>
+        <component_data>
+                <id>391e8ee0452111ef9953beeb7230a932</id>
+                <name><![CDATA[Button11]]></name>
+                <type>MacroButton</type>
+                <description><![CDATA[]]></description>
+                <on_use_code active="True"><![CDATA[# HIL API is imported as 'hil'
+# SCADA API is imported as 'panel'
+# SCADA API constants are imported as 'api_const'
+# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
+# This object can be used as an argument in SCADA API functions.
+
+# TEMPO TOTAL: 2000 ms
+
+# Enable Trigger
+hil.model_write('test_flag', 1)
+
+
+hil.wait_msec(500.0)
+hil.set_scada_input_value('MGCC.STS', 0)
+hil.wait_msec(500.0)
+
+# Disable Trigger
+hil.model_write('test_flag', 0)
+]]></on_use_code>
+                <on_start_code active="False"><![CDATA[# NOTE: The code specified in this handler will be executed on simulation start.
+# NOTE: Variables specified here will be available in other handlers.
+# HIL API is imported as 'hil'
+# SCADA API is imported as 'panel'
+# SCADA API constants are imported as 'api_const'
+# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
+# This object can be used as an argument in SCADA API functions.
+hil.set_scada_input_value('mgcc_req2tieSR', 0)]]></on_start_code>
+                <on_stop_code active="False"><![CDATA[# NOTE: The code specified in this handler will be executed after simulation is stopped.
+# HIL API is imported as 'hil'
+# SCADA API is imported as 'panel'
+# SCADA API constants are imported as 'api_const'
+# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
+# This object can be used as an argument in SCADA API functions.
+
+]]></on_stop_code>
+                <on_start_code_source><![CDATA[Custom code]]></on_start_code_source>
+                <widget_settings>
+                    <x>16</x>
+                    <y>152</y>
+                    <width>240</width>
+                    <height>40</height>
+                    <appearance><![CDATA[Raised]]></appearance>
+                    <hierarchy_position><![CDATA[2]]></hierarchy_position>
+                    <is_background><![CDATA[False]]></is_background>
+                    <label><![CDATA[TEST 04: Transition to Island Mode]]></label>
+                    <use_label>True</use_label>
+                </widget_settings>
+            </component_data>
+        <component_data>
+                <id>391e8ee2452111ef8743beeb7230a932</id>
+                <name><![CDATA[Button10]]></name>
+                <type>MacroButton</type>
+                <description><![CDATA[]]></description>
+                <on_use_code active="True"><![CDATA[# HIL API is imported as 'hil'
+# SCADA API is imported as 'panel'
+# SCADA API constants are imported as 'api_const'
+# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
+# This object can be used as an argument in SCADA API functions.
+
+# TEMPO TOTAL: 2000 ms
+
+# Enable Trigger
+hil.model_write('test_flag', 1)
+
+
+hil.wait_msec(500.0)
+hil.set_scada_input_value('MGCC.STS', 1)
+hil.wait_msec(500.0)
+
+# Disable Trigger
+hil.model_write('test_flag', 0)
+]]></on_use_code>
+                <on_start_code active="False"><![CDATA[# NOTE: The code specified in this handler will be executed on simulation start.
+# NOTE: Variables specified here will be available in other handlers.
+# HIL API is imported as 'hil'
+# SCADA API is imported as 'panel'
+# SCADA API constants are imported as 'api_const'
+# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
+# This object can be used as an argument in SCADA API functions.
+hil.set_scada_input_value('mgcc_req2tieSR', 0)]]></on_start_code>
+                <on_stop_code active="False"><![CDATA[# NOTE: The code specified in this handler will be executed after simulation is stopped.
+# HIL API is imported as 'hil'
+# SCADA API is imported as 'panel'
+# SCADA API constants are imported as 'api_const'
+# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
+# This object can be used as an argument in SCADA API functions.
+
+]]></on_stop_code>
+                <on_start_code_source><![CDATA[Custom code]]></on_start_code_source>
+                <widget_settings>
+                    <x>16</x>
+                    <y>56</y>
+                    <width>240</width>
+                    <height>40</height>
+                    <appearance><![CDATA[Raised]]></appearance>
+                    <hierarchy_position><![CDATA[2]]></hierarchy_position>
+                    <is_background><![CDATA[False]]></is_background>
+                    <label><![CDATA[TEST 02: Transition to Connected Mode]]></label>
+                    <use_label>True</use_label>
+                </widget_settings>
+            </component_data>
+        <component_data>
+                <id>712262fc492511efabc8beeb7230a932</id>
+                <name><![CDATA[Button8]]></name>
+                <type>MacroButton</type>
+                <description><![CDATA[]]></description>
+                <on_use_code active="True"><![CDATA[# HIL API is imported as 'hil'
+# SCADA API is imported as 'panel'
+# SCADA API constants are imported as 'api_const'
+# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
+# This object can be used as an argument in SCADA API functions.
+
+# TEMPO TOTAL: 5000 s
+
+# Enable Trigger
+hil.model_write('test_flag', 1)
+
+# Change MR load
+hil.set_scada_input_value('Load.Single-phase Variable Load.Enable', 1)
+hil.wait_msec(1000.0)
+hil.model_write('Load.Single-phase Variable Load.Pref', 1)
+hil.wait_msec(1000.0)
+hil.model_write('Load.Single-phase Variable Load.Qref', 1)
+hil.wait_msec(1000.0)
+hil.model_write('Load.Single-phase Variable Load.Qref', -1)
+hil.wait_msec(1000.0)
+hil.model_write('Load.Single-phase Variable Load.Pref', 0)
+hil.model_write('Load.Single-phase Variable Load.Qref', 0)
+hil.wait_msec(1000.0)
+hil.set_scada_input_value('Load.Single-phase Variable Load.Enable', 0)
+
+# Disable Trigger
+hil.model_write('test_flag', 0)
+]]></on_use_code>
+                <on_start_code active="False"><![CDATA[# NOTE: The code specified in this handler will be executed on simulation start.
+# NOTE: Variables specified here will be available in other handlers.
+# HIL API is imported as 'hil'
+# SCADA API is imported as 'panel'
+# SCADA API constants are imported as 'api_const'
+# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
+# This object can be used as an argument in SCADA API functions.
+hil.set_scada_input_value('mgcc_req2tieSR', 0)]]></on_start_code>
+                <on_stop_code active="False"><![CDATA[# NOTE: The code specified in this handler will be executed after simulation is stopped.
+# HIL API is imported as 'hil'
+# SCADA API is imported as 'panel'
+# SCADA API constants are imported as 'api_const'
+# 'WIDGET_HANDLE' constant holds the WidgetHandle object of this widget.
+# This object can be used as an argument in SCADA API functions.
+
+]]></on_stop_code>
+                <on_start_code_source><![CDATA[Custom code]]></on_start_code_source>
+                <widget_settings>
+                    <x>16</x>
+                    <y>8</y>
+                    <width>240</width>
+                    <height>40</height>
+                    <appearance><![CDATA[Raised]]></appearance>
+                    <hierarchy_position><![CDATA[2]]></hierarchy_position>
+                    <is_background><![CDATA[False]]></is_background>
+                    <label><![CDATA[TEST 01: Island Mode]]></label>
+                    <use_label>True</use_label>
                 </widget_settings>
             </component_data>
         </components>

@@ -10,7 +10,8 @@
       "improved_droop.h": "c",
       "cmath": "c",
       "complex": "c",
-      "random": "c"
+      "random": "c",
+      "virtual_impedance.h": "c"
     }
   }
 }

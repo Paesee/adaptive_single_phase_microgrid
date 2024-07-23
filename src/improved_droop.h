@@ -1,7 +1,26 @@
+/*
+Droop Controller with Two Integrators
+
+Copyright 2024 Vítor Paese De Carli
+
+This file is part of MRAC for Grid-Forming Inverters applied to Single-Phase Microgrid.
+
+MRAC for Grid-Forming Inverters applied to Single-Phase Microgrid is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+MRAC for Grid-Forming Inverters applied to Single-Phase Microgrid is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MRAC for Grid-Forming Inverters applied to Single-Phase Microgrid.  If not, see <https://www.gnu.org/licenses/>6.
+*/
+
 #ifndef DROOP_H
 #define DROOP_H
-
-/* DROOP CONTROLLER */
 
 // Droop controller constants
 #define TWOPI 6.28318530718
@@ -40,7 +59,6 @@ typedef struct ImprovedDroop
   float ki;
   float kv;
   float kq;
-  int is_islanded;
 
   // integrator variables
   float phi_integral;
@@ -63,7 +81,6 @@ void setKi(ImprovedDroop *droop, float ki);
 void setKv(ImprovedDroop *droop, float kv);
 void setDeltaV(ImprovedDroop *droop, float delta_v);
 void setDeltaW(ImprovedDroop *droop, float delta_w);
-void setStatus(ImprovedDroop *droop, int status);
 void computePhi(ImprovedDroop *droop);
 // Droop Controller Inline Functions
 extern inline float computeP(float v_alpha, float v_beta, float i_alpha, float i_beta);

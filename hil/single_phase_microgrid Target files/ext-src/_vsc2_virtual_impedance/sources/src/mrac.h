@@ -125,7 +125,7 @@ typedef struct MRAC
 } MRAC;
 
 void initMRAC(MRAC *mrac, float sampling_time);
-void computeMRAC(MRAC *mrac, float r_al, float r_be, float x1, float x2, float x3, float ds, float dc, float *u_ctrl, float *r_c, float *y_m);
+void computeMRAC(MRAC *mrac, float r_al, float r_be, float x1, float x2, float x3, float ds, float dc, float *u_ctrl, float *y_m);
 
 extern inline float computeReferenceCorrection(float ral, float rbe, float gain, float phase);
 extern inline void computeWmCoeffs(MRAC *mrac);
@@ -138,7 +138,7 @@ extern inline void computeM2(MRAC *mrac);
 extern inline float computeWm(MRAC *mrac, float u, float u_kminus1, float u_kminus2, float u_kminus3, float y_kminus1, float y_kminus2, float y_kminus3);
 extern inline void updateMRAC(MRAC *mrac, float ym, float v, float u_bounded, float x1, float x2, float x3, float rc, float ds, float dc);
 
-void setTheta(MRAC *mrac, float theta_x1, float theta_x2, float theta_x3, float theta_r, float theta_ds, float theta_dc);
+void setTheta(MRAC *mrac, float theta_x1, float theta_x2, float theta_x3, float theta_u, float theta_r, float theta_ds, float theta_dc);
 void setBoundary(MRAC *mrac, float boundary);
 void setGain(MRAC *mrac, float rho);
 void setPhaseShift(MRAC *mrac, float phi);
@@ -148,6 +148,6 @@ void setPole2(MRAC *mrac, float pole_2);
 void setGamma(MRAC *mrac, float gamma);
 void setWmCoeffs(MRAC *mrac, float alpha0, float alpha1, float alpha2, float alpha3, float beta1, float beta2, float beta3);
 
-void getTheta(MRAC *mrac, float *theta_x1, float *theta_x2, float *theta_x3, float *theta_r, float *theta_ds, float *theta_dc);
+void getTheta(MRAC *mrac, float *theta_x1, float *theta_x2, float *theta_x3, float *theta_u, float *theta_r, float *theta_ds, float *theta_dc);
 
 #endif

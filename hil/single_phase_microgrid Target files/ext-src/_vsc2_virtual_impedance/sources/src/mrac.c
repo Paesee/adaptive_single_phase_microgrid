@@ -114,6 +114,7 @@ void initMRAC(MRAC *mrac, float sampling_time)
   mrac->theta_x1 = 0.0;
   mrac->theta_x2 = 0.0;
   mrac->theta_x3 = 0.0;
+  mrac->theta_u = 0.0;
   mrac->theta_r = 0.0;
   mrac->theta_ds = 0.0;
   mrac->theta_dc = 0.0;
@@ -141,7 +142,7 @@ void initMRAC(MRAC *mrac, float sampling_time)
 /// @param u_ctrl 
 /// @param r_c 
 /// @param y_m 
-void computeMRAC(MRAC *mrac, float r_al, float r_be, float x1, float x2, float x3, float ds, float dc, float *u_ctrl, float *r_c, float *y_m)
+void computeMRAC(MRAC *mrac, float r_al, float r_be, float x1, float x2, float x3, float ds, float dc, float *u_ctrl, float *y_m)
 {
   // correct reference magnitude and phase shift
   float rc = computeReferenceCorrection(r_al, r_be, mrac->rho, mrac->phi);
@@ -178,7 +179,6 @@ void computeMRAC(MRAC *mrac, float r_al, float r_be, float x1, float x2, float x
 
   // output control action
   *u_ctrl = u_bounded;
-  *r_c = mrac->a_err_kminus1;
   *y_m = ym;
 }
 
@@ -378,11 +378,12 @@ extern inline void updateMRAC(MRAC *mrac, float ym, float v, float u_bounded, fl
 /// @param theta_r 
 /// @param theta_ds 
 /// @param theta_dc 
-void setTheta(MRAC *mrac, float theta_x1, float theta_x2, float theta_x3, float theta_r, float theta_ds, float theta_dc)
+void setTheta(MRAC *mrac, float theta_x1, float theta_x2, float theta_x3, float theta_u, float theta_r, float theta_ds, float theta_dc)
 {
   mrac->theta_x1 = theta_x1;
   mrac->theta_x2 = theta_x2;
   mrac->theta_x3 = theta_x3;
+  mrac->theta_u  = theta_u;
   mrac->theta_r  = theta_r;
   mrac->theta_ds = theta_ds;
   mrac->theta_dc = theta_dc;
@@ -479,11 +480,12 @@ void setWmCoeffs(MRAC *mrac, float alpha0, float alpha1, float alpha2, float alp
 /// @param theta_r 
 /// @param theta_sin 
 /// @param theta_cos 
-void getTheta(MRAC *mrac, float *theta_x1, float *theta_x2, float *theta_x3, float *theta_r, float *theta_ds, float *theta_dc)
+void getTheta(MRAC *mrac, float *theta_x1, float *theta_x2, float *theta_x3, float *theta_u, float *theta_r, float *theta_ds, float *theta_dc)
 {
   *theta_x1 = mrac->theta_x1;
   *theta_x2 = mrac->theta_x2;
   *theta_x3 = mrac->theta_x3;
+  *theta_u = mrac->theta_u;
   *theta_r = mrac->theta_r;
   *theta_ds = mrac->theta_ds;
   *theta_dc = mrac->theta_dc;
