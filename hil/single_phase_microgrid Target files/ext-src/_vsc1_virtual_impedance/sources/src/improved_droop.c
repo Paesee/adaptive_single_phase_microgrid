@@ -1,7 +1,41 @@
+/*
+Droop Controller with Two Integrators
+
+Copyright 2024 Vítor Paese De Carli
+
+This file is part of MRAC for Grid-Forming Inverters applied to Single-Phase Microgrid.
+
+MRAC for Grid-Forming Inverters applied to Single-Phase Microgrid is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+MRAC for Grid-Forming Inverters applied to Single-Phase Microgrid is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MRAC for Grid-Forming Inverters applied to Single-Phase Microgrid.  If not, see <https://www.gnu.org/licenses/>6.
+*/
+
+// include its header file
 #include "improved_droop.h"
+// include math.h (it must be included in the implementation file for Typhoon HIL Control Center Compatibility)
 #include <math.h>
 
-/* DROOP CONTROLLER FUNCTIONS IMPLEMENTATION */
+/// @brief 
+/// @param droop 
+/// @param ts 
+/// @param v0 
+/// @param w0 
+/// @param p_max 
+/// @param q_max 
+/// @param delta_v 
+/// @param delta_w 
+/// @param wc 
+/// @param ki 
+/// @param kv 
 void initDroop(ImprovedDroop *droop, float ts, float v0, float w0, float p_max, float q_max, float delta_v, float delta_w, float wc, float ki, float kv)
 {
   // general
@@ -41,6 +75,15 @@ void initDroop(ImprovedDroop *droop, float ts, float v0, float w0, float p_max, 
   droop->theta_kminus1 = 0;
 }
 
+/// @brief 
+/// @param droop 
+/// @param v_alpha 
+/// @param v_beta 
+/// @param i_alpha 
+/// @param i_beta 
+/// @param v 
+/// @param pf 
+/// @param qf 
 void executeDroop(ImprovedDroop *droop, float v_alpha, float v_beta, float i_alpha, float i_beta, float *v, float *pf, float *qf)
 {
   // compute filtered active power
@@ -83,47 +126,73 @@ void executeDroop(ImprovedDroop *droop, float v_alpha, float v_beta, float i_alp
   *qf = q_filtered; // q_filtered;
 }
 
+/// @brief 
+/// @param droop 
+/// @param p0 
 void setP0(ImprovedDroop *droop, float p0)
 {
   droop->p0 = p0;
 }
 
+/// @brief 
+/// @param droop 
+/// @param q0 
 void setQ0(ImprovedDroop *droop, float q0)
 {
   droop->q0 = q0;
 }
 
+/// @brief 
+/// @param droop 
+/// @param v0 
 void setV0(ImprovedDroop *droop, float v0)
 {
   droop->v0 = v0;
 }
 
+/// @brief 
+/// @param droop 
+/// @param w0 
 void setW0(ImprovedDroop *droop, float w0)
 {
   droop->w0 = w0;
 }
 
+/// @brief 
+/// @param droop 
+/// @param ki 
 void setKi(ImprovedDroop *droop, float ki)
 {
   droop->ki = ki;
 }
 
+/// @brief 
+/// @param droop 
+/// @param kv 
 void setKv(ImprovedDroop *droop, float kv)
 {
   droop->kv = kv;
   droop->kq = droop->n * droop->kv;
 }
 
+/// @brief 
+/// @param droop 
+/// @param delta_v 
 void setDeltaV(ImprovedDroop *droop, float delta_v)
 {
   droop->n = delta_v / (2.0 * droop->q_max);
 }
 
+/// @brief 
+/// @param droop 
+/// @param delta_w 
 void setDeltaW(ImprovedDroop *droop, float delta_w)
 {
   droop->m = delta_w / (2.0 * droop->p_max);
 }
 
+/// @brief 
+/// @param droop 
 void computePhi(ImprovedDroop *droop)
 {
   float one_by_divider = 1.0 / (2.0 + droop->sampling_time * droop->cutoff_frequency);
@@ -132,28 +201,55 @@ void computePhi(ImprovedDroop *droop)
   droop->phi3 = (droop->cutoff_frequency * droop->sampling_time - 2.0) * one_by_divider;
 }
 
-/* DROOP CONTROLLER INLINE FUNCTIONS IMPLEMENTATION */
-
+/// @brief 
+/// @param v_alpha 
+/// @param v_beta 
+/// @param i_alpha 
+/// @param i_beta 
+/// @return 
 extern inline float computeP(float v_alpha, float v_beta, float i_alpha, float i_beta)
 {
   return (0.5 * (v_alpha * i_alpha + v_beta * i_beta));
 }
 
+/// @brief 
+/// @param v_alpha 
+/// @param v_beta 
+/// @param i_alpha 
+/// @param i_beta 
+/// @return 
 extern inline float computeQ(float v_alpha, float v_beta, float i_alpha, float i_beta)
 {
   return (0.5 * (v_beta * i_alpha - v_alpha * i_beta));
 }
 
+/// @brief 
+/// @param droop 
+/// @param input 
+/// @param input_kminus1 
+/// @param output_kminus1 
+/// @return 
 extern inline float computeLPF(ImprovedDroop *droop, float input, float input_kminus1, float output_kminus1)
 {
   return (droop->phi1 * input + droop->phi2 * input_kminus1 - droop->phi3 * output_kminus1);
 }
 
+/// @brief 
+/// @param droop 
+/// @param input 
+/// @param input_kminus1 
+/// @param output_kminus1 
+/// @param ki 
+/// @return 
 extern inline float computeIntegral(ImprovedDroop *droop, float input, float input_kminus1, float output_kminus1, float ki)
 {
   return ((ki * droop->phi_integral) * (input + input_kminus1) + output_kminus1);
 }
 
+/// @brief 
+/// @param v_alpha 
+/// @param v_beta 
+/// @return 
 extern inline float computeVrms(float v_alpha, float v_beta)
 {
   return (ONE_BY_SQRT2 * sqrt(v_alpha * v_alpha + v_beta * v_beta));

@@ -1,6 +1,34 @@
+/*
+Virtual Impedance
+
+Copyright 2024 Vítor Paese De Carli
+
+This file is part of MRAC for Grid-Forming Inverters applied to Single-Phase Microgrid.
+
+MRAC for Grid-Forming Inverters applied to Single-Phase Microgrid is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+MRAC for Grid-Forming Inverters applied to Single-Phase Microgrid is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MRAC for Grid-Forming Inverters applied to Single-Phase Microgrid.  If not, see <https://www.gnu.org/licenses/>6.
+*/
+
+// include its header file
 #include "virtual_impedance.h"
 
-// Virtual Impedance functions implementation
+/// @brief 
+/// @param vz 
+/// @param sampling_time 
+/// @param resistance 
+/// @param inductance 
+/// @param zeta 
+/// @param pole 
 void initVirtualImpedance(VirtualImpedance *vz, float sampling_time, float resistance, float inductance, float zeta, float pole)
 {
   // general
@@ -20,6 +48,10 @@ void initVirtualImpedance(VirtualImpedance *vz, float sampling_time, float resis
   vz->voltage_kminus2 = 0;
 }
 
+/// @brief 
+/// @param vz 
+/// @param current 
+/// @param voltage_drop 
 void executeVirtualImpedance(VirtualImpedance *vz, float current, float *voltage_drop)
 {
   // calculate voltage drop
@@ -33,36 +65,53 @@ void executeVirtualImpedance(VirtualImpedance *vz, float current, float *voltage
   *voltage_drop = v_drop;
 }
 
+/// @brief 
+/// @param vz 
+/// @param sampling_time 
 void vz_setSamplingTime(VirtualImpedance *vz, float sampling_time)
 {
   vz->sampling_time = sampling_time;
   calculateVZcoefficients(vz);
 }
 
+/// @brief 
+/// @param vz 
+/// @param resistance 
 void setResistance(VirtualImpedance *vz, float resistance)
 {
   vz->resistance = resistance;
   calculateVZcoefficients(vz);
 }
 
+/// @brief 
+/// @param vz 
+/// @param inductance 
 void setInductance(VirtualImpedance *vz, float inductance)
 {
   vz->inductance = inductance;
   calculateVZcoefficients(vz);
 }
 
+/// @brief 
+/// @param vz 
+/// @param zeta 
 void setDamping(VirtualImpedance *vz, float zeta)
 {
   vz->zeta = zeta;
   calculateVZcoefficients(vz);
 }
 
+/// @brief 
+/// @param vz 
+/// @param pole 
 void setComplexPole(VirtualImpedance *vz, float pole)
 {
   vz->omega_pole = pole;
   calculateVZcoefficients(vz);
 }
 
+/// @brief 
+/// @param vz 
 void calculateVZcoefficients(VirtualImpedance *vz)
 {
 

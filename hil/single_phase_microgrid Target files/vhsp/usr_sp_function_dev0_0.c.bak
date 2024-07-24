@@ -36,52 +36,52 @@ extern "C" {
 
         #include "sogi_qsg.h"
 
-        #include "mrac.h"
-
-        #include "sogi_qsg.h"
-
-
-        #include "sogi_qsg.h"
-
-
-
-
-        #include "sogi_qsg.h"
-
-
-        #include "improved_droop.h"
-
-        #include "sogi_qsg.h"
-
-
-        #include "sogi_qsg.h"
-
-
-            #include "virtual_impedance.h"
-            #include "sogi_qsg.h"
-            #include "mrac.h"
-            #include "improved_droop.h"
-
-        #include "virtual_impedance.h"
-
         #include "improved_droop.h"
 
 
 
-
         #include "sogi_qsg.h"
+            #include "improved_droop.h"
             #include "virtual_impedance.h"
             #include "sogi_qsg.h"
             #include "mrac.h"
-            #include "improved_droop.h"
 
         #include "virtual_impedance.h"
 
+
+
+        #include "improved_droop.h"
+
         #include "mrac.h"
+
 
         #include "sogi_qsg.h"
 
 
+
+        #include "sogi_qsg.h"
+
+        #include "sogi_qsg.h"
+
+
+
+        #include "mrac.h"
+
+
+            #include "improved_droop.h"
+            #include "virtual_impedance.h"
+            #include "sogi_qsg.h"
+            #include "mrac.h"
+
+        #include "virtual_impedance.h"
+
+
+        #include "sogi_qsg.h"
+
+
+        #include "sogi_qsg.h"
+
+        #include "sogi_qsg.h"
 
 // ----------------------------------------------------------------------------------------                // generated using template:generic_macros.template-----------------------------------------
 /*********************** Macros (Inline Functions) Definitions ***************************/

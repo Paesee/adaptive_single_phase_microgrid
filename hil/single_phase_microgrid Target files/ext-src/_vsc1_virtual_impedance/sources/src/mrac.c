@@ -1,20 +1,32 @@
-// include header file
-#include "mrac.h"
+/*
+Model Reference Adaptive Controller (MRAC)
 
-// include math.h (it must be included here for HIL compatibility, can't be called in the library header file)
+Copyright 2024 Vítor Paese De Carli
+
+This file is part of MRAC for Grid-Forming Inverters applied to Single-Phase Microgrid.
+
+MRAC for Grid-Forming Inverters applied to Single-Phase Microgrid is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+MRAC for Grid-Forming Inverters applied to Single-Phase Microgrid is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MRAC for Grid-Forming Inverters applied to Single-Phase Microgrid.  If not, see <https://www.gnu.org/licenses/>6.
+*/
+
+// include its header file
+#include "mrac.h"
+// include math.h (it must be included in the implementation file for Typhoon HIL Control Center Compatibility)
 #include <math.h>
 
-/*
- * MRAC Controller Main Functions Implementation
- */
-
-/// @brief initialize MRAC controller
+/// @brief 
 /// @param mrac 
 /// @param sampling_time 
-/// @param gamma 
-/// @param settling_time 
-/// @param gain_correction 
-/// @param phase_shift 
 void initMRAC(MRAC *mrac, float sampling_time)
 {
   // General initialization
@@ -130,7 +142,7 @@ void initMRAC(MRAC *mrac, float sampling_time)
   mrac->inv_m2_kminus1 = 1.0; // Start with 1 to avoid division by zero
 }
 
-/// @brief compute MRAC control law
+/// @brief 
 /// @param mrac 
 /// @param r_al 
 /// @param r_be 
@@ -140,7 +152,6 @@ void initMRAC(MRAC *mrac, float sampling_time)
 /// @param ds 
 /// @param dc 
 /// @param u_ctrl 
-/// @param r_c 
 /// @param y_m 
 void computeMRAC(MRAC *mrac, float r_al, float r_be, float x1, float x2, float x3, float ds, float dc, float *u_ctrl, float *y_m)
 {
@@ -182,11 +193,7 @@ void computeMRAC(MRAC *mrac, float r_al, float r_be, float x1, float x2, float x
   *y_m = ym;
 }
 
-/*
- * MRAC Controller Auxiliary Functions Implementation
- */
-
-/// @brief compute gain and phase correction for reference
+/// @brief 
 /// @param ral 
 /// @param rbe 
 /// @param gain 
@@ -197,14 +204,14 @@ extern inline float computeReferenceCorrection(float ral, float rbe, float gain,
   return (gain * (cos(phase) * ral + sin(phase) * rbe));
 }
 
-/// @brief compute W_{m} reccurence equations gains according to poles selection
+/// @brief 
 /// @param mrac 
 extern inline void computeWmCoeffs(MRAC *mrac)
 {
   //TODO
 }
 
-/// @brief compute zeta
+/// @brief 
 /// @param mrac 
 /// @param rc 
 /// @param x1 
@@ -224,7 +231,7 @@ extern inline void computeZeta(MRAC *mrac, float rc, float x1, float x2, float x
   mrac->zeta_dc = mrac->alpha0 * dc               + mrac->alpha1 * mrac->dc_kminus1 + mrac->alpha2 * mrac->dc_kminus2 + mrac->alpha3 * mrac->dc_kminus3 - mrac->beta1 * mrac->zeta_dc_kminus1 - mrac->beta2 * mrac->zeta_dc_kminus2 - mrac->beta3 * mrac->zeta_dc_kminus3;
 }
 
-/// @brief compute theta
+/// @brief 
 /// @param mrac 
 extern inline void computeTheta(MRAC *mrac)
 {
@@ -240,12 +247,12 @@ extern inline void computeTheta(MRAC *mrac)
   mrac->theta_dc = mrac->theta_dc_kminus1 - common_factor * mrac->zeta_dc_kminus1; // theta_{dc} => D_{cos} = cos disturbance rejection
 }
 
-/// @brief compute control action u
+/// @brief 
 /// @param mrac 
+/// @param rc 
 /// @param x1 
 /// @param x2 
 /// @param x3 
-/// @param rc 
 /// @param ds 
 /// @param dc 
 /// @return 
@@ -254,7 +261,7 @@ extern inline float computeU(MRAC *mrac, float rc, float x1, float x2, float x3,
   return (mrac->theta_x1 * x1 + mrac->theta_x2 * x2 + mrac->theta_x3 * x3 + mrac->theta_u * mrac->ub_kminus1 + mrac->theta_r * rc + mrac->theta_ds * ds + mrac->theta_dc * dc);
 }
 
-/// @brief compute output boundary
+/// @brief 
 /// @param mrac 
 /// @param u 
 /// @return 
@@ -273,30 +280,49 @@ extern inline float computeBoundary(MRAC *mrac, float u)
   }
 }
 
-/// @brief compute augmented error
-/// @param mrac
+/// @brief 
+/// @param mrac 
 /// @param t_err 
 /// @param v 
-/// @return 
 extern inline void computeAugmentedError(MRAC *mrac, float t_err, float v)
 {
   mrac->csi = - v + mrac->theta_x1 * mrac->zeta_x1 + mrac->theta_x2 * mrac->zeta_x2 + mrac->theta_x3 * mrac->zeta_x3 + mrac->theta_u * mrac->zeta_u + mrac->theta_r * mrac->zeta_r + mrac->theta_ds * mrac->zeta_ds + mrac->theta_dc * mrac->zeta_dc;
   mrac->a_err_kminus1 = t_err + mrac->csi;
 }
 
-/// @brief compute normalization signal
+/// @brief 
 /// @param mrac 
-/// @return 
 extern inline void computeM2(MRAC *mrac)
 {
   mrac->inv_m2_kminus1 = 1.0 / (1 + mrac->zeta_x1 * mrac->zeta_x1 + mrac->zeta_x2 * mrac->zeta_x2 + mrac->zeta_x3 * mrac->zeta_x3 + mrac->zeta_u * mrac->zeta_u + mrac->zeta_r * mrac->zeta_r + mrac->zeta_ds * mrac->zeta_ds + mrac->zeta_dc * mrac->zeta_dc + mrac->csi * mrac->csi);
 }
 
+/// @brief 
+/// @param mrac 
+/// @param u 
+/// @param u_kminus1 
+/// @param u_kminus2 
+/// @param u_kminus3 
+/// @param y_kminus1 
+/// @param y_kminus2 
+/// @param y_kminus3 
+/// @return 
 extern inline float computeWm(MRAC *mrac, float u, float u_kminus1, float u_kminus2, float u_kminus3, float y_kminus1, float y_kminus2, float y_kminus3)
 {
   return (mrac->alpha0 * u + mrac->alpha1 * u_kminus1 + mrac->alpha2 * u_kminus2 + mrac->alpha3 * u_kminus3 - mrac->beta1 * y_kminus1 - mrac->beta2 * y_kminus2 - mrac->beta3 * y_kminus3);
 }
 
+/// @brief 
+/// @param mrac 
+/// @param ym 
+/// @param v 
+/// @param u_bounded 
+/// @param x1 
+/// @param x2 
+/// @param x3 
+/// @param rc 
+/// @param ds 
+/// @param dc 
 extern inline void updateMRAC(MRAC *mrac, float ym, float v, float u_bounded, float x1, float x2, float x3, float rc, float ds, float dc)
 {
   // Recurrence equation variables for y_m
@@ -366,15 +392,12 @@ extern inline void updateMRAC(MRAC *mrac, float ym, float v, float u_bounded, fl
   mrac->theta_dc_kminus1 = mrac->theta_dc;
 }
 
-/*
- * Setters
- */
-
-/// @brief set theta for better initilization
+/// @brief 
 /// @param mrac 
 /// @param theta_x1 
 /// @param theta_x2 
 /// @param theta_x3 
+/// @param theta_u 
 /// @param theta_r 
 /// @param theta_ds 
 /// @param theta_dc 
@@ -389,7 +412,7 @@ void setTheta(MRAC *mrac, float theta_x1, float theta_x2, float theta_x3, float 
   mrac->theta_dc = theta_dc;
 }
 
-/// @brief set output boundary
+/// @brief 
 /// @param mrac 
 /// @param boundary 
 void setBoundary(MRAC *mrac, float boundary)
@@ -397,7 +420,7 @@ void setBoundary(MRAC *mrac, float boundary)
   mrac->u_boundary = boundary;
 }
 
-/// @brief set reference model W_{m} gain correction factor rho
+/// @brief 
 /// @param mrac 
 /// @param rho 
 void setGain(MRAC *mrac, float rho)
@@ -405,7 +428,7 @@ void setGain(MRAC *mrac, float rho)
   mrac->rho = rho;
 }
 
-/// @brief set reference model W_{m} phase correction factor phi
+/// @brief 
 /// @param mrac 
 /// @param phi 
 void setPhaseShift(MRAC *mrac, float phi)
@@ -413,7 +436,7 @@ void setPhaseShift(MRAC *mrac, float phi)
   mrac->phi = phi;
 }
 
-/// @brief set one of the poles of the transfer function W_{m}
+/// @brief 
 /// @param mrac 
 /// @param pole_0 
 void setPole0(MRAC *mrac, float pole_0)
@@ -422,7 +445,7 @@ void setPole0(MRAC *mrac, float pole_0)
   computeWmCoeffs(mrac);
 }
 
-/// @brief set one of the poles of the transfer function W_{m}
+/// @brief 
 /// @param mrac 
 /// @param pole_1 
 void setPole1(MRAC *mrac, float pole_1)
@@ -431,7 +454,7 @@ void setPole1(MRAC *mrac, float pole_1)
   computeWmCoeffs(mrac);
 }
 
-/// @brief set one of the poles of the transfer function W_{m}
+/// @brief 
 /// @param mrac 
 /// @param pole_2 
 void setPole2(MRAC *mrac, float pole_2)
@@ -440,7 +463,7 @@ void setPole2(MRAC *mrac, float pole_2)
   computeWmCoeffs(mrac);
 }
 
-/// @brief set adaptive gain
+/// @brief 
 /// @param mrac 
 /// @param gamma 
 void setGamma(MRAC *mrac, float gamma)
@@ -449,15 +472,15 @@ void setGamma(MRAC *mrac, float gamma)
   mrac->ts_times_gamma = mrac->sampling_time * gamma;
 }
 
-/// @brief set transfer function W_{m} directly (may be used instead of setting poles position)
+/// @brief 
 /// @param mrac 
 /// @param alpha0 
 /// @param alpha1 
 /// @param alpha2 
 /// @param alpha3 
-/// @param beta0 
 /// @param beta1 
 /// @param beta2 
+/// @param beta3 
 void setWmCoeffs(MRAC *mrac, float alpha0, float alpha1, float alpha2, float alpha3, float beta1, float beta2, float beta3)
 {
   mrac->alpha0 = alpha0;
@@ -469,17 +492,15 @@ void setWmCoeffs(MRAC *mrac, float alpha0, float alpha1, float alpha2, float alp
   mrac->beta3 = beta3;
 }
 
-/*
- * Getters
- */
-
-/// @brief get theta vector
+/// @brief 
 /// @param mrac 
 /// @param theta_x1 
-/// @param theta_y 
+/// @param theta_x2 
+/// @param theta_x3 
+/// @param theta_u 
 /// @param theta_r 
-/// @param theta_sin 
-/// @param theta_cos 
+/// @param theta_ds 
+/// @param theta_dc 
 void getTheta(MRAC *mrac, float *theta_x1, float *theta_x2, float *theta_x3, float *theta_u, float *theta_r, float *theta_ds, float *theta_dc)
 {
   *theta_x1 = mrac->theta_x1;

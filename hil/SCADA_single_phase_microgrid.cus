@@ -2649,7 +2649,7 @@ displayValue = 0.0
 # HIL API is imported as 'hil'
 ]]></initialization_code>
                 <widget_settings>
-                    <x>1224</x>
+                    <x>1232</x>
                     <y>488</y>
                     <width>376</width>
                     <height>216</height>
@@ -2716,7 +2716,7 @@ widgetValue = None
 widgetValue = hil.model_read('VSC1.GAIN')
 ]]></on_timer_code>
                 <on_start_code_source><![CDATA[Macro code]]></on_start_code_source>
-                <inputValue><![CDATA[1.00048]]></inputValue>
+                <inputValue><![CDATA[1.0005]]></inputValue>
                 <min>1.0</min>
                 <max>5.0</max>
                 <step>0.05</step>
@@ -2728,7 +2728,7 @@ widgetValue = hil.model_read('VSC1.GAIN')
                     <appearance><![CDATA[Flat]]></appearance>
                     <hierarchy_position><![CDATA[2]]></hierarchy_position>
                     <is_background><![CDATA[False]]></is_background>
-                    <label><![CDATA[Gain]]></label>
+                    <label><![CDATA[1/rho_m = magnitude correction]]></label>
                     <use_label>True</use_label>
                 </widget_settings>
             </component_data>
@@ -2797,7 +2797,7 @@ widgetValue = hil.model_read('VSC1.PHASE_SHIFT')/(2*3.1428)
                     <appearance><![CDATA[Flat]]></appearance>
                     <hierarchy_position><![CDATA[2]]></hierarchy_position>
                     <is_background><![CDATA[False]]></is_background>
-                    <label><![CDATA[Phase shift]]></label>
+                    <label><![CDATA[theta_m = phase shift correction]]></label>
                     <use_label>True</use_label>
                 </widget_settings>
             </component_data>
@@ -2866,7 +2866,7 @@ widgetValue = hil.model_read('VSC1.GAMMA')
                     <appearance><![CDATA[Flat]]></appearance>
                     <hierarchy_position><![CDATA[2]]></hierarchy_position>
                     <is_background><![CDATA[False]]></is_background>
-                    <label><![CDATA[Gamma]]></label>
+                    <label><![CDATA[gamma: adaptive gain]]></label>
                     <use_label>True</use_label>
                 </widget_settings>
             </component_data>
@@ -3328,7 +3328,7 @@ displayValue = textDisplayData
 # HIL API is imported as 'hil'
 ]]></initialization_code>
                 <widget_settings>
-                    <x>1224</x>
+                    <x>1232</x>
                     <y>880</y>
                     <width>376</width>
                     <height>280</height>
@@ -3407,7 +3407,7 @@ widgetValue = hil.model_read('VSC1.FC')
                     <appearance><![CDATA[Flat]]></appearance>
                     <hierarchy_position><![CDATA[2]]></hierarchy_position>
                     <is_background><![CDATA[False]]></is_background>
-                    <label><![CDATA[LPF Cut-off Frequency (Hz)]]></label>
+                    <label><![CDATA[w_cp = i_0 LPF cut-off frequency (Hz)]]></label>
                     <use_label>True</use_label>
                 </widget_settings>
             </component_data>
@@ -3476,7 +3476,7 @@ widgetValue = hil.model_read('VSC1.LV')
                     <appearance><![CDATA[Flat]]></appearance>
                     <hierarchy_position><![CDATA[2]]></hierarchy_position>
                     <is_background><![CDATA[False]]></is_background>
-                    <label><![CDATA[Lv: Virtual Inductance (mH)]]></label>
+                    <label><![CDATA[Lv: virtual inductance (mH)]]></label>
                     <use_label>True</use_label>
                 </widget_settings>
             </component_data>
@@ -3974,7 +3974,7 @@ widgetValue = None
 # HIL API is imported as 'hil'
 ]]></initialization_code>
                 <widget_settings>
-                    <x>1224</x>
+                    <x>1232</x>
                     <y>712</y>
                     <width>376</width>
                     <height>160</height>
@@ -4053,7 +4053,7 @@ widgetValue = hil.model_read('VSC1.KV')
                     <appearance><![CDATA[Flat]]></appearance>
                     <hierarchy_position><![CDATA[2]]></hierarchy_position>
                     <is_background><![CDATA[False]]></is_background>
-                    <label><![CDATA[Kv (Improved Droop RMS Gain)]]></label>
+                    <label><![CDATA[K_v: improved droop proportional gain]]></label>
                     <use_label>True</use_label>
                 </widget_settings>
             </component_data>
@@ -4122,7 +4122,7 @@ widgetValue = hil.model_read('VSC1.KI')
                     <appearance><![CDATA[Flat]]></appearance>
                     <hierarchy_position><![CDATA[2]]></hierarchy_position>
                     <is_background><![CDATA[False]]></is_background>
-                    <label><![CDATA[Ki (Improved Droop Integral Gain)]]></label>
+                    <label><![CDATA[K_i: improved droop integral gain]]></label>
                     <use_label>True</use_label>
                 </widget_settings>
             </component_data>
@@ -4191,7 +4191,7 @@ widgetValue = hil.model_read('VSC1.RV')
                     <appearance><![CDATA[Flat]]></appearance>
                     <hierarchy_position><![CDATA[2]]></hierarchy_position>
                     <is_background><![CDATA[False]]></is_background>
-                    <label><![CDATA[Rv: Virtual Resistance (mOhm)]]></label>
+                    <label><![CDATA[R_v: virtual resistance (mOhm)]]></label>
                     <use_label>True</use_label>
                 </widget_settings>
             </component_data>
@@ -4260,7 +4260,7 @@ widgetValue = hil.model_read('VSC1.W0')
                     <appearance><![CDATA[Flat]]></appearance>
                     <hierarchy_position><![CDATA[2]]></hierarchy_position>
                     <is_background><![CDATA[False]]></is_background>
-                    <label><![CDATA[Wp: Complex Poles (rad/s)]]></label>
+                    <label><![CDATA[omega_p: high frequency poles position (rad/s)]]></label>
                     <use_label>True</use_label>
                 </widget_settings>
             </component_data>

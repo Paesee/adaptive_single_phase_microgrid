@@ -1,7 +1,32 @@
+/*
+Second Order Generalized Integrator + Frequency Locked Loop (SOGI+FLL)
+
+Copyright 2024 Vítor Paese De Carli
+
+This file is part of MRAC for Grid-Forming Inverters applied to Single-Phase Microgrid.
+
+MRAC for Grid-Forming Inverters applied to Single-Phase Microgrid is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+MRAC for Grid-Forming Inverters applied to Single-Phase Microgrid is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MRAC for Grid-Forming Inverters applied to Single-Phase Microgrid.  If not, see <https://www.gnu.org/licenses/>6.
+*/
+
+// include its header file
 #include "sogi_qsg.h"
 
-/* SOGI FUNCTIONS IMPLEMENTATION */
-
+/// @brief 
+/// @param sogi 
+/// @param frequency 
+/// @param p_gain 
+/// @param f_gain 
 void SOGIInit(SOGIqsg *sogi, float frequency, float p_gain, float f_gain)
 {
   sogi->w0 = 2 * PI * frequency;
@@ -13,21 +38,36 @@ void SOGIInit(SOGIqsg *sogi, float frequency, float p_gain, float f_gain)
   sogi->fll_gain = f_gain;
 }
 
+/// @brief 
+/// @param sogi 
+/// @param frequency 
 void setCentralFrequency(SOGIqsg *sogi, float frequency)
 {
   sogi->w0 = 2 * PI * frequency;
 }
 
+/// @brief 
+/// @param sogi 
+/// @param p_gain 
 void setProportionalGain(SOGIqsg *sogi, float p_gain)
 {
   sogi->proportional_gain = p_gain;
 }
 
+/// @brief 
+/// @param sogi 
+/// @param f_gain 
 void setFLLGain(SOGIqsg *sogi, float f_gain)
 {
   sogi->fll_gain = f_gain;
 }
 
+/// @brief 
+/// @param sogi 
+/// @param meas_signal 
+/// @param alpha_signal 
+/// @param beta_signal 
+/// @param frequency 
 void executeSOGI(SOGIqsg *sogi, float meas_signal, float *alpha_signal, float *beta_signal, float *frequency)
 {
   // QSG execution
