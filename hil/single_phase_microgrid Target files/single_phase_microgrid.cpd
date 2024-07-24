@@ -84,22 +84,8 @@
     </pesb>
     <analog_variables>
         <cell>
-            <name>MGCC.Meter._Vg.Cf_Va</name>
-            <address>3</address>
-            <type>voltage</type>
-            <initial_condition>0.0</initial_condition>
-            <visible>False</visible>
-        </cell>
-        <cell>
-            <name>Load.Meter._Ig.Lf_Ia</name>
-            <address>8</address>
-            <type>current</type>
-            <initial_condition>0.0</initial_condition>
-            <visible>False</visible>
-        </cell>
-        <cell>
-            <name>Load.Single-phase Variable Load.Single phase core1.L_ref.Lint</name>
-            <address>9</address>
+            <name>MGCC.Meter._Ig.Lf_Ia</name>
+            <address>11</address>
             <type>current</type>
             <initial_condition>0.0</initial_condition>
             <visible>False</visible>
@@ -112,20 +98,6 @@
             <visible>True</visible>
         </cell>
         <cell>
-            <name>Load.Single-phase Variable Load.Single phase core1.C_ref.Cint</name>
-            <address>2</address>
-            <type>voltage</type>
-            <initial_condition>0.0</initial_condition>
-            <visible>False</visible>
-        </cell>
-        <cell>
-            <name>Load.Single-phase Variable Load.Single phase core1.R_ref.L</name>
-            <address>10</address>
-            <type>current</type>
-            <initial_condition>0.0</initial_condition>
-            <visible>False</visible>
-        </cell>
-        <cell>
             <name>L_VSC2</name>
             <address>4</address>
             <type>current</type>
@@ -133,8 +105,8 @@
             <visible>True</visible>
         </cell>
         <cell>
-            <name>Load.Meter._Vg.Cf_Va</name>
-            <address>0</address>
+            <name>MGCC.Meter._Vg.Cf_Va</name>
+            <address>3</address>
             <type>voltage</type>
             <initial_condition>0.0</initial_condition>
             <visible>False</visible>
@@ -147,9 +119,23 @@
             <visible>False</visible>
         </cell>
         <cell>
-            <name>MGCC.Meter._Ig.Lf_Ia</name>
-            <address>11</address>
+            <name>Load.Meter._Ig.Lf_Ia</name>
+            <address>8</address>
             <type>current</type>
+            <initial_condition>0.0</initial_condition>
+            <visible>False</visible>
+        </cell>
+        <cell>
+            <name>L_grid</name>
+            <address>5</address>
+            <type>current</type>
+            <initial_condition>0.0</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>Load.Single-phase Variable Load.Single phase core1.C_ref.Cint</name>
+            <address>2</address>
+            <type>voltage</type>
             <initial_condition>0.0</initial_condition>
             <visible>False</visible>
         </cell>
@@ -161,51 +147,121 @@
             <visible>True</visible>
         </cell>
         <cell>
-            <name>L_grid</name>
-            <address>5</address>
+            <name>Load.Single-phase Variable Load.Single phase core1.L_ref.Lint</name>
+            <address>9</address>
             <type>current</type>
             <initial_condition>0.0</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>Load.Meter._Ig</name>
-            <address>22</address>
-            <type>current</type>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>Load.Meter._Ig</name>
-            <address>22</address>
-            <type>current</type>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>Short.S_sc.i</name>
-            <address>31</address>
-            <type>current</type>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>Load.Single-phase Variable Load.Single phase core1.C_ref.charge</name>
-            <address>14</address>
-            <type>voltage</type>
-            <initial_condition>None</initial_condition>
             <visible>False</visible>
         </cell>
         <cell>
-            <name>VSC2.Core Coupling 2.I_msr</name>
-            <address>456</address>
+            <name>Load.Meter._Vg.Cf_Va</name>
+            <address>0</address>
+            <type>voltage</type>
+            <initial_condition>0.0</initial_condition>
+            <visible>False</visible>
+        </cell>
+        <cell>
+            <name>Load.Single-phase Variable Load.Single phase core1.R_ref.L</name>
+            <address>10</address>
             <type>current</type>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
+            <initial_condition>0.0</initial_condition>
+            <visible>False</visible>
         </cell>
         <cell>
             <name>MGCC.i</name>
             <address>30</address>
             <type>current</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>MGCC.Meter._Vg.full_bandwidth</name>
+            <address>17</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>MGCC.Meter._Vg_full_bandwidth</name>
+            <address>17</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>Load.Meter._Ig.full_bandwidth</name>
+            <address>21</address>
+            <type>current</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>Load.Meter._Ig_full_bandwidth</name>
+            <address>21</address>
+            <type>current</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>Load.Single-phase Variable Load.V</name>
+            <address>16</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>Load.Single-phase Variable Load.Single phase core1.L_ref.flux</name>
+            <address>26</address>
+            <type>current</type>
+            <initial_condition>None</initial_condition>
+            <visible>False</visible>
+        </cell>
+        <cell>
+            <name>MGCC.Meter._Ig.full_bandwidth</name>
+            <address>28</address>
+            <type>current</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>MGCC.Meter._Ig_full_bandwidth</name>
+            <address>28</address>
+            <type>current</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>Load.Single-phase Variable Load.Single phase core1.L_ref.V</name>
+            <address>15</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>False</visible>
+        </cell>
+        <cell>
+            <name>Load.Single-phase Variable Load.Single phase core1.C_ref.I</name>
+            <address>24</address>
+            <type>current</type>
+            <initial_condition>None</initial_condition>
+            <visible>False</visible>
+        </cell>
+        <cell>
+            <name>VSC1.Core Coupling 2.I_msr</name>
+            <address>452</address>
+            <type>current</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>Load.Meter._Vg</name>
+            <address>13</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>Load.Meter._Vg</name>
+            <address>13</address>
+            <type>voltage</type>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
         </cell>
@@ -224,11 +280,11 @@
             <visible>True</visible>
         </cell>
         <cell>
-            <name>Load.Single-phase Variable Load.Single phase core1.L_ref.flux</name>
-            <address>26</address>
+            <name>Load.Single-phase Variable Load.I</name>
+            <address>25</address>
             <type>current</type>
             <initial_condition>None</initial_condition>
-            <visible>False</visible>
+            <visible>True</visible>
         </cell>
         <cell>
             <name>MGCC.Vgrid</name>
@@ -238,22 +294,15 @@
             <visible>True</visible>
         </cell>
         <cell>
-            <name>MGCC.Meter._Ig</name>
-            <address>29</address>
+            <name>Load.Single-phase Variable Load.Single phase core1.R_ref.I</name>
+            <address>27</address>
             <type>current</type>
             <initial_condition>None</initial_condition>
-            <visible>True</visible>
+            <visible>False</visible>
         </cell>
         <cell>
-            <name>MGCC.Meter._Ig</name>
-            <address>29</address>
-            <type>current</type>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>Load.Single-phase Variable Load.I</name>
-            <address>25</address>
+            <name>VSC2.Core Coupling 2.I_msr</name>
+            <address>456</address>
             <type>current</type>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
@@ -266,6 +315,20 @@
             <visible>True</visible>
         </cell>
         <cell>
+            <name>Load.Meter._Ig</name>
+            <address>22</address>
+            <type>current</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>Load.Meter._Ig</name>
+            <address>22</address>
+            <type>current</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
             <name>Load.Single-phase Variable Load.S1.i</name>
             <address>23</address>
             <type>current</type>
@@ -273,79 +336,30 @@
             <visible>False</visible>
         </cell>
         <cell>
-            <name>Load.Meter._Ig.full_bandwidth</name>
-            <address>21</address>
+            <name>MGCC.Meter._Ig</name>
+            <address>29</address>
             <type>current</type>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
         </cell>
         <cell>
-            <name>Load.Meter._Ig_full_bandwidth</name>
-            <address>21</address>
+            <name>MGCC.Meter._Ig</name>
+            <address>29</address>
             <type>current</type>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
         </cell>
         <cell>
-            <name>Load.Single-phase Variable Load.Single phase core1.R_ref.I</name>
-            <address>27</address>
-            <type>current</type>
-            <initial_condition>None</initial_condition>
-            <visible>False</visible>
-        </cell>
-        <cell>
-            <name>Load.Single-phase Variable Load.Single phase core1.L_ref.V</name>
-            <address>15</address>
+            <name>Load.Single-phase Variable Load.Single phase core1.C_ref.charge</name>
+            <address>14</address>
             <type>voltage</type>
             <initial_condition>None</initial_condition>
             <visible>False</visible>
         </cell>
         <cell>
-            <name>VSC1.Core Coupling 2.I_msr</name>
-            <address>452</address>
+            <name>Short.S_sc.i</name>
+            <address>31</address>
             <type>current</type>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>Load.Single-phase Variable Load.Single phase core1.C_ref.I</name>
-            <address>24</address>
-            <type>current</type>
-            <initial_condition>None</initial_condition>
-            <visible>False</visible>
-        </cell>
-        <cell>
-            <name>MGCC.Meter._Vg.full_bandwidth</name>
-            <address>17</address>
-            <type>voltage</type>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>MGCC.Meter._Vg_full_bandwidth</name>
-            <address>17</address>
-            <type>voltage</type>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>Load.Meter._Vg</name>
-            <address>13</address>
-            <type>voltage</type>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>Load.Meter._Vg</name>
-            <address>13</address>
-            <type>voltage</type>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>Load.Single-phase Variable Load.V</name>
-            <address>16</address>
-            <type>voltage</type>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
         </cell>
@@ -360,20 +374,6 @@
             <name>MGCC.Meter._Vg</name>
             <address>18</address>
             <type>voltage</type>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>MGCC.Meter._Ig.full_bandwidth</name>
-            <address>28</address>
-            <type>current</type>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>MGCC.Meter._Ig_full_bandwidth</name>
-            <address>28</address>
-            <type>current</type>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
         </cell>
@@ -382,20 +382,6 @@
             <address>33280</address>
             <type>voltage</type>
             <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>VSC1.Cf</name>
-            <address>512</address>
-            <type>voltage</type>
-            <initial_condition>0.0</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>VSC1.Lf</name>
-            <address>514</address>
-            <type>current</type>
-            <initial_condition>0.0</initial_condition>
             <visible>True</visible>
         </cell>
         <cell>
@@ -413,8 +399,22 @@
             <visible>False</visible>
         </cell>
         <cell>
-            <name>VSC1.GRID FORMING.v4</name>
-            <address>901</address>
+            <name>VSC1.Cf</name>
+            <address>512</address>
+            <type>voltage</type>
+            <initial_condition>0.0</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>VSC1.Lf</name>
+            <address>514</address>
+            <type>current</type>
+            <initial_condition>0.0</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>VSC1.GRID FORMING.v3</name>
+            <address>900</address>
             <type>voltage</type>
             <initial_condition>None</initial_condition>
             <visible>False</visible>
@@ -434,25 +434,11 @@
             <visible>True</visible>
         </cell>
         <cell>
-            <name>VSC1.GRID FORMING.ib</name>
-            <address>897</address>
-            <type>current</type>
-            <initial_condition>None</initial_condition>
-            <visible>False</visible>
-        </cell>
-        <cell>
-            <name>VSC1.Core Coupling 2.V_msr</name>
-            <address>960</address>
+            <name>VSC1.VC</name>
+            <address>518</address>
             <type>voltage</type>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
-        </cell>
-        <cell>
-            <name>VSC1.GRID FORMING.v3</name>
-            <address>900</address>
-            <type>voltage</type>
-            <initial_condition>None</initial_condition>
-            <visible>False</visible>
         </cell>
         <cell>
             <name>VSC1.I0</name>
@@ -462,23 +448,9 @@
             <visible>True</visible>
         </cell>
         <cell>
-            <name>VSC1.Meter._Vg</name>
-            <address>517</address>
-            <type>voltage</type>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>VSC1.Meter._Vg</name>
-            <address>517</address>
-            <type>voltage</type>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>VSC1.GRID FORMING.v1</name>
-            <address>898</address>
-            <type>voltage</type>
+            <name>VSC1.GRID FORMING.ib</name>
+            <address>897</address>
+            <type>current</type>
             <initial_condition>None</initial_condition>
             <visible>False</visible>
         </cell>
@@ -490,16 +462,44 @@
             <visible>False</visible>
         </cell>
         <cell>
-            <name>VSC1.Meter._Ig</name>
-            <address>522</address>
+            <name>VSC1.GRID FORMING.v1</name>
+            <address>898</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>False</visible>
+        </cell>
+        <cell>
+            <name>VSC1.Core Coupling 2.V_msr</name>
+            <address>960</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>VSC1.IF</name>
+            <address>520</address>
             <type>current</type>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
         </cell>
         <cell>
-            <name>VSC1.Meter._Ig</name>
-            <address>522</address>
-            <type>current</type>
+            <name>VSC1.GRID FORMING.v4</name>
+            <address>901</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>False</visible>
+        </cell>
+        <cell>
+            <name>VSC1.Meter._Vg</name>
+            <address>517</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>VSC1.Meter._Vg</name>
+            <address>517</address>
+            <type>voltage</type>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
         </cell>
@@ -511,8 +511,15 @@
             <visible>False</visible>
         </cell>
         <cell>
-            <name>VSC1.IF</name>
-            <address>520</address>
+            <name>VSC1.Meter._Ig</name>
+            <address>522</address>
+            <type>current</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>VSC1.Meter._Ig</name>
+            <address>522</address>
             <type>current</type>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
@@ -532,13 +539,6 @@
             <visible>True</visible>
         </cell>
         <cell>
-            <name>VSC1.VC</name>
-            <address>518</address>
-            <type>voltage</type>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
             <name>VSC1.V_DC</name>
             <address>33281</address>
             <type>voltage</type>
@@ -551,6 +551,13 @@
             <type>voltage</type>
             <initial_condition>0.0</initial_condition>
             <visible>False</visible>
+        </cell>
+        <cell>
+            <name>VSC2.Cf</name>
+            <address>1024</address>
+            <type>voltage</type>
+            <initial_condition>0.0</initial_condition>
+            <visible>True</visible>
         </cell>
         <cell>
             <name>VSC2.Meter._Ig.Lf_Ia</name>
@@ -567,25 +574,39 @@
             <visible>True</visible>
         </cell>
         <cell>
-            <name>VSC2.Cf</name>
-            <address>1024</address>
+            <name>VSC2.GRID FORMING.v1</name>
+            <address>1410</address>
             <type>voltage</type>
-            <initial_condition>0.0</initial_condition>
+            <initial_condition>None</initial_condition>
+            <visible>False</visible>
+        </cell>
+        <cell>
+            <name>VSC2.Meter._Ig</name>
+            <address>1034</address>
+            <type>current</type>
+            <initial_condition>None</initial_condition>
             <visible>True</visible>
         </cell>
         <cell>
-            <name>VSC2.Meter._Vg</name>
-            <address>1029</address>
+            <name>VSC2.Meter._Ig</name>
+            <address>1034</address>
+            <type>current</type>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>VSC2.VC</name>
+            <address>1030</address>
             <type>voltage</type>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
         </cell>
         <cell>
-            <name>VSC2.Meter._Vg</name>
-            <address>1029</address>
+            <name>VSC2.GRID FORMING.v2</name>
+            <address>1411</address>
             <type>voltage</type>
             <initial_condition>None</initial_condition>
-            <visible>True</visible>
+            <visible>False</visible>
         </cell>
         <cell>
             <name>VSC2.IF</name>
@@ -595,6 +616,13 @@
             <visible>True</visible>
         </cell>
         <cell>
+            <name>VSC2.GRID FORMING.v3</name>
+            <address>1412</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>False</visible>
+        </cell>
+        <cell>
             <name>VSC2.GRID FORMING.ib</name>
             <address>1409</address>
             <type>current</type>
@@ -602,18 +630,25 @@
             <visible>False</visible>
         </cell>
         <cell>
-            <name>VSC2.Meter._Vg.full_bandwidth</name>
-            <address>1028</address>
+            <name>VSC2.Meter._Vg</name>
+            <address>1029</address>
             <type>voltage</type>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
         </cell>
         <cell>
-            <name>VSC2.Meter._Vg_full_bandwidth</name>
-            <address>1028</address>
+            <name>VSC2.Meter._Vg</name>
+            <address>1029</address>
             <type>voltage</type>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
+        </cell>
+        <cell>
+            <name>VSC2.GRID FORMING.v4</name>
+            <address>1413</address>
+            <type>voltage</type>
+            <initial_condition>None</initial_condition>
+            <visible>False</visible>
         </cell>
         <cell>
             <name>VSC2.GRID FORMING.ia</name>
@@ -637,13 +672,6 @@
             <visible>True</visible>
         </cell>
         <cell>
-            <name>VSC2.Core Coupling 2.V_msr</name>
-            <address>1472</address>
-            <type>voltage</type>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
             <name>VSC2.I0</name>
             <address>1031</address>
             <type>current</type>
@@ -651,50 +679,22 @@
             <visible>True</visible>
         </cell>
         <cell>
-            <name>VSC2.Meter._Ig</name>
-            <address>1034</address>
-            <type>current</type>
+            <name>VSC2.Meter._Vg.full_bandwidth</name>
+            <address>1028</address>
+            <type>voltage</type>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
         </cell>
         <cell>
-            <name>VSC2.Meter._Ig</name>
-            <address>1034</address>
-            <type>current</type>
+            <name>VSC2.Meter._Vg_full_bandwidth</name>
+            <address>1028</address>
+            <type>voltage</type>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
         </cell>
         <cell>
-            <name>VSC2.GRID FORMING.v3</name>
-            <address>1412</address>
-            <type>voltage</type>
-            <initial_condition>None</initial_condition>
-            <visible>False</visible>
-        </cell>
-        <cell>
-            <name>VSC2.GRID FORMING.v4</name>
-            <address>1413</address>
-            <type>voltage</type>
-            <initial_condition>None</initial_condition>
-            <visible>False</visible>
-        </cell>
-        <cell>
-            <name>VSC2.GRID FORMING.v2</name>
-            <address>1411</address>
-            <type>voltage</type>
-            <initial_condition>None</initial_condition>
-            <visible>False</visible>
-        </cell>
-        <cell>
-            <name>VSC2.GRID FORMING.v1</name>
-            <address>1410</address>
-            <type>voltage</type>
-            <initial_condition>None</initial_condition>
-            <visible>False</visible>
-        </cell>
-        <cell>
-            <name>VSC2.VC</name>
-            <address>1030</address>
+            <name>VSC2.Core Coupling 2.V_msr</name>
+            <address>1472</address>
             <type>voltage</type>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
@@ -1345,198 +1345,9 @@
 
     <analog_variables>
         <cell>
-            <name>VSC2.Meter.V_RMS</name>
-            <type>voltage</type>
-            <address>16452</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>VSC2.Meter.I_t</name>
-            <type>current</type>
-            <address>16447</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>VSC1.Meter.V_alpha</name>
-            <type>voltage</type>
-            <address>16423</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>MGCC.Meter.V_alpha</name>
-            <type>voltage</type>
-            <address>16409</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>test_flag_fb</name>
-            <type>generic</type>
-            <address>16473</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>Load.Meter.V_RMS</name>
-            <type>voltage</type>
-            <address>16393</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>Load.Single-phase Variable Load.Qref_fb_kVAr</name>
-            <type>generic</type>
-            <address>16400</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>Load.Meter.POWER_PF</name>
-            <type>generic</type>
-            <address>16390</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>VSC1.Meter.POWER_P</name>
-            <type>active power</type>
-            <address>16418</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>VSC2.THETA[0]</name>
-            <type>generic</type>
-            <address>16460</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>VSC2.THETA[1]</name>
-            <type>generic</type>
-            <address>16461</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>VSC2.THETA[2]</name>
-            <type>generic</type>
-            <address>16462</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>VSC2.THETA[3]</name>
-            <type>generic</type>
-            <address>16463</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>VSC2.THETA[4]</name>
-            <type>generic</type>
-            <address>16464</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>VSC2.THETA[5]</name>
-            <type>generic</type>
-            <address>16465</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>VSC2.THETA[6]</name>
-            <type>generic</type>
-            <address>16466</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>VSC2.SF[0]</name>
-            <type>generic</type>
-            <address>16458</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>VSC2.SF[1]</name>
-            <type>generic</type>
-            <address>16459</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>VSC1.Meter.I_RMS</name>
-            <type>current</type>
-            <address>16416</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>VSC1.Meter.V_t</name>
-            <type>voltage</type>
-            <address>16425</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>VSC1.E_TR</name>
-            <type>generic</type>
-            <address>16413</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>Load.Meter.V_beta</name>
-            <type>voltage</type>
-            <address>16395</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>VSC1.YM</name>
-            <type>generic</type>
-            <address>16441</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>VSC2.YM</name>
-            <type>generic</type>
-            <address>16471</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>MGCC.Meter.I_t</name>
-            <type>current</type>
-            <address>16403</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>VSC2.Meter.V_t</name>
-            <type>voltage</type>
-            <address>16455</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>VSC2.VC0_AB0[0]</name>
-            <type>generic</type>
-            <address>16467</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>VSC2.VC0_AB0[1]</name>
-            <type>generic</type>
-            <address>16468</address>
+            <name>MGCC.Meter.Freq</name>
+            <type>frequency</type>
+            <address>16401</address>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
         </cell>
@@ -1548,156 +1359,16 @@
             <visible>True</visible>
         </cell>
         <cell>
-            <name>Load.Meter.V_t</name>
-            <type>voltage</type>
-            <address>16396</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>VSC1.VC_RMS</name>
+            <name>Load.Single-phase Variable Load.Qref_fb_kVAr</name>
             <type>generic</type>
-            <address>16439</address>
+            <address>16400</address>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
         </cell>
         <cell>
-            <name>Load.Single-phase Variable Load.Qmeas_kVAr</name>
-            <type>generic</type>
-            <address>16399</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>Load.Meter.Freq</name>
-            <type>frequency</type>
-            <address>16386</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>VSC1.Meter.V_beta</name>
-            <type>voltage</type>
-            <address>16424</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>MGCC.Meter.POWER_P</name>
-            <type>active power</type>
-            <address>16404</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>Load.Meter.POWER_P</name>
-            <type>active power</type>
-            <address>16389</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>VSC1.YM_RMS</name>
-            <type>generic</type>
-            <address>16442</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>VSC2.Meter.POWER_S</name>
-            <type>apparent power</type>
-            <address>16451</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>VSC2.Meter.V_alpha</name>
-            <type>voltage</type>
-            <address>16453</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>MGCC.Meter.V_RMS</name>
-            <type>voltage</type>
-            <address>16408</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>VSC2.Meter.I_RMS</name>
-            <type>current</type>
-            <address>16446</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>VSC2.V_ZV</name>
-            <type>generic</type>
-            <address>16470</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>Grid.flag</name>
-            <type>generic</type>
-            <address>16384</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>VSC1.MOD</name>
-            <type>generic</type>
-            <address>16414</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>Load.Meter.I_RMS</name>
-            <type>current</type>
-            <address>16387</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>MGCC.Meter.V_beta</name>
-            <type>voltage</type>
-            <address>16410</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>Grid.freq_ref</name>
-            <type>generic</type>
-            <address>16385</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>Load.Single-phase Variable Load.Pmeas_kW</name>
-            <type>generic</type>
-            <address>16397</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>VSC1.Meter.POWER_PF</name>
-            <type>generic</type>
-            <address>16419</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>Load.Meter.V_alpha</name>
-            <type>voltage</type>
-            <address>16394</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>VSC2.Meter.V_beta</name>
-            <type>voltage</type>
-            <address>16454</address>
+            <name>VSC2.Meter.POWER_Q</name>
+            <type>reactive power</type>
+            <address>16450</address>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
         </cell>
@@ -1716,58 +1387,86 @@
             <visible>True</visible>
         </cell>
         <cell>
-            <name>VSC2.YM_RMS</name>
+            <name>VSC1.Meter.POWER_PF</name>
             <type>generic</type>
-            <address>16472</address>
+            <address>16419</address>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
         </cell>
         <cell>
-            <name>VSC1.Meter.V_RMS</name>
+            <name>Load.Meter.I_t</name>
+            <type>current</type>
+            <address>16388</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>Load.Meter.I_RMS</name>
+            <type>current</type>
+            <address>16387</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>VSC1.S0[0]</name>
+            <type>generic</type>
+            <address>16426</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>VSC1.S0[1]</name>
+            <type>generic</type>
+            <address>16427</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>Load.Meter.V_RMS</name>
             <type>voltage</type>
-            <address>16422</address>
+            <address>16393</address>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
         </cell>
         <cell>
-            <name>MGCC.f_pcc</name>
+            <name>VSC1.YM_RMS</name>
             <type>generic</type>
-            <address>16412</address>
+            <address>16442</address>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
         </cell>
         <cell>
-            <name>VSC2.E_TR</name>
-            <type>generic</type>
-            <address>16443</address>
+            <name>VSC2.Meter.V_beta</name>
+            <type>voltage</type>
+            <address>16454</address>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
         </cell>
         <cell>
-            <name>MGCC.Meter.Freq</name>
-            <type>frequency</type>
-            <address>16401</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>VSC2.Meter.POWER_P</name>
+            <name>Load.Meter.POWER_P</name>
             <type>active power</type>
-            <address>16448</address>
+            <address>16389</address>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
         </cell>
         <cell>
-            <name>Load.Single-phase Variable Load.Pref_fb_kW</name>
-            <type>generic</type>
-            <address>16398</address>
+            <name>VSC1.Meter.I_t</name>
+            <type>current</type>
+            <address>16417</address>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
         </cell>
         <cell>
-            <name>MGCC.Meter.V_t</name>
-            <type>voltage</type>
-            <address>16411</address>
+            <name>VSC1.Meter.POWER_P</name>
+            <type>active power</type>
+            <address>16418</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>MGCC.Meter.POWER_S</name>
+            <type>apparent power</type>
+            <address>16407</address>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
         </cell>
@@ -1821,100 +1520,93 @@
             <visible>True</visible>
         </cell>
         <cell>
-            <name>VSC1.S0[0]</name>
-            <type>generic</type>
-            <address>16426</address>
+            <name>Load.Meter.V_t</name>
+            <type>voltage</type>
+            <address>16396</address>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
         </cell>
         <cell>
-            <name>VSC1.S0[1]</name>
-            <type>generic</type>
-            <address>16427</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>MGCC.Meter.POWER_S</name>
-            <type>apparent power</type>
-            <address>16407</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>VSC1.Meter.Freq</name>
+            <name>VSC2.Meter.Freq</name>
             <type>frequency</type>
-            <address>16415</address>
+            <address>16445</address>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
         </cell>
         <cell>
-            <name>MGCC.Meter.POWER_PF</name>
+            <name>VSC1.YM</name>
             <type>generic</type>
-            <address>16405</address>
+            <address>16441</address>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
         </cell>
         <cell>
-            <name>Load.Meter.I_t</name>
+            <name>VSC2.Meter.I_t</name>
             <type>current</type>
-            <address>16388</address>
+            <address>16447</address>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
         </cell>
         <cell>
-            <name>Load.Meter.POWER_S</name>
-            <type>apparent power</type>
-            <address>16392</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>VSC1.Meter.I_t</name>
-            <type>current</type>
-            <address>16417</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>VSC2.VC_RMS</name>
+            <name>Load.Single-phase Variable Load.Pmeas_kW</name>
             <type>generic</type>
-            <address>16469</address>
+            <address>16397</address>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
         </cell>
         <cell>
-            <name>VSC2.Meter.POWER_Q</name>
-            <type>reactive power</type>
-            <address>16450</address>
-            <initial_condition>None</initial_condition>
-            <visible>True</visible>
-        </cell>
-        <cell>
-            <name>VSC1.V_ZV</name>
+            <name>VSC2.VC0_AB0[0]</name>
             <type>generic</type>
-            <address>16440</address>
+            <address>16467</address>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
         </cell>
         <cell>
-            <name>VSC2.Meter.POWER_PF</name>
+            <name>VSC2.VC0_AB0[1]</name>
             <type>generic</type>
-            <address>16449</address>
+            <address>16468</address>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
         </cell>
         <cell>
-            <name>MGCC.Meter.POWER_Q</name>
-            <type>reactive power</type>
-            <address>16406</address>
+            <name>VSC2.YM</name>
+            <type>generic</type>
+            <address>16471</address>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
         </cell>
         <cell>
-            <name>MGCC.Meter.I_RMS</name>
-            <type>current</type>
-            <address>16402</address>
+            <name>MGCC.Meter.V_beta</name>
+            <type>voltage</type>
+            <address>16410</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>Load.Single-phase Variable Load.Qmeas_kVAr</name>
+            <type>generic</type>
+            <address>16399</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>MGCC.Meter.V_alpha</name>
+            <type>voltage</type>
+            <address>16409</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>VSC1.Meter.V_beta</name>
+            <type>voltage</type>
+            <address>16424</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>VSC2.V_ZV</name>
+            <type>generic</type>
+            <address>16470</address>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
         </cell>
@@ -1926,9 +1618,128 @@
             <visible>True</visible>
         </cell>
         <cell>
+            <name>MGCC.Meter.V_RMS</name>
+            <type>voltage</type>
+            <address>16408</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>Load.Meter.POWER_S</name>
+            <type>apparent power</type>
+            <address>16392</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>VSC2.Meter.V_alpha</name>
+            <type>voltage</type>
+            <address>16453</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>VSC1.Meter.Freq</name>
+            <type>frequency</type>
+            <address>16415</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>VSC1.V_ZV</name>
+            <type>generic</type>
+            <address>16440</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
             <name>VSC1.Meter.POWER_Q</name>
             <type>reactive power</type>
             <address>16420</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>Grid.freq_ref</name>
+            <type>generic</type>
+            <address>16385</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>VSC1.Meter.I_RMS</name>
+            <type>current</type>
+            <address>16416</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>VSC2.Meter.V_RMS</name>
+            <type>voltage</type>
+            <address>16452</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>VSC2.Meter.POWER_S</name>
+            <type>apparent power</type>
+            <address>16451</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>VSC1.VC0_AB0[0]</name>
+            <type>generic</type>
+            <address>16437</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>VSC1.VC0_AB0[1]</name>
+            <type>generic</type>
+            <address>16438</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>VSC2.E_TR</name>
+            <type>generic</type>
+            <address>16443</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>MGCC.Meter.POWER_Q</name>
+            <type>reactive power</type>
+            <address>16406</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>Load.Meter.V_beta</name>
+            <type>voltage</type>
+            <address>16395</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>Load.Meter.Freq</name>
+            <type>frequency</type>
+            <address>16386</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>VSC2.Meter.V_t</name>
+            <type>voltage</type>
+            <address>16455</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>VSC2.YM_RMS</name>
+            <type>generic</type>
+            <address>16472</address>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
         </cell>
@@ -1947,9 +1758,163 @@
             <visible>True</visible>
         </cell>
         <cell>
-            <name>VSC2.Meter.Freq</name>
-            <type>frequency</type>
-            <address>16445</address>
+            <name>MGCC.Meter.I_RMS</name>
+            <type>current</type>
+            <address>16402</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>VSC2.Meter.POWER_PF</name>
+            <type>generic</type>
+            <address>16449</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>VSC2.Meter.I_RMS</name>
+            <type>current</type>
+            <address>16446</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>VSC2.VC_RMS</name>
+            <type>generic</type>
+            <address>16469</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>Grid.flag</name>
+            <type>generic</type>
+            <address>16384</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>Load.Single-phase Variable Load.Pref_fb_kW</name>
+            <type>generic</type>
+            <address>16398</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>MGCC.Meter.I_t</name>
+            <type>current</type>
+            <address>16403</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>MGCC.Meter.V_t</name>
+            <type>voltage</type>
+            <address>16411</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>VSC1.Meter.V_t</name>
+            <type>voltage</type>
+            <address>16425</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>VSC1.Meter.V_alpha</name>
+            <type>voltage</type>
+            <address>16423</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>VSC1.E_TR</name>
+            <type>generic</type>
+            <address>16413</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>VSC1.MOD</name>
+            <type>generic</type>
+            <address>16414</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>MGCC.f_pcc</name>
+            <type>generic</type>
+            <address>16412</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>VSC2.THETA[0]</name>
+            <type>generic</type>
+            <address>16460</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>VSC2.THETA[1]</name>
+            <type>generic</type>
+            <address>16461</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>VSC2.THETA[2]</name>
+            <type>generic</type>
+            <address>16462</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>VSC2.THETA[3]</name>
+            <type>generic</type>
+            <address>16463</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>VSC2.THETA[4]</name>
+            <type>generic</type>
+            <address>16464</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>VSC2.THETA[5]</name>
+            <type>generic</type>
+            <address>16465</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>VSC2.THETA[6]</name>
+            <type>generic</type>
+            <address>16466</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>Load.Meter.POWER_PF</name>
+            <type>generic</type>
+            <address>16390</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>MGCC.Meter.POWER_P</name>
+            <type>active power</type>
+            <address>16404</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>Load.Meter.V_alpha</name>
+            <type>voltage</type>
+            <address>16394</address>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
         </cell>
@@ -1961,16 +1926,51 @@
             <visible>True</visible>
         </cell>
         <cell>
-            <name>VSC1.VC0_AB0[0]</name>
+            <name>MGCC.Meter.POWER_PF</name>
             <type>generic</type>
-            <address>16437</address>
+            <address>16405</address>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
         </cell>
         <cell>
-            <name>VSC1.VC0_AB0[1]</name>
+            <name>VSC1.VC_RMS</name>
             <type>generic</type>
-            <address>16438</address>
+            <address>16439</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>VSC1.Meter.V_RMS</name>
+            <type>voltage</type>
+            <address>16422</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>VSC2.Meter.POWER_P</name>
+            <type>active power</type>
+            <address>16448</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>test_flag_fb</name>
+            <type>generic</type>
+            <address>16473</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>VSC2.SF[0]</name>
+            <type>generic</type>
+            <address>16458</address>
+            <initial_condition>None</initial_condition>
+            <visible>True</visible>
+        </cell>
+        <cell>
+            <name>VSC2.SF[1]</name>
+            <type>generic</type>
+            <address>16459</address>
             <initial_condition>None</initial_condition>
             <visible>True</visible>
         </cell>
@@ -1978,12 +1978,12 @@
 
     <digital_variables>
         <cell>
-            <name>Load.Single-phase Variable Load.MCB_status</name>
-            <address>2049</address>
-        </cell>
-        <cell>
             <name>Load.Single-phase Variable Load.Enable_fb</name>
             <address>2048</address>
+        </cell>
+        <cell>
+            <name>Load.Single-phase Variable Load.MCB_status</name>
+            <address>2049</address>
         </cell>
     </digital_variables>
 <digital_variables>
@@ -2529,321 +2529,21 @@
     <adv_c_ext_src>
         <component>
             <is_fmi>False</is_fmi>
-            <identifier_name>_vsc1_modulation_comparator</identifier_name>
-            <fqn>_vsc1_modulation_comparator</fqn>
-            <fqn_original>VSC1.Modulation.Comparator</fqn_original>
+            <identifier_name>_vsc2_voltage_controller</identifier_name>
+            <fqn>_vsc2_voltage_controller</fqn>
+            <fqn_original>VSC2.VOLTAGE_CONTROLLER</fqn_original>
             <include_imports>True</include_imports>
             <library_load_type>Compile-time load</library_load_type>
             <macros></macros>
             <library>
                 <win64>
-                    <library_name>False</library_name>
-                    <linking_name>False</linking_name>
-                    <library_path_relative>False</library_path_relative>
-                    <library_path_absolute>False</library_path_absolute>
-                    <include_folder_relative>False</include_folder_relative>
-                    <h_file>False</h_file>
-                    <h_include_folder_relative>False</h_include_folder_relative>
-                </win64>
-                <linux64>
-                    <library_name>False</library_name>
-                    <linking_name>False</linking_name>
-                    <library_path_relative>False</library_path_relative>
-                    <library_path_absolute>False</library_path_absolute>
-                    <include_folder_relative>False</include_folder_relative>
-                    <h_file>False</h_file>
-                    <h_include_folder_relative>False</h_include_folder_relative>
-                </linux64>
-            </library>
-            <additional_sources>
-                <h>
-                    <files>set()</files>
-                    <files_relative_paths>set()</files_relative_paths>
-                    <folders_relative_paths>set()</folders_relative_paths>
-                </h>
-                <c>
-                    <files>set()</files>
-                    <files_relative_paths>set()</files_relative_paths>
-                    <folders_relative_paths>set()</folders_relative_paths>
-                    <o_files>set()</o_files>
-                    <d_files>set()</d_files>
-                </c>
-                <cpp>
-                    <files>set()</files>
-                    <files_relative_paths>set()</files_relative_paths>
-                    <folders_relative_paths>set()</folders_relative_paths>
-                    <o_files>set()</o_files>
-                    <d_files>set()</d_files>
-                </cpp>
-            </additional_sources>
-        </component>
-        <component>
-            <is_fmi>False</is_fmi>
-            <identifier_name>_vsc2_meter_meter</identifier_name>
-            <fqn>_vsc2_meter_meter</fqn>
-            <fqn_original>VSC2.Meter.Meter</fqn_original>
-            <include_imports>True</include_imports>
-            <library_load_type>Compile-time load</library_load_type>
-            <macros></macros>
-            <library>
-                <win64>
-                    <library_name>False</library_name>
-                    <linking_name>False</linking_name>
-                    <library_path_relative>False</library_path_relative>
-                    <library_path_absolute>False</library_path_absolute>
-                    <include_folder_relative>False</include_folder_relative>
-                    <h_file>False</h_file>
-                    <h_include_folder_relative>False</h_include_folder_relative>
-                </win64>
-                <linux64>
-                    <library_name>False</library_name>
-                    <linking_name>False</linking_name>
-                    <library_path_relative>False</library_path_relative>
-                    <library_path_absolute>False</library_path_absolute>
-                    <include_folder_relative>False</include_folder_relative>
-                    <h_file>False</h_file>
-                    <h_include_folder_relative>False</h_include_folder_relative>
-                </linux64>
-            </library>
-            <additional_sources>
-                <h>
-                    <files>set()</files>
-                    <files_relative_paths>set()</files_relative_paths>
-                    <folders_relative_paths>set()</folders_relative_paths>
-                </h>
-                <c>
-                    <files>set()</files>
-                    <files_relative_paths>set()</files_relative_paths>
-                    <folders_relative_paths>set()</folders_relative_paths>
-                    <o_files>set()</o_files>
-                    <d_files>set()</d_files>
-                </c>
-                <cpp>
-                    <files>set()</files>
-                    <files_relative_paths>set()</files_relative_paths>
-                    <folders_relative_paths>set()</folders_relative_paths>
-                    <o_files>set()</o_files>
-                    <d_files>set()</d_files>
-                </cpp>
-            </additional_sources>
-        </component>
-        <component>
-            <is_fmi>False</is_fmi>
-            <identifier_name>_vsc1_sogi_ym</identifier_name>
-            <fqn>_vsc1_sogi_ym</fqn>
-            <fqn_original>VSC1.SOGI_YM</fqn_original>
-            <include_imports>True</include_imports>
-            <library_load_type>Compile-time load</library_load_type>
-            <macros></macros>
-            <library>
-                <win64>
-                    <library_name>lib_sogi_qsg.dll</library_name>
-                    <linking_name>lib_sogi_qsg</linking_name>
-                    <library_path_relative>ext-src/_vsc1_sogi_ym/binaries/lib_sogi_qsg.dll</library_path_relative>
-                    <library_path_absolute>ext-src/_vsc1_sogi_ym/binaries/lib_sogi_qsg.dll</library_path_absolute>
-                    <include_folder_relative>ext-src/_vsc1_sogi_ym/binaries</include_folder_relative>
-                    <h_file>sogi_qsg.h</h_file>
-                    <h_include_folder_relative>ext-src/_vsc1_sogi_ym/binaries</h_include_folder_relative>
-                </win64>
-                <linux64>
-                    <library_name>False</library_name>
-                    <linking_name>False</linking_name>
-                    <library_path_relative>False</library_path_relative>
-                    <library_path_absolute>False</library_path_absolute>
-                    <include_folder_relative>False</include_folder_relative>
-                    <h_file>False</h_file>
-                    <h_include_folder_relative>False</h_include_folder_relative>
-                </linux64>
-            </library>
-            <additional_sources>
-                <h>
-                    <files>set()</files>
-                    <files_relative_paths>set()</files_relative_paths>
-                    <folders_relative_paths>set()</folders_relative_paths>
-                </h>
-                <c>
-                    <files>set()</files>
-                    <files_relative_paths>set()</files_relative_paths>
-                    <folders_relative_paths>set()</folders_relative_paths>
-                    <o_files>set()</o_files>
-                    <d_files>set()</d_files>
-                </c>
-                <cpp>
-                    <files>set()</files>
-                    <files_relative_paths>set()</files_relative_paths>
-                    <folders_relative_paths>set()</folders_relative_paths>
-                    <o_files>set()</o_files>
-                    <d_files>set()</d_files>
-                </cpp>
-            </additional_sources>
-        </component>
-        <component>
-            <is_fmi>False</is_fmi>
-            <identifier_name>_vsc2_droop_controller</identifier_name>
-            <fqn>_vsc2_droop_controller</fqn>
-            <fqn_original>VSC2.DROOP_CONTROLLER</fqn_original>
-            <include_imports>True</include_imports>
-            <library_load_type>Compile-time load</library_load_type>
-            <macros></macros>
-            <library>
-                <win64>
-                    <library_name>lib_improved_droop.dll</library_name>
-                    <linking_name>lib_improved_droop</linking_name>
-                    <library_path_relative>ext-src/_vsc2_droop_controller/binaries/lib_improved_droop.dll</library_path_relative>
-                    <library_path_absolute>ext-src/_vsc2_droop_controller/binaries/lib_improved_droop.dll</library_path_absolute>
-                    <include_folder_relative>ext-src/_vsc2_droop_controller/binaries</include_folder_relative>
-                    <h_file>improved_droop.h</h_file>
-                    <h_include_folder_relative>ext-src/_vsc2_droop_controller/binaries</h_include_folder_relative>
-                </win64>
-                <linux64>
-                    <library_name>False</library_name>
-                    <linking_name>False</linking_name>
-                    <library_path_relative>False</library_path_relative>
-                    <library_path_absolute>False</library_path_absolute>
-                    <include_folder_relative>False</include_folder_relative>
-                    <h_file>False</h_file>
-                    <h_include_folder_relative>False</h_include_folder_relative>
-                </linux64>
-            </library>
-            <additional_sources>
-                <h>
-                    <files>set()</files>
-                    <files_relative_paths>set()</files_relative_paths>
-                    <folders_relative_paths>set()</folders_relative_paths>
-                </h>
-                <c>
-                    <files>set()</files>
-                    <files_relative_paths>set()</files_relative_paths>
-                    <folders_relative_paths>set()</folders_relative_paths>
-                    <o_files>set()</o_files>
-                    <d_files>set()</d_files>
-                </c>
-                <cpp>
-                    <files>set()</files>
-                    <files_relative_paths>set()</files_relative_paths>
-                    <folders_relative_paths>set()</folders_relative_paths>
-                    <o_files>set()</o_files>
-                    <d_files>set()</d_files>
-                </cpp>
-            </additional_sources>
-        </component>
-        <component>
-            <is_fmi>False</is_fmi>
-            <identifier_name>_vsc1_rms_ym</identifier_name>
-            <fqn>_vsc1_rms_ym</fqn>
-            <fqn_original>VSC1.RMS_YM</fqn_original>
-            <include_imports>True</include_imports>
-            <library_load_type>Compile-time load</library_load_type>
-            <macros></macros>
-            <library>
-                <win64>
-                    <library_name>False</library_name>
-                    <linking_name>False</linking_name>
-                    <library_path_relative>False</library_path_relative>
-                    <library_path_absolute>False</library_path_absolute>
-                    <include_folder_relative>False</include_folder_relative>
-                    <h_file>False</h_file>
-                    <h_include_folder_relative>False</h_include_folder_relative>
-                </win64>
-                <linux64>
-                    <library_name>False</library_name>
-                    <linking_name>False</linking_name>
-                    <library_path_relative>False</library_path_relative>
-                    <library_path_absolute>False</library_path_absolute>
-                    <include_folder_relative>False</include_folder_relative>
-                    <h_file>False</h_file>
-                    <h_include_folder_relative>False</h_include_folder_relative>
-                </linux64>
-            </library>
-            <additional_sources>
-                <h>
-                    <files>set()</files>
-                    <files_relative_paths>set()</files_relative_paths>
-                    <folders_relative_paths>set()</folders_relative_paths>
-                </h>
-                <c>
-                    <files>set()</files>
-                    <files_relative_paths>set()</files_relative_paths>
-                    <folders_relative_paths>set()</folders_relative_paths>
-                    <o_files>set()</o_files>
-                    <d_files>set()</d_files>
-                </c>
-                <cpp>
-                    <files>set()</files>
-                    <files_relative_paths>set()</files_relative_paths>
-                    <folders_relative_paths>set()</folders_relative_paths>
-                    <o_files>set()</o_files>
-                    <d_files>set()</d_files>
-                </cpp>
-            </additional_sources>
-        </component>
-        <component>
-            <is_fmi>False</is_fmi>
-            <identifier_name>_vsc1_teste</identifier_name>
-            <fqn>_vsc1_teste</fqn>
-            <fqn_original>VSC1.TESTE</fqn_original>
-            <include_imports>True</include_imports>
-            <library_load_type>Compile-time load</library_load_type>
-            <macros></macros>
-            <library>
-                <win64>
-                    <library_name>False</library_name>
-                    <linking_name>False</linking_name>
-                    <library_path_relative>False</library_path_relative>
-                    <library_path_absolute>False</library_path_absolute>
-                    <include_folder_relative>False</include_folder_relative>
-                    <h_file>False</h_file>
-                    <h_include_folder_relative>False</h_include_folder_relative>
-                </win64>
-                <linux64>
-                    <library_name>False</library_name>
-                    <linking_name>False</linking_name>
-                    <library_path_relative>False</library_path_relative>
-                    <library_path_absolute>False</library_path_absolute>
-                    <include_folder_relative>False</include_folder_relative>
-                    <h_file>False</h_file>
-                    <h_include_folder_relative>False</h_include_folder_relative>
-                </linux64>
-            </library>
-            <additional_sources>
-                <h>
-                    <files>set()</files>
-                    <files_relative_paths>set()</files_relative_paths>
-                    <folders_relative_paths>set()</folders_relative_paths>
-                </h>
-                <c>
-                    <files>set()</files>
-                    <files_relative_paths>set()</files_relative_paths>
-                    <folders_relative_paths>set()</folders_relative_paths>
-                    <o_files>set()</o_files>
-                    <d_files>set()</d_files>
-                </c>
-                <cpp>
-                    <files>set()</files>
-                    <files_relative_paths>set()</files_relative_paths>
-                    <folders_relative_paths>set()</folders_relative_paths>
-                    <o_files>set()</o_files>
-                    <d_files>set()</d_files>
-                </cpp>
-            </additional_sources>
-        </component>
-        <component>
-            <is_fmi>False</is_fmi>
-            <identifier_name>_vsc2_sogi_qsg</identifier_name>
-            <fqn>_vsc2_sogi_qsg</fqn>
-            <fqn_original>VSC2.SOGI_QSG</fqn_original>
-            <include_imports>True</include_imports>
-            <library_load_type>Compile-time load</library_load_type>
-            <macros></macros>
-            <library>
-                <win64>
-                    <library_name>lib_sogi_qsg.dll</library_name>
-                    <linking_name>lib_sogi_qsg</linking_name>
-                    <library_path_relative>ext-src/_vsc2_sogi_qsg/binaries/lib_sogi_qsg.dll</library_path_relative>
-                    <library_path_absolute>ext-src/_vsc2_sogi_qsg/binaries/lib_sogi_qsg.dll</library_path_absolute>
-                    <include_folder_relative>ext-src/_vsc2_sogi_qsg/binaries</include_folder_relative>
-                    <h_file>sogi_qsg.h</h_file>
-                    <h_include_folder_relative>ext-src/_vsc2_sogi_qsg/binaries</h_include_folder_relative>
+                    <library_name>lib_mrac.dll</library_name>
+                    <linking_name>lib_mrac</linking_name>
+                    <library_path_relative>ext-src/_vsc2_voltage_controller/binaries/lib_mrac.dll</library_path_relative>
+                    <library_path_absolute>ext-src/_vsc2_voltage_controller/binaries/lib_mrac.dll</library_path_absolute>
+                    <include_folder_relative>ext-src/_vsc2_voltage_controller/binaries</include_folder_relative>
+                    <h_file>mrac.h</h_file>
+                    <h_include_folder_relative>ext-src/_vsc2_voltage_controller/binaries</h_include_folder_relative>
                 </win64>
                 <linux64>
                     <library_name>False</library_name>
@@ -2907,16 +2607,16 @@
             </library>
             <additional_sources>
                 <h>
-                    <files>{'improved_droop.h', 'virtual_impedance.h', 'sogi_qsg.h', 'mrac.h'}</files>
-                    <files_relative_paths>{'ext-src/_vsc1_virtual_impedance/sources/src/mrac.h', 'ext-src/_vsc1_virtual_impedance/sources/src/sogi_qsg.h', 'ext-src/_vsc1_virtual_impedance/sources/src/virtual_impedance.h', 'ext-src/_vsc1_virtual_impedance/sources/src/improved_droop.h'}</files_relative_paths>
+                    <files>{'virtual_impedance.h', 'improved_droop.h', 'mrac.h', 'sogi_qsg.h'}</files>
+                    <files_relative_paths>{'ext-src/_vsc1_virtual_impedance/sources/src/mrac.h', 'ext-src/_vsc1_virtual_impedance/sources/src/virtual_impedance.h', 'ext-src/_vsc1_virtual_impedance/sources/src/sogi_qsg.h', 'ext-src/_vsc1_virtual_impedance/sources/src/improved_droop.h'}</files_relative_paths>
                     <folders_relative_paths>{'ext-src/_vsc1_virtual_impedance/sources/src'}</folders_relative_paths>
                 </h>
                 <c>
-                    <files>{'virtual_impedance.c', 'mrac.c', 'improved_droop.c', 'sogi_qsg.c'}</files>
-                    <files_relative_paths>{'ext-src/_vsc1_virtual_impedance/sources/src/mrac.c', 'ext-src/_vsc1_virtual_impedance/sources/src/sogi_qsg.c', 'ext-src/_vsc1_virtual_impedance/sources/src/improved_droop.c', 'ext-src/_vsc1_virtual_impedance/sources/src/virtual_impedance.c'}</files_relative_paths>
+                    <files>{'sogi_qsg.c', 'improved_droop.c', 'virtual_impedance.c', 'mrac.c'}</files>
+                    <files_relative_paths>{'ext-src/_vsc1_virtual_impedance/sources/src/virtual_impedance.c', 'ext-src/_vsc1_virtual_impedance/sources/src/sogi_qsg.c', 'ext-src/_vsc1_virtual_impedance/sources/src/mrac.c', 'ext-src/_vsc1_virtual_impedance/sources/src/improved_droop.c'}</files_relative_paths>
                     <folders_relative_paths>{'ext-src/_vsc1_virtual_impedance/sources/src'}</folders_relative_paths>
-                    <o_files>{'improved_droop.o', 'sogi_qsg.o', 'virtual_impedance.o', 'mrac.o'}</o_files>
-                    <d_files>{'sogi_qsg.d', 'virtual_impedance.d', 'mrac.d', 'improved_droop.d'}</d_files>
+                    <o_files>{'virtual_impedance.o', 'sogi_qsg.o', 'mrac.o', 'improved_droop.o'}</o_files>
+                    <d_files>{'improved_droop.d', 'mrac.d', 'sogi_qsg.d', 'virtual_impedance.d'}</d_files>
                 </c>
                 <cpp>
                     <files>set()</files>
@@ -2929,9 +2629,9 @@
         </component>
         <component>
             <is_fmi>False</is_fmi>
-            <identifier_name>_vsc2_lpf_internal_filter</identifier_name>
-            <fqn>_vsc2_lpf_internal_filter</fqn>
-            <fqn_original>VSC2.LPF.Internal filter</fqn_original>
+            <identifier_name>_vsc2_rms_vc</identifier_name>
+            <fqn>_vsc2_rms_vc</fqn>
+            <fqn_original>VSC2.RMS_VC</fqn_original>
             <include_imports>True</include_imports>
             <library_load_type>Compile-time load</library_load_type>
             <macros></macros>
@@ -2979,309 +2679,9 @@
         </component>
         <component>
             <is_fmi>False</is_fmi>
-            <identifier_name>_vsc1_rms_vc</identifier_name>
-            <fqn>_vsc1_rms_vc</fqn>
-            <fqn_original>VSC1.RMS_VC</fqn_original>
-            <include_imports>True</include_imports>
-            <library_load_type>Compile-time load</library_load_type>
-            <macros></macros>
-            <library>
-                <win64>
-                    <library_name>False</library_name>
-                    <linking_name>False</linking_name>
-                    <library_path_relative>False</library_path_relative>
-                    <library_path_absolute>False</library_path_absolute>
-                    <include_folder_relative>False</include_folder_relative>
-                    <h_file>False</h_file>
-                    <h_include_folder_relative>False</h_include_folder_relative>
-                </win64>
-                <linux64>
-                    <library_name>False</library_name>
-                    <linking_name>False</linking_name>
-                    <library_path_relative>False</library_path_relative>
-                    <library_path_absolute>False</library_path_absolute>
-                    <include_folder_relative>False</include_folder_relative>
-                    <h_file>False</h_file>
-                    <h_include_folder_relative>False</h_include_folder_relative>
-                </linux64>
-            </library>
-            <additional_sources>
-                <h>
-                    <files>set()</files>
-                    <files_relative_paths>set()</files_relative_paths>
-                    <folders_relative_paths>set()</folders_relative_paths>
-                </h>
-                <c>
-                    <files>set()</files>
-                    <files_relative_paths>set()</files_relative_paths>
-                    <folders_relative_paths>set()</folders_relative_paths>
-                    <o_files>set()</o_files>
-                    <d_files>set()</d_files>
-                </c>
-                <cpp>
-                    <files>set()</files>
-                    <files_relative_paths>set()</files_relative_paths>
-                    <folders_relative_paths>set()</folders_relative_paths>
-                    <o_files>set()</o_files>
-                    <d_files>set()</d_files>
-                </cpp>
-            </additional_sources>
-        </component>
-        <component>
-            <is_fmi>False</is_fmi>
-            <identifier_name>_vsc1_droop_controller</identifier_name>
-            <fqn>_vsc1_droop_controller</fqn>
-            <fqn_original>VSC1.DROOP_CONTROLLER</fqn_original>
-            <include_imports>True</include_imports>
-            <library_load_type>Compile-time load</library_load_type>
-            <macros></macros>
-            <library>
-                <win64>
-                    <library_name>lib_improved_droop.dll</library_name>
-                    <linking_name>lib_improved_droop</linking_name>
-                    <library_path_relative>ext-src/_vsc1_droop_controller/binaries/lib_improved_droop.dll</library_path_relative>
-                    <library_path_absolute>ext-src/_vsc1_droop_controller/binaries/lib_improved_droop.dll</library_path_absolute>
-                    <include_folder_relative>ext-src/_vsc1_droop_controller/binaries</include_folder_relative>
-                    <h_file>improved_droop.h</h_file>
-                    <h_include_folder_relative>ext-src/_vsc1_droop_controller/binaries</h_include_folder_relative>
-                </win64>
-                <linux64>
-                    <library_name>False</library_name>
-                    <linking_name>False</linking_name>
-                    <library_path_relative>False</library_path_relative>
-                    <library_path_absolute>False</library_path_absolute>
-                    <include_folder_relative>False</include_folder_relative>
-                    <h_file>False</h_file>
-                    <h_include_folder_relative>False</h_include_folder_relative>
-                </linux64>
-            </library>
-            <additional_sources>
-                <h>
-                    <files>set()</files>
-                    <files_relative_paths>set()</files_relative_paths>
-                    <folders_relative_paths>set()</folders_relative_paths>
-                </h>
-                <c>
-                    <files>set()</files>
-                    <files_relative_paths>set()</files_relative_paths>
-                    <folders_relative_paths>set()</folders_relative_paths>
-                    <o_files>set()</o_files>
-                    <d_files>set()</d_files>
-                </c>
-                <cpp>
-                    <files>set()</files>
-                    <files_relative_paths>set()</files_relative_paths>
-                    <folders_relative_paths>set()</folders_relative_paths>
-                    <o_files>set()</o_files>
-                    <d_files>set()</d_files>
-                </cpp>
-            </additional_sources>
-        </component>
-        <component>
-            <is_fmi>False</is_fmi>
-            <identifier_name>_vsc2_voltage_controller</identifier_name>
-            <fqn>_vsc2_voltage_controller</fqn>
-            <fqn_original>VSC2.VOLTAGE_CONTROLLER</fqn_original>
-            <include_imports>True</include_imports>
-            <library_load_type>Compile-time load</library_load_type>
-            <macros></macros>
-            <library>
-                <win64>
-                    <library_name>lib_mrac.dll</library_name>
-                    <linking_name>lib_mrac</linking_name>
-                    <library_path_relative>ext-src/_vsc2_voltage_controller/binaries/lib_mrac.dll</library_path_relative>
-                    <library_path_absolute>ext-src/_vsc2_voltage_controller/binaries/lib_mrac.dll</library_path_absolute>
-                    <include_folder_relative>ext-src/_vsc2_voltage_controller/binaries</include_folder_relative>
-                    <h_file>mrac.h</h_file>
-                    <h_include_folder_relative>ext-src/_vsc2_voltage_controller/binaries</h_include_folder_relative>
-                </win64>
-                <linux64>
-                    <library_name>False</library_name>
-                    <linking_name>False</linking_name>
-                    <library_path_relative>False</library_path_relative>
-                    <library_path_absolute>False</library_path_absolute>
-                    <include_folder_relative>False</include_folder_relative>
-                    <h_file>False</h_file>
-                    <h_include_folder_relative>False</h_include_folder_relative>
-                </linux64>
-            </library>
-            <additional_sources>
-                <h>
-                    <files>set()</files>
-                    <files_relative_paths>set()</files_relative_paths>
-                    <folders_relative_paths>set()</folders_relative_paths>
-                </h>
-                <c>
-                    <files>set()</files>
-                    <files_relative_paths>set()</files_relative_paths>
-                    <folders_relative_paths>set()</folders_relative_paths>
-                    <o_files>set()</o_files>
-                    <d_files>set()</d_files>
-                </c>
-                <cpp>
-                    <files>set()</files>
-                    <files_relative_paths>set()</files_relative_paths>
-                    <folders_relative_paths>set()</folders_relative_paths>
-                    <o_files>set()</o_files>
-                    <d_files>set()</d_files>
-                </cpp>
-            </additional_sources>
-        </component>
-        <component>
-            <is_fmi>False</is_fmi>
-            <identifier_name>_vsc2_rms_ym</identifier_name>
-            <fqn>_vsc2_rms_ym</fqn>
-            <fqn_original>VSC2.RMS_YM</fqn_original>
-            <include_imports>True</include_imports>
-            <library_load_type>Compile-time load</library_load_type>
-            <macros></macros>
-            <library>
-                <win64>
-                    <library_name>False</library_name>
-                    <linking_name>False</linking_name>
-                    <library_path_relative>False</library_path_relative>
-                    <library_path_absolute>False</library_path_absolute>
-                    <include_folder_relative>False</include_folder_relative>
-                    <h_file>False</h_file>
-                    <h_include_folder_relative>False</h_include_folder_relative>
-                </win64>
-                <linux64>
-                    <library_name>False</library_name>
-                    <linking_name>False</linking_name>
-                    <library_path_relative>False</library_path_relative>
-                    <library_path_absolute>False</library_path_absolute>
-                    <include_folder_relative>False</include_folder_relative>
-                    <h_file>False</h_file>
-                    <h_include_folder_relative>False</h_include_folder_relative>
-                </linux64>
-            </library>
-            <additional_sources>
-                <h>
-                    <files>set()</files>
-                    <files_relative_paths>set()</files_relative_paths>
-                    <folders_relative_paths>set()</folders_relative_paths>
-                </h>
-                <c>
-                    <files>set()</files>
-                    <files_relative_paths>set()</files_relative_paths>
-                    <folders_relative_paths>set()</folders_relative_paths>
-                    <o_files>set()</o_files>
-                    <d_files>set()</d_files>
-                </c>
-                <cpp>
-                    <files>set()</files>
-                    <files_relative_paths>set()</files_relative_paths>
-                    <folders_relative_paths>set()</folders_relative_paths>
-                    <o_files>set()</o_files>
-                    <d_files>set()</d_files>
-                </cpp>
-            </additional_sources>
-        </component>
-        <component>
-            <is_fmi>False</is_fmi>
-            <identifier_name>_vsc2_sogi_ym</identifier_name>
-            <fqn>_vsc2_sogi_ym</fqn>
-            <fqn_original>VSC2.SOGI_YM</fqn_original>
-            <include_imports>True</include_imports>
-            <library_load_type>Compile-time load</library_load_type>
-            <macros></macros>
-            <library>
-                <win64>
-                    <library_name>lib_sogi_qsg.dll</library_name>
-                    <linking_name>lib_sogi_qsg</linking_name>
-                    <library_path_relative>ext-src/_vsc2_sogi_ym/binaries/lib_sogi_qsg.dll</library_path_relative>
-                    <library_path_absolute>ext-src/_vsc2_sogi_ym/binaries/lib_sogi_qsg.dll</library_path_absolute>
-                    <include_folder_relative>ext-src/_vsc2_sogi_ym/binaries</include_folder_relative>
-                    <h_file>sogi_qsg.h</h_file>
-                    <h_include_folder_relative>ext-src/_vsc2_sogi_ym/binaries</h_include_folder_relative>
-                </win64>
-                <linux64>
-                    <library_name>False</library_name>
-                    <linking_name>False</linking_name>
-                    <library_path_relative>False</library_path_relative>
-                    <library_path_absolute>False</library_path_absolute>
-                    <include_folder_relative>False</include_folder_relative>
-                    <h_file>False</h_file>
-                    <h_include_folder_relative>False</h_include_folder_relative>
-                </linux64>
-            </library>
-            <additional_sources>
-                <h>
-                    <files>set()</files>
-                    <files_relative_paths>set()</files_relative_paths>
-                    <folders_relative_paths>set()</folders_relative_paths>
-                </h>
-                <c>
-                    <files>set()</files>
-                    <files_relative_paths>set()</files_relative_paths>
-                    <folders_relative_paths>set()</folders_relative_paths>
-                    <o_files>set()</o_files>
-                    <d_files>set()</d_files>
-                </c>
-                <cpp>
-                    <files>set()</files>
-                    <files_relative_paths>set()</files_relative_paths>
-                    <folders_relative_paths>set()</folders_relative_paths>
-                    <o_files>set()</o_files>
-                    <d_files>set()</d_files>
-                </cpp>
-            </additional_sources>
-        </component>
-        <component>
-            <is_fmi>False</is_fmi>
-            <identifier_name>_vsc1_meter_meter</identifier_name>
-            <fqn>_vsc1_meter_meter</fqn>
-            <fqn_original>VSC1.Meter.Meter</fqn_original>
-            <include_imports>True</include_imports>
-            <library_load_type>Compile-time load</library_load_type>
-            <macros></macros>
-            <library>
-                <win64>
-                    <library_name>False</library_name>
-                    <linking_name>False</linking_name>
-                    <library_path_relative>False</library_path_relative>
-                    <library_path_absolute>False</library_path_absolute>
-                    <include_folder_relative>False</include_folder_relative>
-                    <h_file>False</h_file>
-                    <h_include_folder_relative>False</h_include_folder_relative>
-                </win64>
-                <linux64>
-                    <library_name>False</library_name>
-                    <linking_name>False</linking_name>
-                    <library_path_relative>False</library_path_relative>
-                    <library_path_absolute>False</library_path_absolute>
-                    <include_folder_relative>False</include_folder_relative>
-                    <h_file>False</h_file>
-                    <h_include_folder_relative>False</h_include_folder_relative>
-                </linux64>
-            </library>
-            <additional_sources>
-                <h>
-                    <files>set()</files>
-                    <files_relative_paths>set()</files_relative_paths>
-                    <folders_relative_paths>set()</folders_relative_paths>
-                </h>
-                <c>
-                    <files>set()</files>
-                    <files_relative_paths>set()</files_relative_paths>
-                    <folders_relative_paths>set()</folders_relative_paths>
-                    <o_files>set()</o_files>
-                    <d_files>set()</d_files>
-                </c>
-                <cpp>
-                    <files>set()</files>
-                    <files_relative_paths>set()</files_relative_paths>
-                    <folders_relative_paths>set()</folders_relative_paths>
-                    <o_files>set()</o_files>
-                    <d_files>set()</d_files>
-                </cpp>
-            </additional_sources>
-        </component>
-        <component>
-            <is_fmi>False</is_fmi>
-            <identifier_name>_vsc2_modulation_comparator</identifier_name>
-            <fqn>_vsc2_modulation_comparator</fqn>
-            <fqn_original>VSC2.Modulation.Comparator</fqn_original>
+            <identifier_name>_grid_c_function2</identifier_name>
+            <fqn>_grid_c_function2</fqn>
+            <fqn_original>Grid.C function2</fqn_original>
             <include_imports>True</include_imports>
             <library_load_type>Compile-time load</library_load_type>
             <macros></macros>
@@ -3379,9 +2779,159 @@
         </component>
         <component>
             <is_fmi>False</is_fmi>
-            <identifier_name>_vsc1_sogi_qsg</identifier_name>
-            <fqn>_vsc1_sogi_qsg</fqn>
-            <fqn_original>VSC1.SOGI_QSG</fqn_original>
+            <identifier_name>_vsc2_droop_controller</identifier_name>
+            <fqn>_vsc2_droop_controller</fqn>
+            <fqn_original>VSC2.DROOP_CONTROLLER</fqn_original>
+            <include_imports>True</include_imports>
+            <library_load_type>Compile-time load</library_load_type>
+            <macros></macros>
+            <library>
+                <win64>
+                    <library_name>lib_improved_droop.dll</library_name>
+                    <linking_name>lib_improved_droop</linking_name>
+                    <library_path_relative>ext-src/_vsc2_droop_controller/binaries/lib_improved_droop.dll</library_path_relative>
+                    <library_path_absolute>ext-src/_vsc2_droop_controller/binaries/lib_improved_droop.dll</library_path_absolute>
+                    <include_folder_relative>ext-src/_vsc2_droop_controller/binaries</include_folder_relative>
+                    <h_file>improved_droop.h</h_file>
+                    <h_include_folder_relative>ext-src/_vsc2_droop_controller/binaries</h_include_folder_relative>
+                </win64>
+                <linux64>
+                    <library_name>False</library_name>
+                    <linking_name>False</linking_name>
+                    <library_path_relative>False</library_path_relative>
+                    <library_path_absolute>False</library_path_absolute>
+                    <include_folder_relative>False</include_folder_relative>
+                    <h_file>False</h_file>
+                    <h_include_folder_relative>False</h_include_folder_relative>
+                </linux64>
+            </library>
+            <additional_sources>
+                <h>
+                    <files>set()</files>
+                    <files_relative_paths>set()</files_relative_paths>
+                    <folders_relative_paths>set()</folders_relative_paths>
+                </h>
+                <c>
+                    <files>set()</files>
+                    <files_relative_paths>set()</files_relative_paths>
+                    <folders_relative_paths>set()</folders_relative_paths>
+                    <o_files>set()</o_files>
+                    <d_files>set()</d_files>
+                </c>
+                <cpp>
+                    <files>set()</files>
+                    <files_relative_paths>set()</files_relative_paths>
+                    <folders_relative_paths>set()</folders_relative_paths>
+                    <o_files>set()</o_files>
+                    <d_files>set()</d_files>
+                </cpp>
+            </additional_sources>
+        </component>
+        <component>
+            <is_fmi>False</is_fmi>
+            <identifier_name>_vsc1_teste</identifier_name>
+            <fqn>_vsc1_teste</fqn>
+            <fqn_original>VSC1.TESTE</fqn_original>
+            <include_imports>True</include_imports>
+            <library_load_type>Compile-time load</library_load_type>
+            <macros></macros>
+            <library>
+                <win64>
+                    <library_name>False</library_name>
+                    <linking_name>False</linking_name>
+                    <library_path_relative>False</library_path_relative>
+                    <library_path_absolute>False</library_path_absolute>
+                    <include_folder_relative>False</include_folder_relative>
+                    <h_file>False</h_file>
+                    <h_include_folder_relative>False</h_include_folder_relative>
+                </win64>
+                <linux64>
+                    <library_name>False</library_name>
+                    <linking_name>False</linking_name>
+                    <library_path_relative>False</library_path_relative>
+                    <library_path_absolute>False</library_path_absolute>
+                    <include_folder_relative>False</include_folder_relative>
+                    <h_file>False</h_file>
+                    <h_include_folder_relative>False</h_include_folder_relative>
+                </linux64>
+            </library>
+            <additional_sources>
+                <h>
+                    <files>set()</files>
+                    <files_relative_paths>set()</files_relative_paths>
+                    <folders_relative_paths>set()</folders_relative_paths>
+                </h>
+                <c>
+                    <files>set()</files>
+                    <files_relative_paths>set()</files_relative_paths>
+                    <folders_relative_paths>set()</folders_relative_paths>
+                    <o_files>set()</o_files>
+                    <d_files>set()</d_files>
+                </c>
+                <cpp>
+                    <files>set()</files>
+                    <files_relative_paths>set()</files_relative_paths>
+                    <folders_relative_paths>set()</folders_relative_paths>
+                    <o_files>set()</o_files>
+                    <d_files>set()</d_files>
+                </cpp>
+            </additional_sources>
+        </component>
+        <component>
+            <is_fmi>False</is_fmi>
+            <identifier_name>_vsc1_rms_ym</identifier_name>
+            <fqn>_vsc1_rms_ym</fqn>
+            <fqn_original>VSC1.RMS_YM</fqn_original>
+            <include_imports>True</include_imports>
+            <library_load_type>Compile-time load</library_load_type>
+            <macros></macros>
+            <library>
+                <win64>
+                    <library_name>False</library_name>
+                    <linking_name>False</linking_name>
+                    <library_path_relative>False</library_path_relative>
+                    <library_path_absolute>False</library_path_absolute>
+                    <include_folder_relative>False</include_folder_relative>
+                    <h_file>False</h_file>
+                    <h_include_folder_relative>False</h_include_folder_relative>
+                </win64>
+                <linux64>
+                    <library_name>False</library_name>
+                    <linking_name>False</linking_name>
+                    <library_path_relative>False</library_path_relative>
+                    <library_path_absolute>False</library_path_absolute>
+                    <include_folder_relative>False</include_folder_relative>
+                    <h_file>False</h_file>
+                    <h_include_folder_relative>False</h_include_folder_relative>
+                </linux64>
+            </library>
+            <additional_sources>
+                <h>
+                    <files>set()</files>
+                    <files_relative_paths>set()</files_relative_paths>
+                    <folders_relative_paths>set()</folders_relative_paths>
+                </h>
+                <c>
+                    <files>set()</files>
+                    <files_relative_paths>set()</files_relative_paths>
+                    <folders_relative_paths>set()</folders_relative_paths>
+                    <o_files>set()</o_files>
+                    <d_files>set()</d_files>
+                </c>
+                <cpp>
+                    <files>set()</files>
+                    <files_relative_paths>set()</files_relative_paths>
+                    <folders_relative_paths>set()</folders_relative_paths>
+                    <o_files>set()</o_files>
+                    <d_files>set()</d_files>
+                </cpp>
+            </additional_sources>
+        </component>
+        <component>
+            <is_fmi>False</is_fmi>
+            <identifier_name>_vsc1_sogi_vc</identifier_name>
+            <fqn>_vsc1_sogi_vc</fqn>
+            <fqn_original>VSC1.SOGI_VC</fqn_original>
             <include_imports>True</include_imports>
             <library_load_type>Compile-time load</library_load_type>
             <macros></macros>
@@ -3389,11 +2939,11 @@
                 <win64>
                     <library_name>lib_sogi_qsg.dll</library_name>
                     <linking_name>lib_sogi_qsg</linking_name>
-                    <library_path_relative>ext-src/_vsc1_sogi_qsg/binaries/lib_sogi_qsg.dll</library_path_relative>
-                    <library_path_absolute>ext-src/_vsc1_sogi_qsg/binaries/lib_sogi_qsg.dll</library_path_absolute>
-                    <include_folder_relative>ext-src/_vsc1_sogi_qsg/binaries</include_folder_relative>
+                    <library_path_relative>ext-src/_vsc1_sogi_vc/binaries/lib_sogi_qsg.dll</library_path_relative>
+                    <library_path_absolute>ext-src/_vsc1_sogi_vc/binaries/lib_sogi_qsg.dll</library_path_absolute>
+                    <include_folder_relative>ext-src/_vsc1_sogi_vc/binaries</include_folder_relative>
                     <h_file>sogi_qsg.h</h_file>
-                    <h_include_folder_relative>ext-src/_vsc1_sogi_qsg/binaries</h_include_folder_relative>
+                    <h_include_folder_relative>ext-src/_vsc1_sogi_vc/binaries</h_include_folder_relative>
                 </win64>
                 <linux64>
                     <library_name>False</library_name>
@@ -3429,59 +2979,9 @@
         </component>
         <component>
             <is_fmi>False</is_fmi>
-            <identifier_name>_grid_c_function2</identifier_name>
-            <fqn>_grid_c_function2</fqn>
-            <fqn_original>Grid.C function2</fqn_original>
-            <include_imports>True</include_imports>
-            <library_load_type>Compile-time load</library_load_type>
-            <macros></macros>
-            <library>
-                <win64>
-                    <library_name>False</library_name>
-                    <linking_name>False</linking_name>
-                    <library_path_relative>False</library_path_relative>
-                    <library_path_absolute>False</library_path_absolute>
-                    <include_folder_relative>False</include_folder_relative>
-                    <h_file>False</h_file>
-                    <h_include_folder_relative>False</h_include_folder_relative>
-                </win64>
-                <linux64>
-                    <library_name>False</library_name>
-                    <linking_name>False</linking_name>
-                    <library_path_relative>False</library_path_relative>
-                    <library_path_absolute>False</library_path_absolute>
-                    <include_folder_relative>False</include_folder_relative>
-                    <h_file>False</h_file>
-                    <h_include_folder_relative>False</h_include_folder_relative>
-                </linux64>
-            </library>
-            <additional_sources>
-                <h>
-                    <files>set()</files>
-                    <files_relative_paths>set()</files_relative_paths>
-                    <folders_relative_paths>set()</folders_relative_paths>
-                </h>
-                <c>
-                    <files>set()</files>
-                    <files_relative_paths>set()</files_relative_paths>
-                    <folders_relative_paths>set()</folders_relative_paths>
-                    <o_files>set()</o_files>
-                    <d_files>set()</d_files>
-                </c>
-                <cpp>
-                    <files>set()</files>
-                    <files_relative_paths>set()</files_relative_paths>
-                    <folders_relative_paths>set()</folders_relative_paths>
-                    <o_files>set()</o_files>
-                    <d_files>set()</d_files>
-                </cpp>
-            </additional_sources>
-        </component>
-        <component>
-            <is_fmi>False</is_fmi>
-            <identifier_name>_vsc2_rms_vc</identifier_name>
-            <fqn>_vsc2_rms_vc</fqn>
-            <fqn_original>VSC2.RMS_VC</fqn_original>
+            <identifier_name>_vsc1_meter_meter</identifier_name>
+            <fqn>_vsc1_meter_meter</fqn>
+            <fqn_original>VSC1.Meter.Meter</fqn_original>
             <include_imports>True</include_imports>
             <library_load_type>Compile-time load</library_load_type>
             <macros></macros>
@@ -3579,21 +3079,21 @@
         </component>
         <component>
             <is_fmi>False</is_fmi>
-            <identifier_name>_vsc1_lpf_internal_filter</identifier_name>
-            <fqn>_vsc1_lpf_internal_filter</fqn>
-            <fqn_original>VSC1.LPF.Internal filter</fqn_original>
+            <identifier_name>_vsc2_sogi_qsg</identifier_name>
+            <fqn>_vsc2_sogi_qsg</fqn>
+            <fqn_original>VSC2.SOGI_QSG</fqn_original>
             <include_imports>True</include_imports>
             <library_load_type>Compile-time load</library_load_type>
             <macros></macros>
             <library>
                 <win64>
-                    <library_name>False</library_name>
-                    <linking_name>False</linking_name>
-                    <library_path_relative>False</library_path_relative>
-                    <library_path_absolute>False</library_path_absolute>
-                    <include_folder_relative>False</include_folder_relative>
-                    <h_file>False</h_file>
-                    <h_include_folder_relative>False</h_include_folder_relative>
+                    <library_name>lib_sogi_qsg.dll</library_name>
+                    <linking_name>lib_sogi_qsg</linking_name>
+                    <library_path_relative>ext-src/_vsc2_sogi_qsg/binaries/lib_sogi_qsg.dll</library_path_relative>
+                    <library_path_absolute>ext-src/_vsc2_sogi_qsg/binaries/lib_sogi_qsg.dll</library_path_absolute>
+                    <include_folder_relative>ext-src/_vsc2_sogi_qsg/binaries</include_folder_relative>
+                    <h_file>sogi_qsg.h</h_file>
+                    <h_include_folder_relative>ext-src/_vsc2_sogi_qsg/binaries</h_include_folder_relative>
                 </win64>
                 <linux64>
                     <library_name>False</library_name>
@@ -3629,9 +3129,9 @@
         </component>
         <component>
             <is_fmi>False</is_fmi>
-            <identifier_name>_vsc2_teste</identifier_name>
-            <fqn>_vsc2_teste</fqn>
-            <fqn_original>VSC2.TESTE</fqn_original>
+            <identifier_name>_load_meter_meter</identifier_name>
+            <fqn>_load_meter_meter</fqn>
+            <fqn_original>Load.Meter.Meter</fqn_original>
             <include_imports>True</include_imports>
             <library_load_type>Compile-time load</library_load_type>
             <macros></macros>
@@ -3707,16 +3207,16 @@
             </library>
             <additional_sources>
                 <h>
-                    <files>{'improved_droop.h', 'virtual_impedance.h', 'sogi_qsg.h', 'mrac.h'}</files>
-                    <files_relative_paths>{'ext-src/_vsc2_virtual_impedance/sources/src/sogi_qsg.h', 'ext-src/_vsc2_virtual_impedance/sources/src/improved_droop.h', 'ext-src/_vsc2_virtual_impedance/sources/src/mrac.h', 'ext-src/_vsc2_virtual_impedance/sources/src/virtual_impedance.h'}</files_relative_paths>
+                    <files>{'virtual_impedance.h', 'improved_droop.h', 'mrac.h', 'sogi_qsg.h'}</files>
+                    <files_relative_paths>{'ext-src/_vsc2_virtual_impedance/sources/src/improved_droop.h', 'ext-src/_vsc2_virtual_impedance/sources/src/virtual_impedance.h', 'ext-src/_vsc2_virtual_impedance/sources/src/mrac.h', 'ext-src/_vsc2_virtual_impedance/sources/src/sogi_qsg.h'}</files_relative_paths>
                     <folders_relative_paths>{'ext-src/_vsc2_virtual_impedance/sources/src'}</folders_relative_paths>
                 </h>
                 <c>
-                    <files>{'virtual_impedance.c', 'mrac.c', 'improved_droop.c', 'sogi_qsg.c'}</files>
+                    <files>{'sogi_qsg.c', 'improved_droop.c', 'virtual_impedance.c', 'mrac.c'}</files>
                     <files_relative_paths>{'ext-src/_vsc2_virtual_impedance/sources/src/improved_droop.c', 'ext-src/_vsc2_virtual_impedance/sources/src/mrac.c', 'ext-src/_vsc2_virtual_impedance/sources/src/virtual_impedance.c', 'ext-src/_vsc2_virtual_impedance/sources/src/sogi_qsg.c'}</files_relative_paths>
                     <folders_relative_paths>{'ext-src/_vsc2_virtual_impedance/sources/src'}</folders_relative_paths>
-                    <o_files>{'improved_droop.o', 'sogi_qsg.o', 'virtual_impedance.o', 'mrac.o'}</o_files>
-                    <d_files>{'sogi_qsg.d', 'virtual_impedance.d', 'mrac.d', 'improved_droop.d'}</d_files>
+                    <o_files>{'virtual_impedance.o', 'sogi_qsg.o', 'mrac.o', 'improved_droop.o'}</o_files>
+                    <d_files>{'improved_droop.d', 'mrac.d', 'sogi_qsg.d', 'virtual_impedance.d'}</d_files>
                 </c>
                 <cpp>
                     <files>set()</files>
@@ -3729,9 +3229,9 @@
         </component>
         <component>
             <is_fmi>False</is_fmi>
-            <identifier_name>_mgcc_meter_meter</identifier_name>
-            <fqn>_mgcc_meter_meter</fqn>
-            <fqn_original>MGCC.Meter.Meter</fqn_original>
+            <identifier_name>_vsc2_rms_ym</identifier_name>
+            <fqn>_vsc2_rms_ym</fqn>
+            <fqn_original>VSC2.RMS_YM</fqn_original>
             <include_imports>True</include_imports>
             <library_load_type>Compile-time load</library_load_type>
             <macros></macros>
@@ -3779,9 +3279,109 @@
         </component>
         <component>
             <is_fmi>False</is_fmi>
-            <identifier_name>_vsc2_sogi_qsg1</identifier_name>
-            <fqn>_vsc2_sogi_qsg1</fqn>
-            <fqn_original>VSC2.SOGI_QSG1</fqn_original>
+            <identifier_name>_vsc1_droop_controller</identifier_name>
+            <fqn>_vsc1_droop_controller</fqn>
+            <fqn_original>VSC1.DROOP_CONTROLLER</fqn_original>
+            <include_imports>True</include_imports>
+            <library_load_type>Compile-time load</library_load_type>
+            <macros></macros>
+            <library>
+                <win64>
+                    <library_name>lib_improved_droop.dll</library_name>
+                    <linking_name>lib_improved_droop</linking_name>
+                    <library_path_relative>ext-src/_vsc1_droop_controller/binaries/lib_improved_droop.dll</library_path_relative>
+                    <library_path_absolute>ext-src/_vsc1_droop_controller/binaries/lib_improved_droop.dll</library_path_absolute>
+                    <include_folder_relative>ext-src/_vsc1_droop_controller/binaries</include_folder_relative>
+                    <h_file>improved_droop.h</h_file>
+                    <h_include_folder_relative>ext-src/_vsc1_droop_controller/binaries</h_include_folder_relative>
+                </win64>
+                <linux64>
+                    <library_name>False</library_name>
+                    <linking_name>False</linking_name>
+                    <library_path_relative>False</library_path_relative>
+                    <library_path_absolute>False</library_path_absolute>
+                    <include_folder_relative>False</include_folder_relative>
+                    <h_file>False</h_file>
+                    <h_include_folder_relative>False</h_include_folder_relative>
+                </linux64>
+            </library>
+            <additional_sources>
+                <h>
+                    <files>set()</files>
+                    <files_relative_paths>set()</files_relative_paths>
+                    <folders_relative_paths>set()</folders_relative_paths>
+                </h>
+                <c>
+                    <files>set()</files>
+                    <files_relative_paths>set()</files_relative_paths>
+                    <folders_relative_paths>set()</folders_relative_paths>
+                    <o_files>set()</o_files>
+                    <d_files>set()</d_files>
+                </c>
+                <cpp>
+                    <files>set()</files>
+                    <files_relative_paths>set()</files_relative_paths>
+                    <folders_relative_paths>set()</folders_relative_paths>
+                    <o_files>set()</o_files>
+                    <d_files>set()</d_files>
+                </cpp>
+            </additional_sources>
+        </component>
+        <component>
+            <is_fmi>False</is_fmi>
+            <identifier_name>_vsc1_rms_vc</identifier_name>
+            <fqn>_vsc1_rms_vc</fqn>
+            <fqn_original>VSC1.RMS_VC</fqn_original>
+            <include_imports>True</include_imports>
+            <library_load_type>Compile-time load</library_load_type>
+            <macros></macros>
+            <library>
+                <win64>
+                    <library_name>False</library_name>
+                    <linking_name>False</linking_name>
+                    <library_path_relative>False</library_path_relative>
+                    <library_path_absolute>False</library_path_absolute>
+                    <include_folder_relative>False</include_folder_relative>
+                    <h_file>False</h_file>
+                    <h_include_folder_relative>False</h_include_folder_relative>
+                </win64>
+                <linux64>
+                    <library_name>False</library_name>
+                    <linking_name>False</linking_name>
+                    <library_path_relative>False</library_path_relative>
+                    <library_path_absolute>False</library_path_absolute>
+                    <include_folder_relative>False</include_folder_relative>
+                    <h_file>False</h_file>
+                    <h_include_folder_relative>False</h_include_folder_relative>
+                </linux64>
+            </library>
+            <additional_sources>
+                <h>
+                    <files>set()</files>
+                    <files_relative_paths>set()</files_relative_paths>
+                    <folders_relative_paths>set()</folders_relative_paths>
+                </h>
+                <c>
+                    <files>set()</files>
+                    <files_relative_paths>set()</files_relative_paths>
+                    <folders_relative_paths>set()</folders_relative_paths>
+                    <o_files>set()</o_files>
+                    <d_files>set()</d_files>
+                </c>
+                <cpp>
+                    <files>set()</files>
+                    <files_relative_paths>set()</files_relative_paths>
+                    <folders_relative_paths>set()</folders_relative_paths>
+                    <o_files>set()</o_files>
+                    <d_files>set()</d_files>
+                </cpp>
+            </additional_sources>
+        </component>
+        <component>
+            <is_fmi>False</is_fmi>
+            <identifier_name>_vsc1_sogi_ym</identifier_name>
+            <fqn>_vsc1_sogi_ym</fqn>
+            <fqn_original>VSC1.SOGI_YM</fqn_original>
             <include_imports>True</include_imports>
             <library_load_type>Compile-time load</library_load_type>
             <macros></macros>
@@ -3789,11 +3389,11 @@
                 <win64>
                     <library_name>lib_sogi_qsg.dll</library_name>
                     <linking_name>lib_sogi_qsg</linking_name>
-                    <library_path_relative>ext-src/_vsc2_sogi_qsg1/binaries/lib_sogi_qsg.dll</library_path_relative>
-                    <library_path_absolute>ext-src/_vsc2_sogi_qsg1/binaries/lib_sogi_qsg.dll</library_path_absolute>
-                    <include_folder_relative>ext-src/_vsc2_sogi_qsg1/binaries</include_folder_relative>
+                    <library_path_relative>ext-src/_vsc1_sogi_ym/binaries/lib_sogi_qsg.dll</library_path_relative>
+                    <library_path_absolute>ext-src/_vsc1_sogi_ym/binaries/lib_sogi_qsg.dll</library_path_absolute>
+                    <include_folder_relative>ext-src/_vsc1_sogi_ym/binaries</include_folder_relative>
                     <h_file>sogi_qsg.h</h_file>
-                    <h_include_folder_relative>ext-src/_vsc2_sogi_qsg1/binaries</h_include_folder_relative>
+                    <h_include_folder_relative>ext-src/_vsc1_sogi_ym/binaries</h_include_folder_relative>
                 </win64>
                 <linux64>
                     <library_name>False</library_name>
@@ -3829,9 +3429,9 @@
         </component>
         <component>
             <is_fmi>False</is_fmi>
-            <identifier_name>_load_meter_meter</identifier_name>
-            <fqn>_load_meter_meter</fqn>
-            <fqn_original>Load.Meter.Meter</fqn_original>
+            <identifier_name>_vsc1_modulation_comparator</identifier_name>
+            <fqn>_vsc1_modulation_comparator</fqn>
+            <fqn_original>VSC1.Modulation.Comparator</fqn_original>
             <include_imports>True</include_imports>
             <library_load_type>Compile-time load</library_load_type>
             <macros></macros>
@@ -3929,9 +3529,9 @@
         </component>
         <component>
             <is_fmi>False</is_fmi>
-            <identifier_name>_vsc1_sogi_vc</identifier_name>
-            <fqn>_vsc1_sogi_vc</fqn>
-            <fqn_original>VSC1.SOGI_VC</fqn_original>
+            <identifier_name>_vsc2_sogi_qsg1</identifier_name>
+            <fqn>_vsc2_sogi_qsg1</fqn>
+            <fqn_original>VSC2.SOGI_QSG1</fqn_original>
             <include_imports>True</include_imports>
             <library_load_type>Compile-time load</library_load_type>
             <macros></macros>
@@ -3939,11 +3539,411 @@
                 <win64>
                     <library_name>lib_sogi_qsg.dll</library_name>
                     <linking_name>lib_sogi_qsg</linking_name>
-                    <library_path_relative>ext-src/_vsc1_sogi_vc/binaries/lib_sogi_qsg.dll</library_path_relative>
-                    <library_path_absolute>ext-src/_vsc1_sogi_vc/binaries/lib_sogi_qsg.dll</library_path_absolute>
-                    <include_folder_relative>ext-src/_vsc1_sogi_vc/binaries</include_folder_relative>
+                    <library_path_relative>ext-src/_vsc2_sogi_qsg1/binaries/lib_sogi_qsg.dll</library_path_relative>
+                    <library_path_absolute>ext-src/_vsc2_sogi_qsg1/binaries/lib_sogi_qsg.dll</library_path_absolute>
+                    <include_folder_relative>ext-src/_vsc2_sogi_qsg1/binaries</include_folder_relative>
                     <h_file>sogi_qsg.h</h_file>
-                    <h_include_folder_relative>ext-src/_vsc1_sogi_vc/binaries</h_include_folder_relative>
+                    <h_include_folder_relative>ext-src/_vsc2_sogi_qsg1/binaries</h_include_folder_relative>
+                </win64>
+                <linux64>
+                    <library_name>False</library_name>
+                    <linking_name>False</linking_name>
+                    <library_path_relative>False</library_path_relative>
+                    <library_path_absolute>False</library_path_absolute>
+                    <include_folder_relative>False</include_folder_relative>
+                    <h_file>False</h_file>
+                    <h_include_folder_relative>False</h_include_folder_relative>
+                </linux64>
+            </library>
+            <additional_sources>
+                <h>
+                    <files>set()</files>
+                    <files_relative_paths>set()</files_relative_paths>
+                    <folders_relative_paths>set()</folders_relative_paths>
+                </h>
+                <c>
+                    <files>set()</files>
+                    <files_relative_paths>set()</files_relative_paths>
+                    <folders_relative_paths>set()</folders_relative_paths>
+                    <o_files>set()</o_files>
+                    <d_files>set()</d_files>
+                </c>
+                <cpp>
+                    <files>set()</files>
+                    <files_relative_paths>set()</files_relative_paths>
+                    <folders_relative_paths>set()</folders_relative_paths>
+                    <o_files>set()</o_files>
+                    <d_files>set()</d_files>
+                </cpp>
+            </additional_sources>
+        </component>
+        <component>
+            <is_fmi>False</is_fmi>
+            <identifier_name>_vsc1_sogi_qsg</identifier_name>
+            <fqn>_vsc1_sogi_qsg</fqn>
+            <fqn_original>VSC1.SOGI_QSG</fqn_original>
+            <include_imports>True</include_imports>
+            <library_load_type>Compile-time load</library_load_type>
+            <macros></macros>
+            <library>
+                <win64>
+                    <library_name>lib_sogi_qsg.dll</library_name>
+                    <linking_name>lib_sogi_qsg</linking_name>
+                    <library_path_relative>ext-src/_vsc1_sogi_qsg/binaries/lib_sogi_qsg.dll</library_path_relative>
+                    <library_path_absolute>ext-src/_vsc1_sogi_qsg/binaries/lib_sogi_qsg.dll</library_path_absolute>
+                    <include_folder_relative>ext-src/_vsc1_sogi_qsg/binaries</include_folder_relative>
+                    <h_file>sogi_qsg.h</h_file>
+                    <h_include_folder_relative>ext-src/_vsc1_sogi_qsg/binaries</h_include_folder_relative>
+                </win64>
+                <linux64>
+                    <library_name>False</library_name>
+                    <linking_name>False</linking_name>
+                    <library_path_relative>False</library_path_relative>
+                    <library_path_absolute>False</library_path_absolute>
+                    <include_folder_relative>False</include_folder_relative>
+                    <h_file>False</h_file>
+                    <h_include_folder_relative>False</h_include_folder_relative>
+                </linux64>
+            </library>
+            <additional_sources>
+                <h>
+                    <files>set()</files>
+                    <files_relative_paths>set()</files_relative_paths>
+                    <folders_relative_paths>set()</folders_relative_paths>
+                </h>
+                <c>
+                    <files>set()</files>
+                    <files_relative_paths>set()</files_relative_paths>
+                    <folders_relative_paths>set()</folders_relative_paths>
+                    <o_files>set()</o_files>
+                    <d_files>set()</d_files>
+                </c>
+                <cpp>
+                    <files>set()</files>
+                    <files_relative_paths>set()</files_relative_paths>
+                    <folders_relative_paths>set()</folders_relative_paths>
+                    <o_files>set()</o_files>
+                    <d_files>set()</d_files>
+                </cpp>
+            </additional_sources>
+        </component>
+        <component>
+            <is_fmi>False</is_fmi>
+            <identifier_name>_vsc2_modulation_comparator</identifier_name>
+            <fqn>_vsc2_modulation_comparator</fqn>
+            <fqn_original>VSC2.Modulation.Comparator</fqn_original>
+            <include_imports>True</include_imports>
+            <library_load_type>Compile-time load</library_load_type>
+            <macros></macros>
+            <library>
+                <win64>
+                    <library_name>False</library_name>
+                    <linking_name>False</linking_name>
+                    <library_path_relative>False</library_path_relative>
+                    <library_path_absolute>False</library_path_absolute>
+                    <include_folder_relative>False</include_folder_relative>
+                    <h_file>False</h_file>
+                    <h_include_folder_relative>False</h_include_folder_relative>
+                </win64>
+                <linux64>
+                    <library_name>False</library_name>
+                    <linking_name>False</linking_name>
+                    <library_path_relative>False</library_path_relative>
+                    <library_path_absolute>False</library_path_absolute>
+                    <include_folder_relative>False</include_folder_relative>
+                    <h_file>False</h_file>
+                    <h_include_folder_relative>False</h_include_folder_relative>
+                </linux64>
+            </library>
+            <additional_sources>
+                <h>
+                    <files>set()</files>
+                    <files_relative_paths>set()</files_relative_paths>
+                    <folders_relative_paths>set()</folders_relative_paths>
+                </h>
+                <c>
+                    <files>set()</files>
+                    <files_relative_paths>set()</files_relative_paths>
+                    <folders_relative_paths>set()</folders_relative_paths>
+                    <o_files>set()</o_files>
+                    <d_files>set()</d_files>
+                </c>
+                <cpp>
+                    <files>set()</files>
+                    <files_relative_paths>set()</files_relative_paths>
+                    <folders_relative_paths>set()</folders_relative_paths>
+                    <o_files>set()</o_files>
+                    <d_files>set()</d_files>
+                </cpp>
+            </additional_sources>
+        </component>
+        <component>
+            <is_fmi>False</is_fmi>
+            <identifier_name>_vsc2_sogi_ym</identifier_name>
+            <fqn>_vsc2_sogi_ym</fqn>
+            <fqn_original>VSC2.SOGI_YM</fqn_original>
+            <include_imports>True</include_imports>
+            <library_load_type>Compile-time load</library_load_type>
+            <macros></macros>
+            <library>
+                <win64>
+                    <library_name>lib_sogi_qsg.dll</library_name>
+                    <linking_name>lib_sogi_qsg</linking_name>
+                    <library_path_relative>ext-src/_vsc2_sogi_ym/binaries/lib_sogi_qsg.dll</library_path_relative>
+                    <library_path_absolute>ext-src/_vsc2_sogi_ym/binaries/lib_sogi_qsg.dll</library_path_absolute>
+                    <include_folder_relative>ext-src/_vsc2_sogi_ym/binaries</include_folder_relative>
+                    <h_file>sogi_qsg.h</h_file>
+                    <h_include_folder_relative>ext-src/_vsc2_sogi_ym/binaries</h_include_folder_relative>
+                </win64>
+                <linux64>
+                    <library_name>False</library_name>
+                    <linking_name>False</linking_name>
+                    <library_path_relative>False</library_path_relative>
+                    <library_path_absolute>False</library_path_absolute>
+                    <include_folder_relative>False</include_folder_relative>
+                    <h_file>False</h_file>
+                    <h_include_folder_relative>False</h_include_folder_relative>
+                </linux64>
+            </library>
+            <additional_sources>
+                <h>
+                    <files>set()</files>
+                    <files_relative_paths>set()</files_relative_paths>
+                    <folders_relative_paths>set()</folders_relative_paths>
+                </h>
+                <c>
+                    <files>set()</files>
+                    <files_relative_paths>set()</files_relative_paths>
+                    <folders_relative_paths>set()</folders_relative_paths>
+                    <o_files>set()</o_files>
+                    <d_files>set()</d_files>
+                </c>
+                <cpp>
+                    <files>set()</files>
+                    <files_relative_paths>set()</files_relative_paths>
+                    <folders_relative_paths>set()</folders_relative_paths>
+                    <o_files>set()</o_files>
+                    <d_files>set()</d_files>
+                </cpp>
+            </additional_sources>
+        </component>
+        <component>
+            <is_fmi>False</is_fmi>
+            <identifier_name>_mgcc_meter_meter</identifier_name>
+            <fqn>_mgcc_meter_meter</fqn>
+            <fqn_original>MGCC.Meter.Meter</fqn_original>
+            <include_imports>True</include_imports>
+            <library_load_type>Compile-time load</library_load_type>
+            <macros></macros>
+            <library>
+                <win64>
+                    <library_name>False</library_name>
+                    <linking_name>False</linking_name>
+                    <library_path_relative>False</library_path_relative>
+                    <library_path_absolute>False</library_path_absolute>
+                    <include_folder_relative>False</include_folder_relative>
+                    <h_file>False</h_file>
+                    <h_include_folder_relative>False</h_include_folder_relative>
+                </win64>
+                <linux64>
+                    <library_name>False</library_name>
+                    <linking_name>False</linking_name>
+                    <library_path_relative>False</library_path_relative>
+                    <library_path_absolute>False</library_path_absolute>
+                    <include_folder_relative>False</include_folder_relative>
+                    <h_file>False</h_file>
+                    <h_include_folder_relative>False</h_include_folder_relative>
+                </linux64>
+            </library>
+            <additional_sources>
+                <h>
+                    <files>set()</files>
+                    <files_relative_paths>set()</files_relative_paths>
+                    <folders_relative_paths>set()</folders_relative_paths>
+                </h>
+                <c>
+                    <files>set()</files>
+                    <files_relative_paths>set()</files_relative_paths>
+                    <folders_relative_paths>set()</folders_relative_paths>
+                    <o_files>set()</o_files>
+                    <d_files>set()</d_files>
+                </c>
+                <cpp>
+                    <files>set()</files>
+                    <files_relative_paths>set()</files_relative_paths>
+                    <folders_relative_paths>set()</folders_relative_paths>
+                    <o_files>set()</o_files>
+                    <d_files>set()</d_files>
+                </cpp>
+            </additional_sources>
+        </component>
+        <component>
+            <is_fmi>False</is_fmi>
+            <identifier_name>_vsc1_lpf_internal_filter</identifier_name>
+            <fqn>_vsc1_lpf_internal_filter</fqn>
+            <fqn_original>VSC1.LPF.Internal filter</fqn_original>
+            <include_imports>True</include_imports>
+            <library_load_type>Compile-time load</library_load_type>
+            <macros></macros>
+            <library>
+                <win64>
+                    <library_name>False</library_name>
+                    <linking_name>False</linking_name>
+                    <library_path_relative>False</library_path_relative>
+                    <library_path_absolute>False</library_path_absolute>
+                    <include_folder_relative>False</include_folder_relative>
+                    <h_file>False</h_file>
+                    <h_include_folder_relative>False</h_include_folder_relative>
+                </win64>
+                <linux64>
+                    <library_name>False</library_name>
+                    <linking_name>False</linking_name>
+                    <library_path_relative>False</library_path_relative>
+                    <library_path_absolute>False</library_path_absolute>
+                    <include_folder_relative>False</include_folder_relative>
+                    <h_file>False</h_file>
+                    <h_include_folder_relative>False</h_include_folder_relative>
+                </linux64>
+            </library>
+            <additional_sources>
+                <h>
+                    <files>set()</files>
+                    <files_relative_paths>set()</files_relative_paths>
+                    <folders_relative_paths>set()</folders_relative_paths>
+                </h>
+                <c>
+                    <files>set()</files>
+                    <files_relative_paths>set()</files_relative_paths>
+                    <folders_relative_paths>set()</folders_relative_paths>
+                    <o_files>set()</o_files>
+                    <d_files>set()</d_files>
+                </c>
+                <cpp>
+                    <files>set()</files>
+                    <files_relative_paths>set()</files_relative_paths>
+                    <folders_relative_paths>set()</folders_relative_paths>
+                    <o_files>set()</o_files>
+                    <d_files>set()</d_files>
+                </cpp>
+            </additional_sources>
+        </component>
+        <component>
+            <is_fmi>False</is_fmi>
+            <identifier_name>_vsc2_lpf_internal_filter</identifier_name>
+            <fqn>_vsc2_lpf_internal_filter</fqn>
+            <fqn_original>VSC2.LPF.Internal filter</fqn_original>
+            <include_imports>True</include_imports>
+            <library_load_type>Compile-time load</library_load_type>
+            <macros></macros>
+            <library>
+                <win64>
+                    <library_name>False</library_name>
+                    <linking_name>False</linking_name>
+                    <library_path_relative>False</library_path_relative>
+                    <library_path_absolute>False</library_path_absolute>
+                    <include_folder_relative>False</include_folder_relative>
+                    <h_file>False</h_file>
+                    <h_include_folder_relative>False</h_include_folder_relative>
+                </win64>
+                <linux64>
+                    <library_name>False</library_name>
+                    <linking_name>False</linking_name>
+                    <library_path_relative>False</library_path_relative>
+                    <library_path_absolute>False</library_path_absolute>
+                    <include_folder_relative>False</include_folder_relative>
+                    <h_file>False</h_file>
+                    <h_include_folder_relative>False</h_include_folder_relative>
+                </linux64>
+            </library>
+            <additional_sources>
+                <h>
+                    <files>set()</files>
+                    <files_relative_paths>set()</files_relative_paths>
+                    <folders_relative_paths>set()</folders_relative_paths>
+                </h>
+                <c>
+                    <files>set()</files>
+                    <files_relative_paths>set()</files_relative_paths>
+                    <folders_relative_paths>set()</folders_relative_paths>
+                    <o_files>set()</o_files>
+                    <d_files>set()</d_files>
+                </c>
+                <cpp>
+                    <files>set()</files>
+                    <files_relative_paths>set()</files_relative_paths>
+                    <folders_relative_paths>set()</folders_relative_paths>
+                    <o_files>set()</o_files>
+                    <d_files>set()</d_files>
+                </cpp>
+            </additional_sources>
+        </component>
+        <component>
+            <is_fmi>False</is_fmi>
+            <identifier_name>_vsc2_meter_meter</identifier_name>
+            <fqn>_vsc2_meter_meter</fqn>
+            <fqn_original>VSC2.Meter.Meter</fqn_original>
+            <include_imports>True</include_imports>
+            <library_load_type>Compile-time load</library_load_type>
+            <macros></macros>
+            <library>
+                <win64>
+                    <library_name>False</library_name>
+                    <linking_name>False</linking_name>
+                    <library_path_relative>False</library_path_relative>
+                    <library_path_absolute>False</library_path_absolute>
+                    <include_folder_relative>False</include_folder_relative>
+                    <h_file>False</h_file>
+                    <h_include_folder_relative>False</h_include_folder_relative>
+                </win64>
+                <linux64>
+                    <library_name>False</library_name>
+                    <linking_name>False</linking_name>
+                    <library_path_relative>False</library_path_relative>
+                    <library_path_absolute>False</library_path_absolute>
+                    <include_folder_relative>False</include_folder_relative>
+                    <h_file>False</h_file>
+                    <h_include_folder_relative>False</h_include_folder_relative>
+                </linux64>
+            </library>
+            <additional_sources>
+                <h>
+                    <files>set()</files>
+                    <files_relative_paths>set()</files_relative_paths>
+                    <folders_relative_paths>set()</folders_relative_paths>
+                </h>
+                <c>
+                    <files>set()</files>
+                    <files_relative_paths>set()</files_relative_paths>
+                    <folders_relative_paths>set()</folders_relative_paths>
+                    <o_files>set()</o_files>
+                    <d_files>set()</d_files>
+                </c>
+                <cpp>
+                    <files>set()</files>
+                    <files_relative_paths>set()</files_relative_paths>
+                    <folders_relative_paths>set()</folders_relative_paths>
+                    <o_files>set()</o_files>
+                    <d_files>set()</d_files>
+                </cpp>
+            </additional_sources>
+        </component>
+        <component>
+            <is_fmi>False</is_fmi>
+            <identifier_name>_vsc2_teste</identifier_name>
+            <fqn>_vsc2_teste</fqn>
+            <fqn_original>VSC2.TESTE</fqn_original>
+            <include_imports>True</include_imports>
+            <library_load_type>Compile-time load</library_load_type>
+            <macros></macros>
+            <library>
+                <win64>
+                    <library_name>False</library_name>
+                    <linking_name>False</linking_name>
+                    <library_path_relative>False</library_path_relative>
+                    <library_path_absolute>False</library_path_absolute>
+                    <include_folder_relative>False</include_folder_relative>
+                    <h_file>False</h_file>
+                    <h_include_folder_relative>False</h_include_folder_relative>
                 </win64>
                 <linux64>
                     <library_name>False</library_name>
